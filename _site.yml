@@ -3,14 +3,22 @@ output_dir: "."
 navbar:
   title: "Hande Sodacı"
   left:
-  #- text: "Research"
-  #  href: research.html
-  #- text: "Publications"
-  #  href: pubs.html
-  #- text: "CV"
-  #  href: cv.html
-  #- text: "Personal"
-  #  href: projects.html
+  - text: "Research"
+    href: research.html
+  - text: "Publications"
+    href: pubs.html
+  - text: "CV"
+    href: cv.html
+  - text: "Personal"
+    href: projects.html
+#    - text: 'Whatever Menu' ## setting up a drop down menu
+#      menu:
+#        - text: 'Whatever Menu 1'
+#          href: whatevermenu1.html
+#        - text: 'Whatever Menu 2'
+#          href: whatevermenu2.html
+#        - text: 'Whatever Menu 3'
+#          href: whatevermenu3.html
   right:
   - icon: fa-envelope fa-lg
     href: mailto:sodaci92@gmail.com
@@ -21,4 +29,5 @@ navbar:
   - icon: fa-linkedin fa-lg
     href: https://www.linkedin.com/in/hande-sodac%C4%B1-697a1855/
 output:
-  html_document   #cerulean #flatly #cosmo #readable #yeti
+  html_document:
+    theme: flatly #cerulean #flatly #cosmo #readable #yeti

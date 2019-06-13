@@ -1,0 +1,7 @@
+---
+title: "Research"
+---
+
+I am interested in psychology of language. Recently I worked in projects investigating the influence of culture and language on bilinguals’ speech and gesture, language change in third-generation immigrants, and second language tutoring using social robots. My most recent work examined whether cognitive mechanisms of bilingualism have a role in the change observed in the Turkish spoken by the Dutch Turks.
+
+In my future projects I would like to apply the computational methods such as analyzing big data or conducting online experiments, because they can enormously contribute to this field of research.
