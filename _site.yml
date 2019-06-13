@@ -1,0 +1,24 @@
+name: "Hande's website"
+output_dir: "docs"
+navbar:
+  title: "Hande Sodacı"
+  left:
+  #- text: "Research"
+  #  href: research.html
+  #- text: "Publications"
+  #  href: pubs.html
+  #- text: "CV"
+  #  href: cv.html
+  #- text: "Personal"
+  #  href: projects.html
+  right:
+  - icon: fa-envelope fa-lg
+    href: mailto:sodaci92@gmail.com
+  - icon: fa-github fa-lg
+    href: http://github.com/hsodaci
+  - icon: fa-twitter fa-lg
+    href: https://twitter.com/sodask_
+  - icon: fa-linkedin fa-lg
+    href: https://www.linkedin.com/in/hande-sodac%C4%B1-697a1855/
+output:
+  html_document   #cerulean #flatly #cosmo #readable #yeti
