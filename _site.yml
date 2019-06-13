@@ -1,5 +1,5 @@
 name: "Hande's website"
-output_dir: "docs"
+output_dir: "."
 navbar:
   title: "Hande Sodacı"
   left:
