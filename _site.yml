@@ -28,9 +28,9 @@ navbar:
     href: https://twitter.com/sodask_
   - icon: fa-linkedin fa-lg
     href: https://www.linkedin.com/in/hande-sodac%C4%B1-697a1855/
-  - icon: ai-osf-square ai-lg
-    href: https://osf.io/x47zg/
+  #- icon: ai ai-osf
+    #href: https://osf.io/x47zg/
 output:
   html_document:
     theme: flatly #cerulean #flatly #cosmo #readable #yeti
-    css: academicons.min.css
+    #css: academicons.min.css
