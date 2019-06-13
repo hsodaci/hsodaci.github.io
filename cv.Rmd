@@ -1,5 +1,0 @@
----
-title: "CV"
----
-
-<a href="cv.pdf#" class="download" title="Download CV as PDF">Download CV</a>
