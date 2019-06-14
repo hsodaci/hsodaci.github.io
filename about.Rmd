@@ -3,4 +3,4 @@ title: "About me"
 output: html_document
 ---
 
-Coming soon
+<div style="text-align: justify"> Coming soon </div>

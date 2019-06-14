@@ -2,6 +2,14 @@
 title: "Research"
 ---
 
-I am interested in psychology of language. Recently I worked in projects investigating the influence of culture and language on bilinguals’ speech and gesture, language change in third-generation immigrants, and second language tutoring using social robots. My most recent work examined whether cognitive mechanisms of bilingualism have a role in the change observed in the Turkish spoken by the Dutch Turks.
+<div style="text-align: justify"> Bilingualism (or multilingualism in general) forms a natural language contact situation, which can theoretically lead to language change. The change is frequently studied, and the most visible in one particular group - heritage speakers. They are asymmetrical bilinguals who grew up learning their native language but, as adults, are now dominant in another language.
 
-In my future projects I would like to apply the computational methods such as analyzing big data or conducting online experiments, because they can enormously contribute to this field of research.
+Questions to which I aim to find answers:
+
++ Can heritage language syntaxes change in language contact situations?
+
++ What is the extent of this change? From short-term (synchronic change) to the emergence of a new grammar (diachronic change)?
+
++ What psychological, social and/or linguistic mechanisms may be underlying language change? Which psychological, social and linguistic factors may be modulating the change?
+
++ How prevalent is the change in the population? Can we expect heterogeneity as a result of the variation in, for example, speaker's location or the amount of speaker's social interactions? </div>
