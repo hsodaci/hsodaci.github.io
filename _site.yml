@@ -8,7 +8,6 @@ navbar:
   - text: "Publications"
     href: pubs.html
   - text: "Personal"
-    href: projects.html
     menu: ## setting up a drop down menu
       - text: "Gran's Words"
         href: anneannem.html
