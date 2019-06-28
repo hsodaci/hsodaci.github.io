@@ -9,13 +9,13 @@ navbar:
     href: pubs.html
   - text: "Personal"
     href: projects.html
-      menu: ## setting up a drop down menu
-        - text: "Gran's Words"
-          href: anneannem.html
-        - text: "Turkish Rap"
-          href: turkcerap.html
-#        - text: ""
-#          href: whatevermenu3.html
+    menu: ## setting up a drop down menu
+      - text: "Gran's Words"
+        href: anneannem.html
+      - text: "Turkish Rap"
+        href: turkcerap.html
+#      - text: ""
+#        href: whatevermenu3.html
   right:
   - icon: fa-envelope fa-lg
     href: mailto:sodaci92@gmail.com
