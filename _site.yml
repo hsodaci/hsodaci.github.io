@@ -9,13 +9,12 @@ navbar:
     href: pubs.html
   - text: "Personal"
     href: projects.html
-#    - text: 'Whatever Menu' ## setting up a drop down menu
-#      menu:
-#        - text: 'Whatever Menu 1'
-#          href: whatevermenu1.html
-#        - text: 'Whatever Menu 2'
-#          href: whatevermenu2.html
-#        - text: 'Whatever Menu 3'
+      menu: ## setting up a drop down menu
+        - text: "Gran's Words"
+          href: anneannem.html
+        - text: "Turkish Rap"
+          href: turkcerap.html
+#        - text: ""
 #          href: whatevermenu3.html
   right:
   - icon: fa-envelope fa-lg
