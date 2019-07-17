@@ -1,8 +1,11 @@
 ---
-title: "Grand's words (or 'Anneannemin kelimeleri')"
+title: "Gran's words"
 ---
 
-| Syntax      | Description | Test Text     |
-| :---        |    :----:   |          ---: |
-| Header      | Title       | Here is this  |
-| Paragraph   | Text        | And more      |
+An excerpt from my corpus:
+
+| word        | Meaning in Turkish          | origin        | original spelling     |
+| :---        | :---                        | :---          | :---                  |
+| çüçan       | beceriksiz, pısırık, hımbıl | Albanian      | çyçën                 |
+| teferiç     | keyifli, güzel, hoş mekan   | Bosnian       | teferič               |
+| kofer       | tahta bavul                 | Serbian       | кофер                 |
