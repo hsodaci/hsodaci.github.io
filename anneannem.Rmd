@@ -2,10 +2,18 @@
 title: "Gran's words"
 ---
 
-An excerpt from my corpus:
+```{r, echo = FALSE}
+excerpt <- 
+  tibble::tribble(
+  ~word,       ~`meaning in Turkish`,          ~origin,       ~`original spelling`,
+  "çüçan",     "beceriksiz, pısırık, hımbıl",  "Albanian",    "çyçën",
+  "teferiç",   "keyifli, güzel, hoş mekan",    "Bosnian",     "teferič",
+  "kofer",     "tahta bavul",                  "Serbian",     "кофер"
+)
 
-| word        | Meaning in Turkish          | origin        | original spelling     |
-| :---        | :---                        | :---          | :---                  |
-| çüçan       | beceriksiz, pısırık, hımbıl | Albanian      | çyçën                 |
-| teferiç     | keyifli, güzel, hoş mekan   | Bosnian       | teferič               |
-| kofer       | tahta bavul                 | Serbian       | кофер                 |
+knitr::kable(
+  excerpt,
+  caption = "An excerpt from my corpus",
+  booktabs = TRUE
+)
+```

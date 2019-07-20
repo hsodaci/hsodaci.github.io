@@ -1,8 +1,3 @@
 ---
-  title: "Turkish rap (or 'Türkçe rap')"
+  title: "Turkish rap"
 ---
-  
-  | Syntax      | Description | Test Text     |
-  | :---        |    :----:   |          ---: |
-  | Header      | Title       | Here is this  |
-  | Paragraph   | Text        | And more      |
