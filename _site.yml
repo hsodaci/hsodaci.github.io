@@ -3,6 +3,8 @@ output_dir: "."
 navbar:
   title: "Hande Sodacı"
   left:
+  - text: "Hakkımda / About me"
+    href: about.html
   - text: "Araştırma / Research"
     href: research.html
   - text: "Yayınlar / Publications"

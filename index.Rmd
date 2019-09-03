@@ -2,8 +2,14 @@
 title: "Hoşgeldiniz / Welcome!"
 ---
 
+<br />
+
 <img src="images/photo.jpg" style="width:25%; border:20px transparent; margin-right: 20px" align="left">
 
-<div style="text-align: justify"> I am interested in how the languages we speak interact with each other, and how this interaction may change our representation of these languages. My research concerns the intersection of bilingualism, cross-language interactions, and language change. I study these issues using psycholinguistic methods and, hopefully soon, computational methods.
+<br />
 
-I am currently seeking academic positions, so feel free to reach me via the channels at top right. </div>
+<br>Hande Sodacı
+<br>X Üniversitesi
+<br>Y Fakültesi Z Bölümü
+<br />
+<br>xyz@abc.edu.tr
