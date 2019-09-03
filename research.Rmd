@@ -1,5 +1,5 @@
 ---
-title: "Research"
+title: "Araştırma / Research"
 ---
 
 <div style="text-align: justify"> Bilingualism (or multilingualism in general) forms a natural language contact situation, which can theoretically lead to language change. The change is frequently studied, and the most visible in one particular group - heritage speakers. They are asymmetrical bilinguals who grew up learning their native language but, as adults, are now dominant in another language.

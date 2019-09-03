@@ -9,9 +9,9 @@ navbar:
     href: pubs.html
   - text: "Kişisel / Personal"
     menu: ## setting up a drop down menu
-      - text: "Gran's Words"
+      - text: "Anneannemin Kelimeleri / Gran's Words"
         href: anneannem.html
-      - text: "Turkish Rap"
+      - text: "Türkçe Rap / Turkish Rap"
         href: turkcerap.html
 #      - text: ""
 #        href: whatevermenu3.html

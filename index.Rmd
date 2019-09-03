@@ -1,5 +1,5 @@
 ---
-title: "Welcome!"
+title: "Hoşgeldiniz / Welcome!"
 ---
 
 <img src="images/photo.jpg" style="width:25%; border:20px transparent; margin-right: 20px" align="left">
