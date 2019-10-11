@@ -1,5 +1,5 @@
 ---
-title: "Anneannemin Kelimeleri / Gran's Words"
+title: "Gran's Words project"
 ---
 
 ```{r, echo = FALSE}

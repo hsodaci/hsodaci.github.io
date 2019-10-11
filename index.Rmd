@@ -1,5 +1,5 @@
 ---
-title: "Hoşgeldiniz / Welcome!"
+title: "Welcome!"
 ---
 
 <br />
@@ -9,7 +9,7 @@ title: "Hoşgeldiniz / Welcome!"
 <br />
 
 <br>Hande Sodacı
-<br>X Üniversitesi
-<br>Y Fakültesi Z Bölümü
+<br>X University
+<br>Department of Y, Division of Z
 <br />
 <br>xyz@abc.edu.tr

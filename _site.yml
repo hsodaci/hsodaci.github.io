@@ -1,19 +1,19 @@
-name: "Hande'nin Websitesi / Hande's website"
+name: "Hande's website"
 output_dir: "."
 navbar:
   title: "Hande Sodacı"
   left:
-  - text: "Hakkımda / About me"
+  - text: "About"
     href: about.html
-  - text: "Araştırma / Research"
+  - text: "Research"
     href: research.html
-  - text: "Yayınlar / Publications"
+  - text: "Publications"
     href: pubs.html
-  - text: "Kişisel / Personal"
+  - text: "Personal"
     menu: ## setting up a drop down menu
-      - text: "Anneannemin Kelimeleri / Gran's Words"
+      - text: "Gran's Words"
         href: anneannem.html
-      - text: "Türkçe Rap / Turkish Rap"
+      - text: "Turkish Rap"
         href: turkcerap.html
 #      - text: ""
 #        href: whatevermenu3.html

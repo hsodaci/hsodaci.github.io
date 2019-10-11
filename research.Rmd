@@ -1,5 +1,5 @@
 ---
-title: "Araştırma / Research"
+title: "Research"
 ---
 
 <html>
@@ -20,12 +20,14 @@ hr {
 
 <br />
 
-<div style="text-align: justify"> Dil, ister konuşmak yoluyla olsun ister işaretleşmek yoluyla, insan iletişiminin en eski sistemlerinden biri olarak karşımıza çıkıyor. Dünyanın büyük çoğunluğu birden fazla dil biliyor ve bu dilleri gündelik hayatında etkin bir biçimde kullanıyor, bu da bize "çok dilli" olmanın sanılanın aksine "tek dilli" olmaktan çok daha olağan bir durum olduğunu gösteriyor.
+<!--
+<p style="text-align: justify"> Dil, ister konuşmak yoluyla olsun ister işaretleşmek yoluyla, insan iletişiminin en eski sistemlerinden biri olarak karşımıza çıkıyor. Dünyanın büyük çoğunluğu birden fazla dil biliyor ve bu dilleri gündelik hayatında etkin bir biçimde kullanıyor, bu da bize "çok dilli" olmanın sanılanın aksine "tek dilli" olmaktan çok daha olağan bir durum olduğunu gösteriyor.
 
-Çok dilli olmak yarattığı sonuçlar açısından psikoloji, sosyoloji ve dilbilim gibi bilim dalları için çok önemli ve ilginç bir olgu. Kullandığımız dillerin birbirleriyle sürekli bir etkileşim halinde olduğu artık bilim çevrelerince kabul görmüş durumda. İşte <b>bu etkileşimin çok dilli kişilerin dil temsillerini ve dil kullanımını nasıl etkileyebileceği, bu etkinin hangi psikolojik mekanizmalar ve toplumsal etmenlerle ilişkili olabileceği</b> benim araştırma alanlarımı oluşturuyor. Bu konuları araştırırken psikodilbilimin ve sosyodilbilimin yöntemlerini kullanıyorum ve yakın gelecekte bilişimsel yöntemlerden de faydalanmayı planlıyorum. </div>
+Çok dilli olmak yarattığı sonuçlar açısından psikoloji, sosyoloji ve dilbilim gibi bilim dalları için çok önemli ve ilginç bir olgu. Kullandığımız dillerin birbirleriyle sürekli bir etkileşim halinde olduğu artık bilim çevrelerince kabul görmüş durumda. İşte <b>bu etkileşimin çok dilli kişilerin dil temsillerini ve dil kullanımını nasıl etkileyebileceği, bu etkinin hangi psikolojik mekanizmalar ve toplumsal etmenlerle ilişkili olabileceği</b> benim araştırma alanlarımı oluşturuyor. Bu konuları araştırırken psikodilbilimin ve sosyodilbilimin yöntemlerini kullanıyorum ve yakın gelecekte bilişimsel yöntemlerden de faydalanmayı planlıyorum. </p>
 
 <br />
 <hr>
 <br />
 
-<div style="text-align: justify"> I am interested in how the languages we speak interact with each other, and how this interaction may change our representation of these languages. My research concerns the intersection of bilingualism, cross-language interactions, and language change. I study these issues using psycholinguistic and sociolinguistic methods and, hopefully soon, computational methods. </div>
+-->
+<p style="text-align: justify"> I am interested in how the languages we speak interact with each other, and how this interaction may change our representation of these languages. My research concerns the intersection of bilingualism, cross-language interactions, and language change. I study these issues using psycholinguistic and sociolinguistic methods and, hopefully soon, computational methods. </p>

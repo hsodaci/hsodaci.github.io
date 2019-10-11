@@ -1,5 +1,5 @@
 ---
-title: "Yayınlar / Publications"
+title: "Publications"
 ---
   
 <div style="text-align: justify"> Coming soon </div>
