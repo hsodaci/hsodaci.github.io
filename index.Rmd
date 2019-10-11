@@ -4,12 +4,12 @@ title: "Welcome!"
 
 <br />
 
-<img src="images/photo.jpg" style="width:25%; border:20px transparent; margin-right: 20px" align="left">
+<img src="images/photo.jpg" style="width:25%; border:20px transparent; margin-right: 20px; border-radius: 50px; padding: 10px" align="left">
 
 <br />
 
-<br>Hande Sodacı
-<br>X University
-<br>Department of Y, Division of Z
-<br />
-<br>xyz@abc.edu.tr
+<p>Hande Sodacı</p>
+<p>X University<br>
+  Department of Y<br>
+  Division of Z</p>
+<p><a href="mailto:xyz@abc.edu.tr">xyz@abc.edu.tr</a></p>

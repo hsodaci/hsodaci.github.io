@@ -2,6 +2,8 @@
 title: "Gran's Words project"
 ---
 
+<br />
+
 ```{r, echo = FALSE}
 excerpt <- 
   tibble::tribble(
