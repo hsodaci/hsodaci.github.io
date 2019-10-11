@@ -18,8 +18,8 @@ navbar:
 #      - text: ""
 #        href: whatevermenu3.html
   right:
-  - icon: fa-envelope fa-lg
-    href: mailto:sodaci92@gmail.com
+  #- icon: fa-envelope fa-lg
+  #  href: mailto:sodaci92@gmail.com
   - icon: fa-twitter fa-lga
     href: https://twitter.com/sodask_
   - icon: ai ai-osf ai-lg
