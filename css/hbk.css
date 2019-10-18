@@ -1,0 +1,110 @@
+body{
+  font-family: Helvetica, Arial;
+  margin: 0;
+}
+
+.center-fit{
+    max-width: 100%;
+    max-height: 100vh;
+    height: auto;
+}
+
+#header{
+  text-align: center;
+  padding: 20px;
+}
+
+#about{
+  color: #101e68;
+  text-align: center;
+  padding: 50px;
+  line-height: 200%;
+}
+
+#what-image{
+  float: left;
+  width: 510px;
+  padding: 30px 0;
+}
+
+#what-image img{
+  width: 400px;
+}
+
+#what-content{
+  float: left;
+  width: 510px;
+  padding: 40px 0;
+  line-height: 140%;
+  color: #125281;
+}
+
+#services{
+  background-color: #e8f5ff;
+  padding: 50px 0;
+  color: #125281;
+}
+
+.service-box{
+  float: left;
+  background-color: white;
+  padding: 40px;
+  margin: 20px 10px;
+  text-align: center;
+  width: 155px;
+  border-radius: 10px;
+}
+
+#contact{
+  background-color: #2c86c7;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  line-height: 160%;
+}
+
+#contact p{
+  margin: 0;
+}
+
+#contact hr{
+  border: 0;
+  height: 1px;
+  background-color: #5ca5da;
+  margin: 30px auto;
+  width: 600px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.phone{
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 15px !important;
+}
+
+.clear{
+  clear: left;
+}
+
+.inner{
+  width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2{
+  font-weight: normal;
+}
+
+h3{
+  color: #101e68;
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+---
+title: ""
+output: html_document
+---
+
+<link rel="stylesheet" href="css/hbk.css" type="text/css">
+
+<body>
+
+<div id="about">
+  <h1>Happy Birthday Hammermann!</h1>
+  <p>This page is dedicated to celebrate your birthday via my recently acquired html and css skills.<br>You will notice that there hasn't been much acquisition happened yet.</p>
+  <img style="width:70%; border:20px transparent; margin:0px; padding: 10px" align="center" src="images/welcome.jpg">
+</div>
+
+<div id="about">
+  <h3>A terribly animated celebratory message for you.</h3>
+  <img style="width:50%; border:20px transparent; margin-right: 20px; border-radius: 50px; padding: 10px" align="center" src="https://megaport.hu/media/king-include/uploads/2018/11/happy-birthday-animation-9265839923.gif">
+</div>
+
+<div id="about">
+  <p>I know I know, it is not as impressive as my previous pygame gift.<br>And I wasn't expressive about it much lately, but remember that<br>you've always got someone out there who does miss your comradeship.</p>
+</div>
+
+<div id="about">
+  <h3>Take care and have a great day!</h3>
+  <img style="width:25%; border:20px transparent; margin-right: 20px; border-radius: 50px; padding: 10px" align="center" src="images/mabel.jpeg">
+</div>
+
+</body>
