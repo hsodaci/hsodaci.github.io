@@ -15,8 +15,8 @@ navbar:
         href: anneannem.html
       - text: "Turkish Rap"
         href: turkcerap.html
-      - text: "Happy Birthday Hammermann"
-        href: hbk.html
+#      - text: "Happy Birthday Hammermann"
+#        href: hbk.html
 #      - text: ""
 #        href: whatevermenu3.html
   right:
