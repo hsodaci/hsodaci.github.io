@@ -3,25 +3,23 @@ output_dir: "."
 navbar:
   title: "Hande Sodacı"
   left:
-  - text: "About"
+  - text: "About me"
     href: about.html
   - text: "Research"
     href: research.html
   - text: "Publications"
     href: pubs.html
-  - text: "Personal"
-    menu: ## setting up a drop down menu
-      - text: "Gran's Words"
-        href: anneannem.html
-      - text: "Turkish Rap"
-        href: turkcerap.html
+#  - text: "Personal"
+#    menu: ## setting up a drop down menu
+#      - text: "Gran's Words"
+#        href: anneannem.html
+#      - text: "Turkish Rap"
+#        href: turkcerap.html
 #      - text: "Happy Birthday Hammermann"
 #        href: hbk.html
 #      - text: ""
 #        href: whatevermenu3.html
   right:
-  #- icon: fa-envelope fa-lg
-  #  href: mailto:sodaci92@gmail.com
   - icon: fa-twitter fa-lga
     href: https://twitter.com/sodask_
   - icon: ai ai-osf ai-lg
@@ -31,9 +29,7 @@ navbar:
   - icon: fa-github fa-lg
     href: http://github.com/hsodaci
   - icon: ai-cv ai-lg
-    href: "Hande_Sodaci_resume_Jan2020.pdf"
-    #- icon: fa-linkedin fa-lg
-    #href: https://www.linkedin.com/in/hande-sodac%C4%B1-697a1855/
+    href: "Hande_Sodaci_resume_May2020.pdf"
 output:
   html_document:
     theme: flatly #cerulean #cosmo #readable #yeti
