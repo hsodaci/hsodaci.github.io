@@ -1,18 +1,31 @@
 ---
 title: "Welcome!"
 ---
+<style>
 
-<br />
+p {margin-bottom: 30px;}
 
-<img src="images/photo.jpg" style="width:25%; border:20px transparent; margin-right: 20px; border-radius: 50px; padding: 10px" align="left">
+.parent {text-align: center;}
 
-<section style="margin-top: 20px">
+.child {display: inline-block;}
 
-<p>Hande Sodacı</p>
-<p>Research Assistant<br>
-Istanbul Medipol University<br>
-School of Humanities and Social Sciences<br>
-Department of Psychology<br></p>
-<p><a href="mailto:hsodaci[at]medipol.edu.tr">hsodaci[at]medipol.edu.tr</p>
+</style>
 
-</section>
+<div class="parent">
+  <div class="child">
+  <img src="images/photo.jpg" style="width:35%; border:20px transparent; border-radius: 360px; padding: 10px">
+  </div>
+
+  <div class="child" style="margin-top:20px">
+  <p><b>Hande Sodacı</b></p>
+  <p> PhD Student in Psychology<br>
+      College of Social Sciences and Humanities<br>
+      Koç University, Istanbul<br>
+      <a href="mailto:hsodaci20[at]ku.edu.tr">hsodaci20[at]ku.edu.tr</a><br></p>
+
+  <p> Research Assistant in the project <a href="https://bilisselakademilab.com/kule/">KULE</a></p>
+
+  <p> Member of <a href="https://dililetisimlab.ku.edu.tr/en/about/">Language and Communication Development Lab</a><br>
+      Koç University, Istanbul<br></p>
+  </div>
+</div>
