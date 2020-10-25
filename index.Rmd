@@ -29,7 +29,7 @@ p {margin-bottom: 30px;}
   <p> Member of <a href="https://dililetisimlab.ku.edu.tr/en/about/">Language and Communication Development Lab</a><br>
       Koç University, Istanbul</p>
   
-  <p> Lead of <a href="https://bilisselakademilab.com/ogrenci-gruplarimiz/">Technology in Education Working Group</a><br>
+  <p> Member of <a href="https://bilisselakademilab.com/ogrenci-gruplarimiz/">Technology in Education Working Group</a><br>
       MEF University, Istanbul</p>
   </div>
 </div>
