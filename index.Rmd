@@ -23,7 +23,7 @@ p {margin-bottom: 30px;}
       Koç University, Istanbul<br>
       <a href="mailto:hsodaci20[at]ku.edu.tr">hsodaci20[at]ku.edu.tr</a></p>
 
-  <p> Research Assistant in the project <a href="https://bilisselakademilab.com/kule/" target="_blank">KULE</a><br>
+  <p> Project Coordinator in the project <a href="https://bilisselakademilab.com/kule/" target="_blank">KULE</a><br>
       MEF University, Istanbul</p>
 
   <p> Member of <a href="https://dililetisimlab.ku.edu.tr/en/about/" target="_blank">Language and Communication Development Lab</a><br>
