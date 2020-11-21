@@ -9,6 +9,8 @@ navbar:
     href: research.html
   - text: "Publications"
     href: pubs.html
+  - text: "Tech In Ed"
+    href: techined.html
 #  - text: "Personal"
 #    menu: ## setting up a drop down menu
 #      - text: "Gran's Words"
