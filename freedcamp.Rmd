@@ -18,7 +18,11 @@ hr {
 </head>
 <body>
 
-<a href="images/turnoffemail.gif" target="_blank">How to turn off email notifications
+<br />
+
+<ul>
+<li><a href="images/turnoffemail.gif" target="_blank">How to turn off email notifications</li>
+</ul>
 
 </body>
 </html>
