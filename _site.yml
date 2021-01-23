@@ -15,25 +15,23 @@ navbar:
 #    menu: ## setting up a drop down menu
 #      - text: "Gran's Words"
 #        href: anneannem.html
-#      - text: "Turkish Rap"
-#        href: turkcerap.html
 #      - text: "Happy Birthday Hammermann"
 #        href: hbk.html
 #      - text: ""
 #        href: whatevermenu3.html
   right:
-  - icon: fa-twitter fa-lga
-    href: https://twitter.com/sodask_
+  - icon: ai-orcid ai-lga
+    href: https://orcid.org/0000-0003-1995-6005
   - icon: ai ai-google-scholar ai-lg
     href: https://scholar.google.com/citations?user=mMp7tIcAAAAJ
   - icon: ai ai-osf ai-lg
     href: https://osf.io/x47zg/
   - icon: ai-researchgate ai-lg
     href: https://www.researchgate.net/profile/Hande_Sodaci2
-  - icon: fa-github fa-lg
+  - icon: fab fa-github fa-lg
     href: http://github.com/hsodaci
   - icon: ai-cv ai-lg
-    href: "Hande_Sodaci_resume_Oct2020.pdf"
+    href: "Hande_Sodaci_resume_Jan2021.pdf"
 output:
   html_document:
     theme: flatly #cerulean #cosmo #readable #yeti
