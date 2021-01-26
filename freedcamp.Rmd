@@ -1,5 +1,5 @@
 ---
-title: Using Freedcamp
+title: "Using Freedcamp"
 ---
 
 <html>
@@ -22,6 +22,10 @@ hr {
 
 <ul>
 <li><a href="images/turnoffemail.gif" target="_blank">How to turn off email notifications</li>
+</ul>
+
+<ul>
+<li><a href="random-sampling.gif">Random sampling in Excel</a></li>
 </ul>
 
 </body>
