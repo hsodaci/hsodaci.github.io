@@ -9,8 +9,8 @@ navbar:
     href: research.html
   - text: "Publications"
     href: pubs.html
-  - text: "Using Freedcamp"
-    href: freedcamp.html
+#  - text: "Using Freedcamp"
+#    href: freedcamp.html
 #  - text: "Personal"
 #    menu: ## setting up a drop down menu
 #      - text: "Gran's Words"
