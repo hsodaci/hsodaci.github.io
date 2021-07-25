@@ -13,7 +13,7 @@ p {margin-bottom: 30px;}
 
 <div class="parent">
   <div class="child">
-  <img src="images/photo1.jpg" style="width:35%; border:20px transparent; border-radius: 150px; padding: 10px">
+  <img src="images/photo2.jpg" style="width:35%; border:20px transparent; border-radius: 150px; padding: 10px">
   </div>
 
   <div class="child" style="margin-top:20px">
@@ -28,8 +28,5 @@ p {margin-bottom: 30px;}
 
   <p> Member of <a href="https://dililetisimlab.ku.edu.tr/en/members/" target="_blank">Language and Communication Development Lab</a><br>
       Koç University, Istanbul</p>
-  
-  <p> Member of <a href="https://bilisselakademilab.com/ogrenci-gruplarimiz/" target="_blank">Technology in Education Working Group</a><br>
-      MEF University, Istanbul</p>
   </div>
 </div>
