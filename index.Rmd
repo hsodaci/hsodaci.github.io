@@ -13,7 +13,7 @@ p {margin-bottom: 30px;}
 
 <div class="parent">
   <div class="child">
-  <img src="images/photo2.jpg" style="width:35%; border:20px transparent; border-radius: 150px; padding: 10px">
+  <img src="images/photo1.jpg" style="width:35%; border:20px transparent; border-radius: 150px; padding: 10px">
   </div>
 
   <div class="child" style="margin-top:20px">
