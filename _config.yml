@@ -59,7 +59,7 @@ plugins:
 
 author:
   name   : "Hande Sodacı"
-  avatar : "/assets/images/mpines.jpeg"
+  avatar : "/images/mpines.jpg"
   bio    : "My awesome biography constrained to a sentence or two goes here."
   links:
     - label: "Website"
