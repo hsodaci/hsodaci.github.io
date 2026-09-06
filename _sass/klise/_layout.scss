@@ -130,7 +130,11 @@
     }
   }
 
+  // Hidden by default; revealed on hover or when the <details> is opened
+  // (via click/tap or keyboard), so desktop gets hover-to-open while
+  // touch devices keep working via the native details/summary toggle.
   .dropdown-menu {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -156,6 +160,11 @@
         opacity: 1;
       }
     }
+  }
+
+  .dropdown:hover > .dropdown-menu,
+  .dropdown[open] > .dropdown-menu {
+    display: block;
   }
 
   @include media-query($on-mobile) {
