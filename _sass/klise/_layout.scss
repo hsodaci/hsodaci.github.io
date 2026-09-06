@@ -419,12 +419,56 @@
   }
 }
 
-.contact-sent {
-  margin: 1.5em auto 0;
-  max-width: 480px;
+.contact-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(13, 18, 43, 0.5);
+  z-index: 10;
+  padding: $spacing-full;
+  box-sizing: border-box;
+}
+
+.contact-modal {
+  width: 100%;
+  max-width: 320px;
   text-align: center;
-  font-weight: $bold-weight;
-  color: $text-link-blue;
+  background-color: $white;
+  border: 1px solid $light;
+  border-radius: 12px;
+  padding: 2em;
+  box-sizing: border-box;
+  -webkit-animation: 0.2s ease-in forwards fadein;
+  animation: 0.2s ease-in forwards fadein;
+
+  .contact-modal-title {
+    font-weight: $bold-weight;
+    font-size: 1.15em;
+    color: $black;
+    margin-bottom: 20px;
+  }
+
+  .contact-modal-close {
+    font: inherit;
+    font-weight: $bold-weight;
+    font-size: $small-font-size;
+    color: $white;
+    background-color: $black;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    cursor: pointer;
+    opacity: 0.9;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .not-found {

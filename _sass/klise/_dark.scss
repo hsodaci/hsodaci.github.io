@@ -273,7 +273,17 @@ body[data-theme="dark"] {
     }
   }
 
-  .contact-sent {
-    color: $dark-text-link-blue;
+  .contact-modal {
+    background-color: $dark-black;
+    border-color: $dark-light;
+
+    .contact-modal-title {
+      color: $dark-white;
+    }
+
+    .contact-modal-close {
+      color: $dark-black;
+      background-color: $dark-white;
+    }
   }
 }

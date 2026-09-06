@@ -37,13 +37,38 @@ comments: false
     <button type="submit">Send message</button>
   </form>
 
-  <p id="contact-sent" class="contact-sent" hidden>Thanks — your message is on its way!</p>
+</div>
+
+<div id="contact-sent-overlay" class="contact-modal-overlay" hidden>
+  <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-sent-title">
+    <p id="contact-sent-title" class="contact-modal-title">Message received</p>
+    <button type="button" id="contact-sent-close" class="contact-modal-close">Close</button>
+  </div>
 </div>
 
 <script>
-  if (window.location.search.includes('sent=true')) {
-    document.getElementById('contact-sent').hidden = false;
-  }
+  (function () {
+    if (!window.location.search.includes('sent=true')) return;
+
+    var overlay = document.getElementById('contact-sent-overlay');
+    var closeBtn = document.getElementById('contact-sent-close');
+
+    function closeModal() {
+      overlay.hidden = true;
+      var url = new URL(window.location.href);
+      url.searchParams.delete('sent');
+      window.history.replaceState({}, '', url);
+    }
+
+    overlay.hidden = false;
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  })();
 </script>
 
 <!--
