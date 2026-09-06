@@ -244,4 +244,28 @@ body[data-theme="dark"] {
       }
     }
   }
+
+  // Contact form
+  .contact-form {
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      color: $dark-text-base-color;
+      background-color: $dark-light;
+      border-color: $dark-smoke;
+
+      &:focus {
+        border-color: $dark-text-link-blue;
+      }
+    }
+
+    button {
+      color: $dark-black;
+      background-color: $dark-white;
+    }
+  }
+
+  .contact-sent {
+    color: $dark-text-link-blue;
+  }
 }

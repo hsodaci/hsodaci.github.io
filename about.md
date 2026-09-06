@@ -18,4 +18,4 @@ I'm Hande Sodacı, a PhD candidate in Psychology at Koç University (defending 2
 
 **Outside of research.** *(TODO: optional — a line or two of personal color: hobbies, interests, where you're based.)*
 
-You can find my work on the [projects](/projects/) page, and my full background on the [resume](/resume/) page. Feel free to reach out at [{{ site.author.email }}](mailto:{{ site.author.email }}) or on [LinkedIn](https://linkedin.com/in/{{ site.author.linkedin }}).
+You can find my work on the [projects](/projects/) page, and my full background on the [resume](/resume/) page. Feel free to [get in touch](/contact/).
