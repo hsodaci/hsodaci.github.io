@@ -432,6 +432,15 @@
   z-index: 10;
   padding: $spacing-full;
   box-sizing: border-box;
+
+  // An author-stylesheet "display" declaration always beats the browser's
+  // built-in [hidden] { display: none }, no matter the specificity - so
+  // without this, toggling the hidden attribute in JS updated the DOM but
+  // never actually hid the overlay. This rule (attribute selector on the
+  // same class) outranks the plain class rule above and restores it.
+  &[hidden] {
+    display: none;
+  }
 }
 
 .contact-modal {
