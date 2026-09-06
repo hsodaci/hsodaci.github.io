@@ -213,6 +213,58 @@
     max-width: 393px;
     line-height: 1.688;
   }
+
+  .author-links {
+    margin-top: 14px;
+
+    a {
+      color: $text-base-color;
+      text-decoration: none;
+      opacity: 0.75;
+      padding: 4px 8px;
+      border: 1px solid $light;
+      border-radius: 4px;
+      margin: 0 4px;
+      font-size: 0.85em;
+      display: inline-block;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Quick links (homepage)
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 3.5em;
+
+  a {
+    color: $text-base-color;
+    text-decoration: none;
+    padding: 10px 16px;
+    border: 1px solid $light;
+    border-radius: 6px;
+    font-size: 0.95em;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.section-note {
+  text-align: center;
+  opacity: 0.75;
+  max-width: 480px;
+  margin: 0 auto 3em;
+  line-height: 1.688;
 }
 
 // Content

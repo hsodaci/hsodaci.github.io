@@ -1,18 +1,21 @@
 ---
-title: Colophon
+title: About
 permalink: /about/
 layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
+excerpt: PhD in Psychology (Koç University, 2026), researching human-robot interaction and psycholinguistics, now moving into UX research, HCI, and data science.
 comments: false
 ---
 
-He's a student from Banyuwangi, living in Jogjakarta. the blog for documentation about his programming 🎒 journey, running on jekyll, hosting on [now.sh](http://now.sh) and using his own theme, he name it <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">klisé</a>, he also loves to learning web technology; but he often forgot, that a reason why him doing the writing.
+<!-- TODO: replace this placeholder bio with your own story. Suggested beats below. -->
 
-If you have a question about him or else, just send a letter to him.
+I'm Hande Sodacı, a PhD candidate in Psychology at Koç University (defending 2026). My dissertation looks at how people adapt the way they communicate — word choice, timing, repair strategies — when their conversation partner is an AI or robot instead of another human.
 
-You can [report](http://github.com/piharpi/jekyll-klise/issues/new) if there is an broken link(s) or somethings else.
+**Background.** *(TODO: 2-3 sentences — your academic path, e.g. undergrad/masters field, how you landed in psycholinguistics and human-robot interaction, and what drew you to that intersection.)*
 
-**may u needs ✨**
+**What I actually do.** *(TODO: describe your day-to-day research methods — experimental design, eye-tracking, corpus analysis, statistical modeling in R/Python, etc. Recruiters skim this for transferable skills.)*
 
-- {{ site.author.email }}
-- github.com/{{ site.author.github }}
+**Why I'm moving into tech.** *(TODO: 2-3 sentences on your motivation for pivoting toward UX research / HCI / data science — e.g. wanting to apply rigorous behavioral research methods to real products, faster iteration cycles, etc.)*
+
+**Outside of research.** *(TODO: optional — a line or two of personal color: hobbies, interests, where you're based.)*
+
+You can find my work on the [projects](/projects/) page, and my full background on the [resume](/resume/) page. Feel free to reach out at [{{ site.author.email }}](mailto:{{ site.author.email }}) or on [LinkedIn](https://linkedin.com/in/{{ site.author.linkedin }}).

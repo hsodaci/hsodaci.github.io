@@ -1,28 +1,31 @@
 # Site settings
-title: Hande's Portfolio # site title
+title: Hande Sodacı # site title
 description: >- # site description
-  PhD in Psychology (Koç University, 2026). Researching human-robot interaction and psycholinguistics — now building UX research and data science projects.
+  Portfolio of Hande Sodacı, PhD — human-robot interaction and psycholinguistics
+  researcher moving into UX research, HCI, and data science. Case studies,
+  projects, and writing from a dissertation on how people adapt communication
+  to AI partners.
 lang: en-US # default lang
 timezone: Europe/Istanbul # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
-repo: https://github.com/piharpi/jekyll-klise # site repo [optional]
 mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
-  name: Jekyll Klisé # author name
+  name: Hande Sodacı # author name
   bio: >- # tell to the world
-    The minimalist Jekyll theme, light and dark mode support, for running a personal site and blog, 
-    meet Klisé theme at <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">@github</a>.
-  username: username # general username
-  github: github_username # github username
-  twitter: twitter_username # twitter username
-  facebook: facebook_username # facebook username
-  email: your-email@email.com # email adress
+    PhD in Psychology (Koç University, 2026). Researching human-robot
+    interaction and psycholinguistics — now building UX research and data
+    science projects.
+  username: hsodaci # general username
+  github: hsodaci # github username
+  linkedin: hsodaci # linkedin username (linkedin.com/in/USERNAME)
+  orcid: 0000-0003-1995-6005 # ORCID id
+  email: sodaci92@gmail.com # email adress
   avatar: /assets/img/avatar.jpg # change with your own avatar
 
 # URL settings
-url: "https://klise.now.sh" #
+url: "https://hsodaci.github.io" #
 baseurl:
 permalink: /:title/
 google_analytics: # leave it blank if not wish
@@ -46,17 +49,6 @@ defaults:
     values:
       layout: post
       comments: false
-
-# Jekyll Compose default front matter
-jekyll_compose:
-  post_default_front_matter:
-    modified:
-    tags: []
-    description:
-  draft_default_front_matter:
-    modified:
-    tags: []
-    description:
 
 # Homepage limit posts
 number_of_posts: 5
@@ -84,8 +76,8 @@ exclude:
   - klise-*.gem
   - klise.gemspec
 
-# Plugins
+# Plugins (kept to GitHub Pages' supported plugin list, see
+# https://pages.github.com/versions/)
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-postfiles
