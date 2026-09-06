@@ -326,10 +326,17 @@
 }
 
 // Contact form
-.contact-lead {
+//
+// Specificity note: .page-content > p (in _post.scss) sets margin: 0 with
+// higher specificity (class + type) than a bare .contact-lead class, which
+// silently killed the "margin: 0 auto" centering below (text stayed
+// text-align: center, but inside a box that was no longer itself centered).
+// The nested selector here matches that specificity to win reliably.
+.page-content > p.contact-lead {
   text-align: center;
   max-width: 480px;
   margin: 0 auto 2.5em;
+  padding: 0;
   opacity: 0.85;
   line-height: 1.688;
 }
