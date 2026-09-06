@@ -133,12 +133,18 @@
   // Hidden by default; revealed on hover or when the <details> is opened
   // (via click/tap or keyboard), so desktop gets hover-to-open while
   // touch devices keep working via the native details/summary toggle.
+  // No margin-top gap here on purpose: the menu is absolutely positioned
+  // (out of the parent <details>'s layout flow), so a gap between it and
+  // the summary would be empty space belonging to whatever's behind the
+  // menu - moving the mouse through it would drop :hover before reaching
+  // the menu at all. padding-top fakes the same visual spacing from
+  // inside the menu's own (still-hoverable) box instead.
   .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    margin-top: 6px;
+    margin-top: 0;
     padding: 6px 0;
     min-width: 140px;
     background-color: $white;
@@ -162,9 +168,14 @@
     }
   }
 
+  // Chromium hides non-open <details> content via content-visibility:
+  // hidden internally (not just display: none), which skips rendering
+  // and hit-testing regardless of a display override - so that has to be
+  // undone explicitly too, or hovering visually does nothing.
   .dropdown:hover > .dropdown-menu,
   .dropdown[open] > .dropdown-menu {
     display: block;
+    content-visibility: visible;
   }
 
   @include media-query($on-mobile) {
