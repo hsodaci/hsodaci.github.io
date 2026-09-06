@@ -350,6 +350,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
+  text-align: center;
 
   .field {
     display: flex;
@@ -376,6 +377,7 @@
     border: 1px solid $light;
     border-radius: 8px;
     padding: 10px 12px;
+    text-align: center;
     resize: vertical;
     box-sizing: border-box;
 
