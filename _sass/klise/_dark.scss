@@ -246,6 +246,10 @@ body[data-theme="dark"] {
   }
 
   // Contact form
+  .contact-card {
+    border-color: $dark-light;
+  }
+
   .contact-form {
     input[type="text"],
     input[type="email"],
@@ -253,6 +257,10 @@ body[data-theme="dark"] {
       color: $dark-text-base-color;
       background-color: $dark-light;
       border-color: $dark-smoke;
+
+      &::placeholder {
+        color: $dark-gray;
+      }
 
       &:focus {
         border-color: $dark-text-link-blue;
