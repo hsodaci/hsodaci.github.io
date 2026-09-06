@@ -222,6 +222,7 @@
 
     a {
       color: $text-base-color;
+      background-color: $light;
       text-decoration: none;
       opacity: 0.75;
       padding: 4px 8px;
@@ -233,6 +234,8 @@
 
       &:hover {
         opacity: 1;
+        color: $text-link-blue;
+        border-color: $text-link-blue;
       }
     }
   }

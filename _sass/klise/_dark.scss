@@ -239,7 +239,13 @@ body[data-theme="dark"] {
   // Author links (email/github/linkedin/orcid/resume buttons)
   .author-links a {
     color: $dark-text-base-color;
+    background-color: $dark-light;
     border-color: $dark-smoke;
+
+    &:hover {
+      color: $dark-text-link-blue;
+      border-color: $dark-text-link-blue;
+    }
   }
 
   .search-article {
