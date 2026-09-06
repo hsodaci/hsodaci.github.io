@@ -236,6 +236,12 @@ body[data-theme="dark"] {
     }
   }  
 
+  // Author links (email/github/linkedin/orcid/resume buttons)
+  .author-links a {
+    color: $dark-text-base-color;
+    border-color: $dark-smoke;
+  }
+
   .search-article {
     input[type="search"] {
       color: $dark-text-base-color;
