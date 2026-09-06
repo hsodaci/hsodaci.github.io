@@ -6,7 +6,7 @@ excerpt: Get in touch with Hande Sodacı.
 comments: false
 ---
 
-<p class="contact-lead">Have a question, an opportunity, or just want to say hi? Send a message below and it'll land directly in my inbox.</p>
+<p class="contact-lead">Have a question, an opportunity, or just want to say hi? Send a message below and I will get back to you as soon as possible.</p>
 
 <div class="contact-card">
   <form action="https://formsubmit.co/{{ site.author.email }}" method="POST" class="contact-form">
