@@ -7,8 +7,14 @@
   external: false
 
 - title: projects
-  url: /projects/
   external: false
+  children:
+    - title: project1
+      url: /projects/project1/
+    - title: project2
+      url: /projects/project2/
+    - title: project3
+      url: /projects/project3/
 
 - title: contact
   url: /contact/

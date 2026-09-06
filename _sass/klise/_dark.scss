@@ -136,6 +136,16 @@ body[data-theme="dark"] {
       .menu-link {
         color: $dark-white;
       }
+
+      .dropdown-menu {
+        background-color: $dark-black;
+        border-color: $dark-light;
+
+        .dropdown-item {
+          color: $dark-white;
+        }
+      }
+
       @include media-query($on-mobile) {
         background-color: $dark-black;
         border-color: $dark-light;
@@ -148,6 +158,10 @@ body[data-theme="dark"] {
 
         input[type="checkbox"]:checked ~ .trigger {
           background: $dark-black;
+        }
+
+        .dropdown-menu {
+          background-color: transparent;
         }
       }
     }

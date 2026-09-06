@@ -164,10 +164,23 @@
         {%- assign url = page.url -%}
         {%- assign menus = site.data.menus -%}
         {%- if menus %}
-          {%- for menu in menus -%} 
-            {%- if url == menu.url -%}
+          {%- for menu in menus -%}
+            {%- if menu.children -%}
+              {%- assign parent_active = false -%}
+              {%- for child in menu.children -%}
+                {%- if url == child.url -%}{%- assign parent_active = true -%}{%- endif -%}
+              {%- endfor -%}
+              <details class="menu-link dropdown">
+                <summary class="dropdown-toggle {% if parent_active %}active{% endif %}">{{ menu.title }}</summary>
+                <div class="dropdown-menu">
+                  {%- for child in menu.children -%}
+                    <a class="dropdown-item {% if url == child.url %}active{% endif %}" href="{{ child.url }}">{{ child.title }}</a>
+                  {%- endfor -%}
+                </div>
+              </details>
+            {%- elsif url == menu.url -%}
               <a class="menu-link active" href="{{ menu.url }}">{{ menu.title }}</a>
-            {%- else -%} 
+            {%- else -%}
               {%- if menu.external -%}
                 <a
                   class="menu-link"
@@ -178,8 +191,8 @@
                 >
               {%- else -%}
                 <a class="menu-link" href="{{ menu.url }}">{{ menu.title }}</a>
-              {%- endif -%} 
-            {%- endif -%} 
+              {%- endif -%}
+            {%- endif -%}
           {%- endfor -%}
         {%- else -%}
           <a class="menu-link {% if url == '/' %}active{% endif %}" href="/">home</a>
