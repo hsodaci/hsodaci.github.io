@@ -43,6 +43,8 @@ figure {
 
 // Basic styling
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
@@ -275,6 +277,10 @@ blockquote {
 
 // Wrapper
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  width: 100%;
   max-width: -webkit-calc(#{$narrow-size} - (#{$spacing-full} * 2));
   max-width: calc(#{$narrow-size} - (#{$spacing-full} * 2));
   position: relative;
@@ -282,6 +288,7 @@ blockquote {
   margin-left: auto;
   padding-right: $spacing-full;
   padding-left: $spacing-full;
+  box-sizing: border-box;
   @extend %clearfix;
 
   @include media-query($on-mobile) {
