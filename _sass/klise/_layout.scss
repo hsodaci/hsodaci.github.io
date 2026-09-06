@@ -1,6 +1,8 @@
 // Navbar
 .navbar {
   height: auto;
+  width: 100%;
+  box-sizing: border-box;
   max-width: calc(#{$wide-size} - (#{$spacing-full} * 2));
   max-width: -webkit-calc(#{$wide-size} - (#{$spacing-full} * 2));
   position: relative;
