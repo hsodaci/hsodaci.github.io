@@ -14,4 +14,4 @@ I'm Hande Sodacı, a behavioral researcher with a PhD in Cognitive Psychology fr
 
 **Where I'm headed.** I'm looking for behavioral research roles at the intersection of human–AI interaction and experimental design — research that shapes how AI systems and robots actually communicate with people, grounded in the same rigor as academic work but moving at a faster pace.
 
-You can see my research and past projects under [projects](/projects/project1/) in the nav above, and my full background on the [resume](/resume/) page. Feel free to [get in touch](/contact/).
+You can see my research and past projects under [projects](/projects/project1/) in the nav above, and my full background on my [resume](/assets/HS_resume_202609.pdf). Feel free to [get in touch](/contact/).
