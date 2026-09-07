@@ -9,7 +9,7 @@ comments: false
 <p class="contact-lead">Have a question, an opportunity, or just want to say hi? Send a message below and I will get back to you as soon as possible.</p>
 
 <div class="contact-card">
-  <form action="https://formsubmit.co/{{ site.author.email }}" method="POST" class="contact-form">
+  <form action="https://formsubmit.co/handesodaci@gmail.com" method="POST" class="contact-form">
     <!-- Plain-text email notification, no fancy template -->
     <input type="hidden" name="_subject" value="New message from hsodaci.github.io">
     <!-- Honeypot field to cut down on bot spam -->
@@ -73,9 +73,9 @@ comments: false
 
 <!--
   This form uses FormSubmit (https://formsubmit.co) to relay submissions to
-  {{ site.author.email }} without needing a backend server. The FIRST
+  handesodaci@gmail.com without needing a backend server. The FIRST
   submission after this page goes live will trigger a one-time confirmation
-  email from FormSubmit to {{ site.author.email }} — you must click the
+  email from FormSubmit to handesodaci@gmail.com — you must click the
   activation link in that email before the form will actually deliver
   messages.
 -->
