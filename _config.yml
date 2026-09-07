@@ -12,11 +12,11 @@ mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
-  name: Hande Sodacı # author name
+  name: Hande Sodacı, PhD # author name
   bio: >- # tell to the world
-    Cognitive psychologist & HRI researcher. PhD in Psychology (Koç Uni,
-    Istanbul). 10+ years of experience designing controlled interaction
-    studies and analyzing trial-level data.
+    Cognitive psychologist & HRI researcher. 10+ years of experience
+    designing controlled interaction studies and analyzing trial-level
+    data.
   username: hsodaci # general username
   github: hsodaci # github username
   linkedin: hsodaci # linkedin username (linkedin.com/in/USERNAME)
