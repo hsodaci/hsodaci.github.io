@@ -1,14 +1,20 @@
 ---
-title: Project title one
+title: Speaker adaptation to robotic listeners
 permalink: /projects/project1/
 layout: page
-excerpt: Placeholder project entry.
+excerpt: Dissertation research on how speakers adapt their level of detail when talking to robots versus humans.
 comments: false
 ---
 
-<!-- TODO: replace this placeholder with a real project. -->
+<!-- TODO: expand with figures, a link to the paper/poster once published, and any demo material. -->
 
-*(TODO: 1-2 sentence summary — what question you asked, what you built/ran, and what you found. e.g. "Examined how speakers adjust disfluency and repair strategies when talking to a robot vs. a human confederate, using a Wizard-of-Oz dialogue paradigm with 60 participants.")*
+Dissertation research at Koç University examining how speakers adapt the way they communicate — level of detail, timing, repair strategies — when their listener is a robot instead of a human. Led the project end-to-end: study design, robot interaction programming, data collection, analysis, and dissemination.
 
-**Tools/methods:** *(TODO — e.g. Python, R, PsychoPy, eye-tracking, statistical modeling)*
-**Links:** *(TODO — paper, poster, code repo, demo video)*
+- Designed and ran controlled interactive experiments with **160 participants** and **6,080 trials**.
+- Modeled trial-level data with **mixed-effects and cumulative link (ordinal) models** to detect real-time adaptation in speakers' level of detail as they talked to human versus robotic listeners.
+- Tested how people respond to system feedback and interaction failures, establishing several effects as genuine nulls through **equivalence testing** rather than treating non-significance as inconclusive.
+- Built a **reproducible R pipeline** covering data management through modeling and reporting.
+
+**Tools/methods:** R (mixed-effects & cumulative link models, equivalence testing), Choregraphe (NAO robot programming), reproducible analysis pipelines
+**Presented at:** IEEE HRI, CogSci, APS
+**Links:** *(TODO — paper/poster links once available)*

@@ -1,10 +1,10 @@
 # Site settings
-title: Hande Sodacı # site title
+title: Hande Sodacı, PhD # site title
 description: >- # site description
-  Portfolio of Hande Sodacı, PhD — human-robot interaction and psycholinguistics
-  researcher moving into UX research, HCI, and data science. Case studies,
-  projects, and writing from a dissertation on how people adapt communication
-  to AI partners.
+  Portfolio of Hande Sodacı, PhD — behavioral researcher working on
+  human–AI interaction and experimental design. Research, projects, and
+  writing on how people adapt communication to conversational agents and
+  robots.
 lang: en-US # default lang
 timezone: Europe/Istanbul # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
@@ -14,9 +14,9 @@ mode: dark # default theme "dark" | "light"
 author:
   name: Hande Sodacı # author name
   bio: >- # tell to the world
-    PhD in Psychology (Koç University, 2026). Researching human-robot
-    interaction and psycholinguistics — now building UX research and data
-    science projects.
+    Behavioral Researcher — Human–AI Interaction — Experimental Design.
+    PhD in Cognitive Psychology, Koç University. 10+ years designing
+    controlled interaction studies and analyzing trial-level data.
   username: hsodaci # general username
   github: hsodaci # github username
   linkedin: hsodaci # linkedin username (linkedin.com/in/USERNAME)
