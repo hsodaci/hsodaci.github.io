@@ -2,7 +2,7 @@
 title: Resume
 permalink: /resume/
 layout: page
-excerpt: Behavioral Researcher — Human–AI Interaction — Experimental Design. PhD in Cognitive Psychology, Koç University.
+excerpt: Cognitive Psychologist — Behavioral Scientist — Human–Robot Interaction Researcher. PhD in Cognitive Psychology, Koç University.
 comments: false
 ---
 

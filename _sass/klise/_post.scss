@@ -8,9 +8,9 @@
 
 // Post title
 .header {
-  // Shrunk 60% from the theme's original 7.8em/3em
-  margin-top: 3.12em;
-  margin-bottom: 1.2em;
+  // Shrunk further from the theme's original 7.8em/3em
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
 
   .tags {
     margin-left: 3px;
@@ -29,8 +29,8 @@
   .header-title {
     font-size: 2em;
     line-height: 1.2;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 4px;
+    margin-bottom: 8px;
 
     &.center {
       text-align: center;

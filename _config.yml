@@ -14,9 +14,9 @@ mode: dark # default theme "dark" | "light"
 author:
   name: Hande Sodacı # author name
   bio: >- # tell to the world
-    Behavioral Researcher — Human–AI Interaction — Experimental Design.
-    PhD in Cognitive Psychology, Koç University. 10+ years designing
-    controlled interaction studies and analyzing trial-level data.
+    Cognitive Psychologist — Behavioral Scientist — Human–Robot Interaction
+    Researcher. PhD in Cognitive Psychology, Koç University. 10+ years
+    designing controlled interaction studies and analyzing trial-level data.
   username: hsodaci # general username
   github: hsodaci # github username
   linkedin: hsodaci # linkedin username (linkedin.com/in/USERNAME)
