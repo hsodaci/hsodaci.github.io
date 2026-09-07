@@ -6,7 +6,7 @@ excerpt: Behavioral Researcher — Human–AI Interaction — Experimental Desig
 comments: false
 ---
 
-**[Download PDF resume](/assets/resume.pdf)**
+**[Download PDF resume](/assets/HS_resume_202609.pdf)**
 
 Istanbul, Turkey · [{{ site.author.email }}](mailto:{{ site.author.email }}) · [linkedin.com/in/hsodaci](https://linkedin.com/in/hsodaci) · [hsodaci.github.io](https://hsodaci.github.io)
 
