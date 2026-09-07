@@ -6,22 +6,41 @@ excerpt: A data pipeline for comparing Türkiye's 2023 and 2026 CEV Women's Euro
 comments: false
 ---
 
-**Filenin Sultanları** — Python · Web Scraping · Pandas · Sports Analytics
+<p class="pub-meta">Filenin Sultanları &middot; 2026</p>
+
+<div class="pub-tags">
+  <span class="pub-tag">Python</span>
+  <span class="pub-tag">Web Scraping</span>
+  <span class="pub-tag">Pandas</span>
+  <span class="pub-tag">Sports Analytics</span>
+</div>
 
 Türkiye won the CEV Women's EuroVolley Championship in both 2023 and 2026. This project builds a clean player- and team-level dataset to compare the two championship runs and study how Türkiye's statistical profile changed across three years.
 
-#### Project
+<div class="pub-actions">
+  <a class="pub-btn pub-doi" href="#">GitHub Repository</a>
+</div>
 
-I collected official match statistics directly from CEV's public match-report system. The pipeline covers:
+<!-- TODO: the GitHub link above is a placeholder — swap in the real repo URL. -->
+
+#### Situation
+
+Türkiye won the CEV Women's EuroVolley Championship in both 2023 and 2026, but no clean, comparable dataset existed to study how the team's statistical profile changed between the two title runs.
+
+#### Task
+
+Build a player- and team-level dataset from CEV's official public match-report system that makes the 2023 and 2026 championships directly comparable, covering serving, reception, attacking, blocking, scoring, and set participation.
+
+#### Action
+
+Collected official match statistics directly from CEV's public match-report system across:
 
 - 2 tournaments
 - 152 matches
 - 18 Türkiye matches
 - player-level and team-level statistics
 
-The data includes serving, reception, attacking, blocking, scoring, and set participation.
-
-#### Pipeline
+Built a two-notebook pipeline:
 
 ```text
 CEV Match Reports
@@ -36,51 +55,22 @@ Team-level dataset
 Statistical analysis
 ```
 
-The project uses two notebooks:
-
 ```text
 01_scrape_eurovolley_data.ipynb
 02_clean_eurovolley_data.ipynb
 ```
 
-#### Data cleaning
+The cleaning step handled several issues in the original CEV data: separating team totals from player rows, correctly converting placeholder values, distinguishing missing percentages from true 0%, separating set participation from rotation position, standardizing player and team names, converting names to ASCII, and validating results against known matches.
 
-The cleaning process handles several issues in the original CEV data:
+#### Result
 
-- separates team totals from player rows
-- converts placeholder values correctly
-- distinguishes missing percentages from true 0%
-- separates set participation from rotation position
-- standardizes player and team names
-- converts names to ASCII
-- validates results against known matches
-
-#### Output
+Two analysis-ready datasets:
 
 ```text
 eurovolley_2023_2026_players_clean.csv
 eurovolley_2023_2026_team_totals_clean.csv
 ```
 
-Both datasets are analysis-ready.
+Data collection and cleaning are complete; analysis is in progress. The next phase compares Türkiye's two title runs across attack efficiency, serve pressure, reception quality, blocking, error control, and player contribution — to identify which characteristics of Türkiye's championship performance were stable, changed over time, or depended on specific players.
 
-#### Next step
-
-The next phase compares Türkiye's two title runs across:
-
-- attack efficiency
-- serve pressure
-- reception quality
-- blocking
-- error control
-- player contribution
-
-The goal is to identify which characteristics of Türkiye's championship performance were stable, changed over time, or depended on specific players.
-
-#### Status
-
-- Data collection: **Complete**
-- Data cleaning: **Complete**
-- Analysis: **In progress**
-
-**Links:** *(TODO — add the real GitHub repository URL; the one in the source draft was a placeholder)*
+<p class="pub-meta">Data collection: complete &middot; Data cleaning: complete &middot; Analysis: in progress</p>
