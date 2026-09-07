@@ -9,6 +9,7 @@ comments: false
 <div class="pub-list">
 
   <article class="pub-card">
+    <span class="pub-award">🏅 Honorable Mention Award</span>
     <h3 class="pub-title">Real-Time Speech Adaptation to Human and Robot Audiences</h3>
     <p class="pub-meta">Companion Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction (HRI Companion '26) · 392–396 · 2026</p>
     <p class="pub-authors"><strong>Sodacı, H.</strong>, &amp; Küntay, A. C.</p>
@@ -20,7 +21,7 @@ comments: false
       <span class="pub-tag">Task-based interaction</span>
     </div>
     <div class="pub-actions">
-      <a class="pub-btn" href="https://doi.org/10.1145/3776734.3794422" target="_blank" rel="noopener">doi</a>
+      <a class="pub-btn pub-doi" href="https://doi.org/10.1145/3776734.3794422" target="_blank" rel="noopener">doi</a>
       <details class="pub-cite">
         <summary class="pub-btn">Cite this</summary>
         <pre>Sodacı, H., &amp; Küntay, A. C. (2026). Real-time speech adaptation to
@@ -44,7 +45,7 @@ International Conference on Human-Robot Interaction, HRI Companion '26,
       <span class="pub-tag">Vocabulary</span>
     </div>
     <div class="pub-actions">
-      <a class="pub-btn" href="https://doi.org/10.1111/jcal.12510" target="_blank" rel="noopener">doi</a>
+      <a class="pub-btn pub-doi" href="https://doi.org/10.1111/jcal.12510" target="_blank" rel="noopener">doi</a>
       <details class="pub-cite">
         <summary class="pub-btn">Cite this</summary>
         <pre>Leeuwestein, H., Barking, M., Sodacı, H., Oudgenoeg-Paz, O.,

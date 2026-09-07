@@ -35,8 +35,13 @@ $dark-smoke: #4a4d56;
 $dark-gray: #767f87;
 
 // Width of the content area
-$wide-size: 890px;
-$narrow-size: 720px;
+// Both bumped 50% from the theme's original 890px/720px for a wider
+// reading column on desktop. These are max-width caps only - on mobile
+// the containing block (the viewport) is already narrower than either
+// value, so the box just fills the available width as before; nothing
+// here can push content wider than the screen.
+$wide-size: 1335px;
+$narrow-size: 1080px;
 
 // Padding unit
 $spacing-full: 30px;

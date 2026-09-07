@@ -658,6 +658,18 @@
   }
 }
 
+.pub-award {
+  display: inline-block;
+  font-size: 0.78em;
+  font-weight: $bold-weight;
+  padding: 4px 10px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  color: #8a5a00;
+  background-color: rgba(230, 162, 0, 0.15);
+  border: 1px solid rgba(230, 162, 0, 0.5);
+}
+
 .pub-title {
   font-size: 1.05em;
   line-height: 1.4;
@@ -705,21 +717,45 @@
   gap: 10px;
   font-size: $small-font-size;
 
-  // Shared button look for the doi link and the "Cite this" summary toggle
+  // Shared button shape for the doi link and the "Cite this" summary
+  // toggle; each gets its own color treatment below so they read as two
+  // distinct actions.
   .pub-btn {
     display: inline-block;
     cursor: pointer;
-    color: $text-base-color;
     text-decoration: none;
     padding: 6px 14px;
-    border: 1px solid $light;
     border-radius: 999px;
+
+    // Remove the generic external-link arrow this theme adds to every
+    // target="_blank" link inside .page-content - not wanted on the
+    // doi button.
+    &[target="_blank"]::after {
+      content: none !important;
+    }
+  }
+
+  // doi: outlined in the link-blue accent
+  .pub-doi {
+    color: $text-link-blue;
+    border: 1px solid $text-link-blue;
     opacity: 0.85;
 
     &:hover {
       opacity: 1;
-      color: $text-link-blue;
-      border-color: $text-link-blue;
+    }
+  }
+
+  // Cite this: solid, matching the site's other primary buttons
+  // (contact form submit, etc.)
+  summary.pub-btn {
+    color: $white;
+    background-color: $black;
+    border: 1px solid $black;
+    opacity: 0.9;
+
+    &:hover {
+      opacity: 1;
     }
   }
 
