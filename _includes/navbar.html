@@ -170,14 +170,14 @@
               {%- for child in menu.children -%}
                 {%- if url == child.url -%}{%- assign parent_active = true -%}{%- endif -%}
               {%- endfor -%}
-              <details class="menu-link dropdown">
-                <summary class="dropdown-toggle {% if parent_active %}active{% endif %}">{{ menu.title }}</summary>
+              <div class="menu-link dropdown">
+                <span class="dropdown-toggle {% if parent_active %}active{% endif %}" tabindex="0">{{ menu.title }}</span>
                 <div class="dropdown-menu">
                   {%- for child in menu.children -%}
                     <a class="dropdown-item {% if url == child.url %}active{% endif %}" href="{{ child.url }}">{{ child.title }}</a>
                   {%- endfor -%}
                 </div>
-              </details>
+              </div>
             {%- elsif url == menu.url -%}
               <a class="menu-link active" href="{{ menu.url }}">{{ menu.title }}</a>
             {%- else -%}
