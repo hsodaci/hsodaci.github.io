@@ -6,8 +6,7 @@ excerpt: Behavioral Researcher — Human–AI Interaction — Experimental Desig
 comments: false
 ---
 
-<!-- TODO: once you have a compiled PDF of technology_resume_onepage-2.tex, upload it to assets/resume.pdf and uncomment the line below. -->
-<!-- **[Download PDF resume](/assets/resume.pdf)** -->
+**[Download PDF resume](/assets/resume.pdf)**
 
 Istanbul, Turkey · [{{ site.author.email }}](mailto:{{ site.author.email }}) · [linkedin.com/in/hsodaci](https://linkedin.com/in/hsodaci) · [hsodaci.github.io](https://hsodaci.github.io)
 
