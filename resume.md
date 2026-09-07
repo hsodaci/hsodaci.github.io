@@ -55,4 +55,6 @@ Behavioral researcher with a PhD in Cognitive Psychology and 10+ years of experi
 - Holland Scholarship, Dutch Ministry of Education, Culture and Science — 2016 – 2018
 - Higher Education Scholarship, Turkish Ministry of Youth and Sports — top 100 nationally, university entrance exam — 2011 – 2016
 
+See the full publication list on the [academia](/academia/) page.
+
 <!-- References intentionally left off this public page; happy to share on request via the contact form. -->

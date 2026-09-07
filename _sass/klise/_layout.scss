@@ -638,3 +638,86 @@
     background-color: rgba(128, 128, 128, 0.1);
   }
 }
+
+// Publication list (academia page)
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 1.5em;
+}
+
+.pub-card {
+  padding-bottom: 28px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $light;
+  }
+}
+
+.pub-title {
+  font-size: 1.05em;
+  line-height: 1.4;
+  margin-bottom: 6px;
+  color: $black;
+}
+
+.pub-meta {
+  font-size: $small-font-size;
+  color: $gray;
+  margin-bottom: 4px;
+}
+
+.pub-authors {
+  font-size: $small-font-size;
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+
+.pub-tags {
+  margin-bottom: 12px;
+
+  .pub-tag {
+    display: inline-block;
+    font-size: 0.78em;
+    padding: 3px 9px;
+    margin: 0 6px 6px 0;
+    border-radius: 999px;
+    border: 1px solid $light;
+    color: $gray;
+  }
+}
+
+.pub-actions {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: $small-font-size;
+
+  .pub-link {
+    color: $text-link-blue;
+  }
+
+  .pub-cite {
+    summary {
+      cursor: pointer;
+      color: $text-link-blue;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+
+    pre {
+      margin-top: 10px;
+      padding: 12px 14px;
+      font-size: 0.82em;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      background-color: rgba(128, 128, 128, 0.1);
+      border-radius: 6px;
+    }
+  }
+}

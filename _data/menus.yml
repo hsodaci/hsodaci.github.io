@@ -16,6 +16,10 @@
     - title: TÜBİTAK 1003
       url: /projects/project3/
 
+- title: academia
+  url: /academia/
+  external: false
+
 - title: contact
   url: /contact/
   external: false

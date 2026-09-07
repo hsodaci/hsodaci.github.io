@@ -312,4 +312,41 @@ body[data-theme="dark"] {
       background-color: $dark-white;
     }
   }
+
+  // Publication list (academia page)
+  .pub-card {
+    &:not(:last-child) {
+      border-color: $dark-light;
+    }
+  }
+
+  .pub-title {
+    color: $dark-white;
+  }
+
+  .pub-meta {
+    color: $dark-gray;
+  }
+
+  .pub-tags .pub-tag {
+    border-color: $dark-smoke;
+    color: $dark-gray;
+  }
+
+  .pub-actions {
+    .pub-link {
+      color: $dark-text-link-blue;
+    }
+
+    .pub-cite {
+      summary {
+        color: $dark-text-link-blue;
+      }
+
+      pre {
+        color: $dark-text-base-color;
+        background-color: rgba(255, 255, 255, 0.06);
+      }
+    }
+  }
 }
