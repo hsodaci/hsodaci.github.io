@@ -658,12 +658,24 @@
   }
 }
 
+.pub-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+
+  @include media-query($on-mobile) {
+    flex-wrap: wrap;
+  }
+}
+
 .pub-award {
-  display: inline-block;
+  flex-shrink: 0;
+  white-space: nowrap;
   font-size: 0.78em;
   font-weight: $bold-weight;
   padding: 4px 10px;
-  margin-bottom: 10px;
   border-radius: 999px;
   color: #8a5a00;
   background-color: rgba(230, 162, 0, 0.15);
@@ -675,6 +687,12 @@
   line-height: 1.4;
   margin-bottom: 6px;
   color: $black;
+}
+
+// Inside .pub-header (title + award badge row) the header's own
+// margin-bottom already provides the spacing below.
+.pub-header .pub-title {
+  margin-bottom: 0;
 }
 
 .pub-meta {

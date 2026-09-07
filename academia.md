@@ -9,8 +9,10 @@ comments: false
 <div class="pub-list">
 
   <article class="pub-card">
-    <span class="pub-award">🏅 Honorable Mention Award</span>
-    <h3 class="pub-title">Real-Time Speech Adaptation to Human and Robot Audiences</h3>
+    <div class="pub-header">
+      <h3 class="pub-title">Real-Time Speech Adaptation to Human and Robot Audiences</h3>
+      <span class="pub-award">🏅 Honorable Mention Award</span>
+    </div>
     <p class="pub-meta">Companion Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction (HRI Companion '26) · 392–396 · 2026</p>
     <p class="pub-authors"><strong>Sodacı, H.</strong>, &amp; Küntay, A. C.</p>
     <p class="pub-abstract">Audience design (adapting communication to an audience's needs and shared knowledge) poses unique challenges in human-robot interaction (HRI), where speakers lack prior experience with robots and must rely on real-time communicative cues. In a word-guessing game, participants described words to either a robot or a human audience, who guessed the words with a 25% error rate. Descriptions were coded for the number of semantic details (distinct meaning-relevant units). Participants produced more semantic details for robots than humans, with a marginal trend suggesting speakers reduced details for humans but maintained elaboration for robots during consistent success. This asymmetry hints at persistent assumptions about robot competence that behavioral success may not override.</p>
