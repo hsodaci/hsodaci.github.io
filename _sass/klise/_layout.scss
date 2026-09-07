@@ -648,10 +648,13 @@
 }
 
 .pub-card {
-  padding-bottom: 28px;
+  padding: 24px;
+  border: 1px solid $light;
+  border-radius: 10px;
+  box-sizing: border-box;
 
-  &:not(:last-child) {
-    border-bottom: 1px solid $light;
+  @include media-query($on-mobile) {
+    padding: 18px;
   }
 }
 
@@ -671,11 +674,18 @@
 .pub-authors {
   font-size: $small-font-size;
   opacity: 0.85;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.pub-abstract {
+  font-size: $small-font-size;
+  line-height: 1.688;
+  opacity: 0.85;
+  margin-bottom: 14px;
 }
 
 .pub-tags {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 
   .pub-tag {
     display: inline-block;
@@ -692,17 +702,29 @@
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 10px;
   font-size: $small-font-size;
 
-  .pub-link {
-    color: $text-link-blue;
+  // Shared button look for the doi link and the "Cite this" summary toggle
+  .pub-btn {
+    display: inline-block;
+    cursor: pointer;
+    color: $text-base-color;
+    text-decoration: none;
+    padding: 6px 14px;
+    border: 1px solid $light;
+    border-radius: 999px;
+    opacity: 0.85;
+
+    &:hover {
+      opacity: 1;
+      color: $text-link-blue;
+      border-color: $text-link-blue;
+    }
   }
 
   .pub-cite {
-    summary {
-      cursor: pointer;
-      color: $text-link-blue;
+    summary.pub-btn {
       list-style: none;
 
       &::-webkit-details-marker {
