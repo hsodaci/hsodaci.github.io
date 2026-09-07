@@ -243,16 +243,26 @@
       }
     }
 
+    // Shrink-wrap to the "projects" label instead of the full-width row
+    // the generic .menu-link rule above gives it, so the flyout below
+    // can anchor to the word itself rather than the edge of the screen.
+    &.dropdown {
+      display: inline-block;
+      width: auto;
+    }
+
     .dropdown-menu {
-      position: static;
-      margin-top: 4px;
-      padding: 0;
-      border: none;
-      box-shadow: none;
-      background-color: transparent;
+      top: 0;
+      left: 100%;
+      right: auto;
+      margin-top: 0;
+      margin-left: 8px;
+      min-width: 0;
+      max-width: 38vw;
 
       .dropdown-item {
-        padding: 4px 0;
+        white-space: normal;
+        padding: 4px 14px;
         font-size: 0.9em;
       }
     }
