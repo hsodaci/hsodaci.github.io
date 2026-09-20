@@ -49,7 +49,7 @@ comments: false
 
 <div class="case-insight">
   <div class="case-insight-label">💡 What this means in practice</div>
-  <p>Children liked the bilingual robot more, even though they learned less from it. Hearing information in both languages may have been confusing or distracting, which may explain the difference in learning with a bilingual or Dutch-only robot. Testing robot preference and learning performance separately, rather than assuming a well-liked feature is also an effective one, is the only way to answer this question.</p>
+  <p>Children liked the bilingual robot more, even though they learned less from it — hearing information in both languages may have been confusing or distracting, which could explain why learning differed between the two conditions. That gap is exactly why preference and performance need to be measured separately: assuming a well-liked feature is also an effective one would have missed it entirely.</p>
 </div>
 
 <div class="pub-actions">
