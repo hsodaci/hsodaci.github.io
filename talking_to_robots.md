@@ -85,5 +85,3 @@ comments: false
 <div class="pub-actions">
   <a class="pub-btn pub-doi" href="/academia/">Full write-ups &amp; citations</a>
 </div>
-
-**Tools:** R, custom behavioral coding, reproducible analysis
