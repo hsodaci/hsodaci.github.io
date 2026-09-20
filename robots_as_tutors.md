@@ -9,12 +9,11 @@ comments: false
 <p class="pub-meta">Robot-assisted language learning research &middot; Tilburg &amp; Utrecht Universities &middot; 2017–2018</p>
 
 <div class="pub-tags">
-  <span class="pub-tag">Field Experiments</span>
+  <span class="pub-tag">A/B Testing</span>
   <span class="pub-tag">Bilingual Education</span>
-  <span class="pub-tag">Mixed Models</span>
+  <span class="pub-tag">Mixed-Effects Models</span>
   <span class="pub-tag">R</span>
   <span class="pub-tag">Multi-Site Collaboration</span>
-  <span class="pub-tag">Cross-Functional Teamwork</span>
 </div>
 
 <div class="case-block">
@@ -29,7 +28,7 @@ comments: false
 
 <div class="case-block">
   <div class="case-block-label">🤝 My role</div>
-  <p>This project spanned four universities in the Netherlands. I took part in the whole process: designing the experiment, preparing the gamified lesson materials, building the lesson into the robot, running early tests, and analyzing the data.</p>
+  <p>This project spanned Tilburg and Utrecht Universities in the Netherlands. I took part in several critical stages of the project, including experimental design, developing the gamified lesson materials, programming the lesson into the robot, pilot testing, and data analysis.</p>
 </div>
 
 <div class="case-block">
