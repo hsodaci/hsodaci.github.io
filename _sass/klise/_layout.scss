@@ -811,21 +811,22 @@
 // Case-study components (used on the "Talking to Robots" project page)
 .case-block {
   margin: 1.8em 0;
-  padding-left: 16px;
-  border-left: 3px solid $light;
+  padding: 14px 16px;
+  border-left: 3px solid $text-link-blue;
+  background-color: rgba(0, 63, 255, 0.05);
+  border-radius: 0 8px 8px 0;
 
   p {
-    opacity: 0.85;
+    opacity: 0.9;
+    margin: 0;
   }
 }
 
 .case-block-label {
   font-weight: $bold-weight;
-  font-size: $small-font-size;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  color: $gray;
-  margin-bottom: 4px;
+  font-size: 1em;
+  color: $text-link-blue;
+  margin-bottom: 6px;
 }
 
 .case-step {

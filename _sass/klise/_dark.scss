@@ -361,11 +361,12 @@ body[data-theme="dark"] {
 
   // Case-study components
   .case-block {
-    border-color: $dark-light;
+    border-color: $dark-text-link-blue;
+    background-color: rgba(255, 82, 119, 0.08);
   }
 
   .case-block-label {
-    color: $dark-gray;
+    color: $dark-text-link-blue;
   }
 
   .case-step {
