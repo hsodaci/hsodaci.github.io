@@ -909,3 +909,75 @@
   color: #8a5a00;
   margin-bottom: 8px;
 }
+
+// Human vs. robot comparison chip (Test 1)
+.vs-compare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 16px 0;
+
+  @include media-query($on-mobile) {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.vs-chip {
+  padding: 8px 18px;
+  border: 1px solid $light;
+  border-radius: 999px;
+  font-weight: $bold-weight;
+  font-size: 0.9em;
+}
+
+.vs-versus {
+  font-size: 0.75em;
+  font-weight: $bold-weight;
+  color: $gray;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// 2x2 condition grid (Test 2)
+.matrix-2x2 {
+  display: grid;
+  grid-template-columns: minmax(90px, auto) repeat(2, 1fr);
+  gap: 6px;
+  margin: 16px 0;
+
+  @include media-query($on-mobile) {
+    grid-template-columns: minmax(60px, auto) repeat(2, 1fr);
+    font-size: 0.85em;
+  }
+}
+
+.matrix-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 6px;
+  border-radius: 6px;
+  min-height: 40px;
+  background-color: rgba(128, 128, 128, 0.08);
+  font-size: 0.85em;
+}
+
+.matrix-corner {
+  background-color: transparent;
+}
+
+.matrix-head {
+  font-weight: $bold-weight;
+  background-color: transparent;
+  font-size: 0.8em;
+}
+
+.matrix-caption {
+  font-size: $small-font-size;
+  color: $gray;
+  text-align: center;
+  margin-top: -6px;
+}

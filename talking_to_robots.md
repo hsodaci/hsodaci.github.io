@@ -6,7 +6,7 @@ excerpt: Two controlled experiments on communication and system design — refra
 comments: false
 ---
 
-<p class="pub-meta">PhD dissertation research on communication and robotic system design &middot; Koç University &middot; 2020–2026</p>
+<p class="pub-meta">PhD dissertation research on communication and system design &middot; Koç University &middot; 2020–2026</p>
 
 <div class="pub-tags">
   <span class="pub-tag">A/B Testing</span>
@@ -16,28 +16,34 @@ comments: false
   <span class="pub-tag">Experimental Design</span>
 </div>
 
-How much should a conversational partner explain itself before the person talking to it trusts it understood them? Too little, and people fill in the gaps themselves. Too much, and they stop listening.
-
-I spent several years studying this question through two controlled experiments, then decided to bring that experimental mindset into product work, where a finding can change something for real users in weeks instead of years.
+<div class="case-block">
+  <div class="case-block-label">The problem</div>
+  <p>How much should a conversational agent (a robot, a chatbot, a voice assistant) signal what it understands to the person using it? Too little, and people may give it more information than it needs. Too much, and the signal may not change their behavior at all. My research tested how people adjust the amount of detail they give a conversational agent based on the signals it sends about whether it understood them.</p>
+</div>
 
 <div class="case-block">
-  <div class="case-block-label">Why a robot, of all things</div>
-  <p>A robot is a strange kind of listener: not fully predictable like a person, not fully mechanical like a button. That uncertainty is exactly what makes it useful for studying calibration. People had to decide, in real time, how much to explain, with no script to fall back on.</p>
+  <div class="case-block-label">Why this was a useful test environment</div>
+  <p>A robot is a strange kind of listener — not predictable like a person, not mechanical like a button. People cannot rely on their usual social shortcuts to guess what it understands, so it becomes a clean setting for isolating which signals people actually rely on, versus which ones they just assume should matter.</p>
 </div>
 
 <div class="case-block">
   <div class="case-block-label">What I built to measure it</div>
-  <p>Before I could test anything, I needed a way to measure detail level precisely, not just sentence length. I built a custom metric, <strong>semantic detail density</strong>: the number of distinct, meaning-relevant pieces of information a person packed into a single response.</p>
+  <p>Before testing anything, I needed a sharper way to measure detail than sentence length could offer. So I built one: <strong>semantic detail density</strong>, a custom metric counting the distinct, meaning-relevant pieces of information packed into a single response. Describing a truck as <em>"a large vehicle used to carry stuff"</em> scores three points of detail.</p>
 </div>
 
 <div class="case-step">
   <div class="case-step-number">1</div>
   <div class="case-step-body">
     <h3 class="case-step-title">Does the listener change what people say?</h3>
-    <p>Participants described words to either a human or a robot listener, using prerecorded video so timing and accuracy stayed identical across both conditions and only who was listening varied.</p>
+    <p>Participants described words to a human listener or a robot listener — same timing, same accuracy, same errors, down to the second. The only thing that changed was who was listening.</p>
+    <div class="vs-compare">
+      <span class="vs-chip">Human listener</span>
+      <span class="vs-versus">vs</span>
+      <span class="vs-chip">Robot listener</span>
+    </div>
     <div class="case-result">
       <span class="case-result-label">Result</span>
-      People gave the robot more detail than the human, consistently, and didn't scale it back even after the robot got several answers right in a row. Task success alone wasn't a strong enough signal to change behavior. This became a published paper at ACM/IEEE HRI '26, which received an Honorable Mention.
+      People gave the robot more detail than the human, every time, and never dialed it back, even after the robot nailed several answers in a row. Success alone was not enough to earn a shorter explanation. This became a published paper at ACM/IEEE HRI '26, and won an Honorable Mention.
     </div>
   </div>
 </div>
@@ -46,17 +52,29 @@ I spent several years studying this question through two controlled experiments,
   <div class="case-step-number">2</div>
   <div class="case-step-body">
     <h3 class="case-step-title">Which signals actually change behavior?</h3>
-    <p>I tested two signals from the robot together instead of one at a time: whether it opened by claiming competence, and whether it gave specific praise on a correct guess.</p>
+    <p>Next, I tested two signals from the robot at once instead of one at a time: an upfront claim of competence, and specific positive feedback after a correct guess.</p>
+    <div class="matrix-2x2">
+      <div class="matrix-cell matrix-corner"></div>
+      <div class="matrix-cell matrix-head">No competence claim</div>
+      <div class="matrix-cell matrix-head">Competence claim</div>
+      <div class="matrix-cell matrix-head">Generic feedback</div>
+      <div class="matrix-cell">No effect</div>
+      <div class="matrix-cell">No effect</div>
+      <div class="matrix-cell matrix-head">Specific feedback</div>
+      <div class="matrix-cell">No effect</div>
+      <div class="matrix-cell">No effect</div>
+    </div>
+    <p class="matrix-caption">All four combinations tested — none moved the metric on their own.</p>
     <div class="case-result">
       <span class="case-result-label">Result</span>
-      Neither signal, nor the combination, moved the metric. But a signal we hadn't tested as a primary hypothesis did: when the robot explicitly said it failed and asked for another try, people immediately added more detail on the next response, then reverted back to baseline right after.
+      Neither moved the needle. Not the claim, not the feedback, not the combination. But one signal I had not even set out to test did: when the robot said flat out that it failed and asked for another try, people upped their detail instantly, then dropped straight back to baseline the moment after.
     </div>
   </div>
 </div>
 
 <div class="case-insight">
-  <div class="case-insight-label">The pattern underneath both results</div>
-  <p>Vague positive signals don't change behavior. Specific, actionable ones do. Telling someone something worked, or that the system is capable, doesn't reliably shift what they do next. Telling them precisely what didn't work, at a moment they can still act on it, does, immediately and measurably.</p>
+  <div class="case-insight-label">What this means in practice</div>
+  <p>People did not change how much detail they gave just because the robot sounded confident or had been successful before. They changed when the robot gave a signal about what had just happened in that exact interaction. In other words, immediate and relevant feedback mattered more than general signs of competence.</p>
 </div>
 
 <div class="pub-actions">
