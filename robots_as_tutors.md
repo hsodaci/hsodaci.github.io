@@ -44,12 +44,12 @@ comments: false
 
 <div class="case-result">
   <span class="case-result-label">Result</span>
-  Children learned more new words from the Dutch-only robot than from the robot that gave Turkish translations — the opposite of what the team expected going in. This held up both right after the lesson and a week later. Children who already knew more words, in either language, learned more overall, regardless of which robot taught them.
+  Children learned more new words from the Dutch-only robot than from the robot that gave Turkish translations — the opposite of what the team expected going in. This held up both right after the lesson and a week later. Children who already knew more words, in either language, learned more overall, regardless of which robot taught them. Most children said they liked the bilingual robot better, even though they learned less from it.
 </div>
 
 <div class="case-insight">
   <div class="case-insight-label">💡 What this means in practice</div>
-  <p>Children liked the bilingual robot more, even though they learned less from it. Hearing information in both languages may have been confusing or distracting, which may explain the difference in learning with a bilingual or Dutch-only robot.</p>
+  <p>Children liked the bilingual robot more, even though they learned less from it. Hearing information in both languages may have been confusing or distracting, which may explain the difference in learning with a bilingual or Dutch-only robot. Testing robot preference and learning performance separately, rather than assuming a well-liked feature is also an effective one, is the only way to answer this question.</p>
 </div>
 
 <div class="pub-actions">
