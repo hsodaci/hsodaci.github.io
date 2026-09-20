@@ -358,4 +358,43 @@ body[data-theme="dark"] {
       background-color: rgba(255, 255, 255, 0.06);
     }
   }
+
+  // Case-study components
+  .case-block {
+    border-color: $dark-light;
+  }
+
+  .case-block-label {
+    color: $dark-gray;
+  }
+
+  .case-step {
+    border-color: $dark-light;
+  }
+
+  .case-step-number {
+    background-color: $dark-white;
+    color: $dark-black;
+  }
+
+  .case-step-title {
+    color: $dark-white;
+  }
+
+  .case-result {
+    background-color: rgba(255, 82, 119, 0.1);
+  }
+
+  .case-result-label {
+    color: $dark-text-link-blue;
+  }
+
+  .case-insight {
+    border-color: rgba(255, 197, 66, 0.4);
+    background-color: rgba(255, 197, 66, 0.1);
+  }
+
+  .case-insight-label {
+    color: #ffcf6b;
+  }
 }

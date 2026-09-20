@@ -807,3 +807,105 @@
     }
   }
 }
+
+// Case-study components (used on the "Talking to Robots" project page)
+.case-block {
+  margin: 1.8em 0;
+  padding-left: 16px;
+  border-left: 3px solid $light;
+
+  p {
+    opacity: 0.85;
+  }
+}
+
+.case-block-label {
+  font-weight: $bold-weight;
+  font-size: $small-font-size;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: $gray;
+  margin-bottom: 4px;
+}
+
+.case-step {
+  display: flex;
+  gap: 16px;
+  margin: 2.2em 0;
+  padding: 20px;
+  border: 1px solid $light;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  @include media-query($on-mobile) {
+    padding: 16px;
+    gap: 12px;
+  }
+}
+
+.case-step-number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $black;
+  color: $white;
+  font-weight: $bold-weight;
+  font-size: 0.95em;
+}
+
+.case-step-body {
+  min-width: 0;
+
+  p {
+    opacity: 0.85;
+  }
+}
+
+.case-step-title {
+  font-size: 1em;
+  margin-bottom: 6px;
+  color: $black;
+}
+
+.case-result {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background-color: rgba(0, 63, 255, 0.06);
+  font-size: 0.95em;
+}
+
+.case-result-label {
+  display: block;
+  font-weight: $bold-weight;
+  font-size: $small-font-size;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: $text-link-blue;
+  margin-bottom: 4px;
+}
+
+.case-insight {
+  margin: 2.2em 0;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(230, 162, 0, 0.5);
+  background-color: rgba(230, 162, 0, 0.08);
+
+  p {
+    margin: 0;
+  }
+}
+
+.case-insight-label {
+  font-weight: $bold-weight;
+  font-size: $small-font-size;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #8a5a00;
+  margin-bottom: 8px;
+}
