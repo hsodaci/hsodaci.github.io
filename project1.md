@@ -1,5 +1,5 @@
 ---
-title: Speaker adaptation to robotic listeners
+title: Talking to Robots
 permalink: /projects/project1/
 layout: page
 excerpt: Dissertation research on how speakers adapt their level of detail when talking to robots versus humans.
