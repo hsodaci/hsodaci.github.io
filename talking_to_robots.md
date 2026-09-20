@@ -2,11 +2,11 @@
 title: Talking to Robots
 permalink: /projects/talking-to-robots/
 layout: page
-excerpt: Two controlled experiments on what actually changes user behavior — reframed as an A/B test and a multivariate test.
+excerpt: Two controlled experiments on communication and system design — reframed as an A/B test and a multivariate test.
 comments: false
 ---
 
-<p class="pub-meta">PhD dissertation research, reframed as a growth case study &middot; Koç University &middot; 2020–2026</p>
+<p class="pub-meta">PhD dissertation research on communication and system design &middot; Koç University &middot; 2020–2026</p>
 
 <div class="pub-tags">
   <span class="pub-tag">A/B Testing</span>
@@ -16,22 +16,24 @@ comments: false
   <span class="pub-tag">Experimental Design</span>
 </div>
 
-Two controlled experiments, run as part of my PhD, that use the same logic growth teams use to test product changes: comparing conditions, measuring a behavioral outcome, and asking what actually moved it. The audience was a robot instead of a landing page, but the method is identical: hold everything constant except the variable under test, then look at what people actually did, not what they said they'd do.
+How much should a conversational partner explain itself before the person talking to it trusts it understood them? Too little, and people fill in the gaps themselves. Too much, and they stop listening.
+
+I spent several years studying this question through two controlled experiments, then decided to bring that experimental mindset into product work, where a finding can change something for real users in weeks instead of years.
 
 <div class="case-block">
-  <div class="case-block-label">The problem</div>
-  <p>When someone interacts with a new system — a robot, an app, an onboarding flow — they don't know upfront how much it "gets." They give more explanation than needed, then adjust based on signals of success or failure. Which signals actually change behavior, and which ones people just assume should work, is an empirical question.</p>
+  <div class="case-block-label">Why a robot, of all things</div>
+  <p>A robot is a strange kind of listener: not fully predictable like a person, not fully mechanical like a button. That uncertainty is exactly what makes it useful for studying calibration. People had to decide, in real time, how much to explain, with no script to fall back on.</p>
 </div>
 
 <div class="case-block">
   <div class="case-block-label">What I built to measure it</div>
-  <p>I built a custom metric, <strong>semantic detail density</strong>: the number of distinct, meaning-relevant pieces of information a person included in a response. It's a proxy for a general growth question — how much convincing does a user think they still need to do — and it's more sensitive than a surface metric like message length.</p>
+  <p>Before I could test anything, I needed a way to measure detail level precisely, not just sentence length. I built a custom metric, <strong>semantic detail density</strong>: the number of distinct, meaning-relevant pieces of information a person packed into a single response.</p>
 </div>
 
 <div class="case-step">
   <div class="case-step-number">1</div>
   <div class="case-step-body">
-    <h3 class="case-step-title">Audience A/B test</h3>
+    <h3 class="case-step-title">Does the listener change what people say?</h3>
     <p>Participants described words to either a human or a robot listener, using prerecorded video so timing and accuracy stayed identical across both conditions and only who was listening varied.</p>
     <div class="case-result">
       <span class="case-result-label">Result</span>
@@ -43,18 +45,18 @@ Two controlled experiments, run as part of my PhD, that use the same logic growt
 <div class="case-step">
   <div class="case-step-number">2</div>
   <div class="case-step-body">
-    <h3 class="case-step-title">Feedback multivariate test</h3>
-    <p>The multivariate equivalent of Test 1's single-variable design: I tested two signals from the robot together instead of one at a time. <strong>Framing</strong> — did the robot open by claiming competence, or say nothing about its ability? <strong>Feedback</strong> — on a correct guess, did it give specific praise, or just a bare acknowledgment?</p>
+    <h3 class="case-step-title">Which signals actually change behavior?</h3>
+    <p>I tested two signals from the robot together instead of one at a time: whether it opened by claiming competence, and whether it gave specific praise on a correct guess.</p>
     <div class="case-result">
       <span class="case-result-label">Result</span>
-      Neither signal, nor the combination, moved the metric. People didn't give less detail just because the system claimed competence or praised them. But a signal we hadn't tested as a primary hypothesis did: when the robot explicitly said it failed and asked for another try, people immediately added more detail on the next response, then reverted back to baseline right after.
+      Neither signal, nor the combination, moved the metric. But a signal we hadn't tested as a primary hypothesis did: when the robot explicitly said it failed and asked for another try, people immediately added more detail on the next response, then reverted back to baseline right after.
     </div>
   </div>
 </div>
 
 <div class="case-insight">
-  <div class="case-insight-label">What this means for a growth context</div>
-  <p>The pattern that held across both experiments: <strong>vague positive signals don't change behavior; specific, actionable signals do.</strong> Telling a user something worked, or that the system is capable, doesn't reliably shift what they do next. Telling them specifically what didn't work — in a moment they can still act on it — does, immediately and measurably. Applied to funnels and paywalls: generic encouragement in an upsell or onboarding step is unlikely to move behavior on its own; specific, actionable feedback at the point of friction is where the effect actually is.</p>
+  <div class="case-insight-label">The pattern underneath both results</div>
+  <p>Vague positive signals don't change behavior. Specific, actionable ones do. Telling someone something worked, or that the system is capable, doesn't reliably shift what they do next. Telling them precisely what didn't work, at a moment they can still act on it, does, immediately and measurably.</p>
 </div>
 
 <div class="pub-actions">
