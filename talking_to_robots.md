@@ -6,7 +6,7 @@ excerpt: Two controlled experiments on communication and system design — refra
 comments: false
 ---
 
-<p class="pub-meta">PhD dissertation research on communication and system design &middot; Koç University &middot; 2020–2026</p>
+<p class="pub-meta">PhD dissertation research on communication and robotic system design &middot; Koç University &middot; 2020–2026</p>
 
 <div class="pub-tags">
   <span class="pub-tag">A/B Testing</span>
