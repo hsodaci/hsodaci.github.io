@@ -10,9 +10,9 @@
   external: false
   children:
     - title: talking to robots
-      url: /projects/project1/
+      url: /projects/talking-to-robots/
     - title: robots as tutors
-      url: /projects/project2/
+      url: /projects/robots-as-tutors/
 
 - title: academia
   url: /academia/

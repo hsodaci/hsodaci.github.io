@@ -1,6 +1,6 @@
 ---
 title: Robots as Tutors
-permalink: /projects/project2/
+permalink: /projects/robots-as-tutors/
 layout: page
 excerpt: A personalized language-learning study for bilingual children using a NAO social robot, part of the EU Horizon 2020 L2TOR project.
 comments: false

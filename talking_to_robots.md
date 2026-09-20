@@ -1,6 +1,6 @@
 ---
 title: Talking to Robots
-permalink: /projects/project1/
+permalink: /projects/talking-to-robots/
 layout: page
 excerpt: Dissertation research on how speakers adapt their level of detail when talking to robots versus humans.
 comments: false
