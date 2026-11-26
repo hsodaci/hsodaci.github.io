@@ -53,25 +53,41 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
 .ttr-steps{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .ttr-steps span{padding:3px 10px;border-radius:99px;border:2px solid transparent;transition:.2s}
 .ttr-proc[data-step="1"] .ttr-steps span:nth-child(1),.ttr-proc[data-step="2"] .ttr-steps span:nth-child(2),.ttr-proc[data-step="3"] .ttr-steps span:nth-child(3){border-color:var(--ink);background:var(--pop);color:var(--on-pop)}
-.ttr-word{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(44px,9vw,76px);line-height:1.05;letter-spacing:-.03em;margin:18px 0 14px;min-height:1.1em}
+.ttr-word{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(40px,8vw,64px);line-height:1.05;letter-spacing:-.03em;margin:6px 0 12px;min-height:1.1em}
 .ttr-proc[data-step="0"] .ttr-word{font-size:clamp(26px,5vw,38px);font-style:italic;font-weight:500;color:var(--muted);letter-spacing:-.01em}
 .ttr-meter{height:6px;border-radius:99px;background:var(--line);overflow:hidden;max-width:420px;margin:0 auto}
 .ttr-fillbar{height:100%;width:100%;background:var(--pop);border-radius:99px}
-.ttr-clock{font-family:"DM Mono",monospace;font-size:12px;letter-spacing:.1em;color:var(--muted);margin:8px 0 16px}
+.ttr-clock{font-family:"DM Mono",monospace;font-size:12px;letter-spacing:.1em;color:var(--muted);margin:8px 0 0}
 .ttr-proc textarea{display:block;width:100%;max-width:560px;margin:0 auto;min-height:78px;resize:none;font-family:"Instrument Sans",sans-serif;font-size:17px;line-height:1.5;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:14px;padding:12px 14px;text-align:left}
 .ttr-proc textarea:disabled{opacity:.55}
 .ttr-proc textarea:focus{outline:none;box-shadow:4px 4px 0 var(--pop)}
-.ttr-reply{display:flex;align-items:center;justify-content:center;gap:10px;min-height:46px;margin:14px 0 4px;opacity:.35;transition:opacity .25s}
-.ttr-proc[data-step="3"] .ttr-reply{opacity:1}
-.ttr-mini{width:30px;height:30px;flex:none}
-.ttr-proc[data-l="robot"] .ttr-mini.hm,.ttr-proc[data-l="human"] .ttr-mini.rb{display:none}
-.ttr-said{font-family:Fraunces,serif;font-style:italic;font-weight:500;font-size:clamp(18px,2.6vw,22px)}
-.ttr-tally{margin:12px auto 4px;max-width:560px}
-.ttr-tally .ttr-mono{color:var(--muted);font-size:11px}
-.ttr-chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0}
-.ttr-chips button{font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:99px;padding:3px 12px;cursor:pointer}
-.ttr-chips button.on{background:var(--mint);color:var(--on-mint)}
-.ttr-tallyn b{font-family:Fraunces,serif;font-weight:800;font-size:34px;color:var(--pop);margin-right:6px}
+.ttr-screen{position:relative;background:var(--paper);border:3px solid var(--ink);border-radius:20px;padding:16px 16px 14px;max-width:560px;margin:16px auto 14px}
+.ttr-listener{display:block;width:150px;height:auto;margin:0 auto}
+.ttr-proc[data-l="robot"] .lg.hm,.ttr-proc[data-l="human"] .lg.rb{display:none}
+.ttr-listener .head,.ttr-listener .body,.ttr-listener .eye,.ttr-listener .ant,.ttr-listener .mouth{transform-box:fill-box;transform-origin:50% 100%}
+.ttr-listener .head{animation:ttr-sway 6s ease-in-out infinite}
+.ttr-listener .body{animation:ttr-breath 4s ease-in-out infinite}
+.ttr-listener .eye{transform-origin:50% 50%;animation:ttr-blink 4.8s infinite}
+.ttr-listener .ant{transform-origin:50% 100%;animation:ttr-wob 3s ease-in-out infinite}
+.ttr-listener .pupil{transition:transform .12s}
+.ttr-listener .hm .mouth,.ttr-proc[data-speak="1"] .hm .smile{display:none}
+.ttr-proc[data-speak="1"] .hm .mouth{display:block}
+.ttr-proc[data-speak="1"] .ttr-listener .mouth{animation:ttr-talk .2s infinite alternate;transform-origin:50% 50%}
+.ttr-proc[data-step="2"] .ttr-listener .head{animation:ttr-listen 2.8s ease-in-out infinite}
+.ttr-listener.nod .head{animation:ttr-nod .38s ease-out!important}
+.ttr-proc[data-mood="puzzled"] .ttr-listener .head{animation:none;transform:rotate(-8deg)}
+.ttr-proc[data-mood="happy"] .ttr-listener .head{animation:ttr-hop .55s ease-out}
+@keyframes ttr-sway{0%,100%{transform:translateY(0) rotate(0)}30%{transform:translateY(-2px) rotate(1.6deg)}65%{transform:translateY(1px) rotate(-1.4deg)}}
+@keyframes ttr-listen{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(2px) rotate(2.5deg)}}
+@keyframes ttr-nod{0%{transform:translateY(0)}40%{transform:translateY(5px)}100%{transform:translateY(0)}}
+@keyframes ttr-hop{0%{transform:translateY(0)}35%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+@keyframes ttr-breath{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.025)}}
+@keyframes ttr-blink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.08)}}
+@keyframes ttr-wob{0%,100%{transform:rotate(0)}50%{transform:rotate(9deg)}}
+@keyframes ttr-talk{from{transform:scaleY(.4)}to{transform:scaleY(1.5)}}
+.ttr-bub{position:absolute;top:14px;right:14px;max-width:42%;background:var(--card);border:2px solid var(--ink);border-radius:14px;padding:6px 12px;text-align:left;font-family:Fraunces,serif;font-style:italic;font-weight:500;font-size:16px;line-height:1.3;transition:background .2s}
+.ttr-proc[data-mood="happy"] .ttr-bub{background:var(--mint);color:var(--on-mint);font-style:normal;font-weight:700}
+.ttr-proc[data-mood="puzzled"] .ttr-bub{border-color:var(--pop)}
 .ttr-go{margin-top:12px;font-weight:600;font-size:15px;border:2px solid var(--ink);background:var(--pop);color:var(--on-pop);border-radius:99px;padding:9px 22px;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
 .ttr-go:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
 .ttr-fine{font-family:"DM Mono",monospace;font-size:12px;line-height:1.5;color:var(--muted);max-width:640px;margin:8px 0 18px}
@@ -132,8 +148,8 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
 .ttr-actions{margin:34px 0 6px}
 .ttr a.ttr-btn{display:inline-block;text-decoration:none;font-weight:600;font-size:16px;padding:14px 24px;border:2px solid var(--ink);border-radius:99px;background:var(--ink);color:var(--paper);box-shadow:4px 4px 0 var(--pop);transition:transform .12s,box-shadow .12s}
 .ttr a.ttr-btn:hover{transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--pop)}
-@media(max-width:600px){.ttr{padding:6px 16px 32px;border-radius:22px;font-size:16px}.ttr-ticker{margin-inline:-16px}.ttr-robot{display:none}.ttr h1.ttr-title{padding-right:0}.ttr-card{grid-template-columns:40px 1fr}.ttr-card i{font-size:32px}.ttr-num{flex-basis:44px;font-size:28px}.ttr-body{padding:18px 16px}.ttr-matrix{grid-template-columns:76px 1fr 1fr}.ttr-insight{padding:26px 20px}}
-@media(prefers-reduced-motion:reduce){.ttr-track{animation:none}}
+@media(max-width:600px){.ttr-bub{max-width:52%;font-size:14px}.ttr{padding:6px 16px 32px;border-radius:22px;font-size:16px}.ttr-ticker{margin-inline:-16px}.ttr-robot{display:none}.ttr h1.ttr-title{padding-right:0}.ttr-card{grid-template-columns:40px 1fr}.ttr-card i{font-size:32px}.ttr-num{flex-basis:44px;font-size:28px}.ttr-body{padding:18px 16px}.ttr-matrix{grid-template-columns:76px 1fr 1fr}.ttr-insight{padding:26px 20px}}
+@media(prefers-reduced-motion:reduce){.ttr-track,.ttr-listener *{animation:none!important}}
 </style>
 <div class="ttr">
 <div class="ttr-hero">
@@ -178,20 +194,37 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
       </div>
     </div>
     <div class="ttr-steps" aria-hidden="true"><span>1 · Word appears</span><span>2 · You describe it</span><span>3 · Listener guesses</span></div>
-    <div class="ttr-word" id="ttr-word" aria-live="polite">You are the speaker</div>
-    <div class="ttr-meter"><div class="ttr-fillbar" id="ttr-fill"></div></div>
-    <div class="ttr-clock" id="ttr-clock">7.0 s</div>
+    <div class="ttr-screen">
+      <svg class="ttr-listener" id="ttr-listener" viewBox="0 0 160 150" aria-hidden="true">
+        <g class="lg rb">
+          <g class="body"><path d="M24 150C24 118 50 106 80 106C110 106 136 118 136 150Z" fill="var(--mint)" stroke="var(--ink)" stroke-width="4"/><circle cx="80" cy="132" r="9" fill="var(--paper)" stroke="var(--ink)" stroke-width="3.5"/></g>
+          <g class="head">
+            <line x1="80" y1="10" x2="80" y2="24" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+            <circle class="ant" cx="80" cy="8" r="5.5" fill="var(--pop)"/>
+            <rect x="34" y="22" width="92" height="72" rx="26" fill="var(--paper)" stroke="var(--ink)" stroke-width="4"/>
+            <g class="eye"><circle cx="60" cy="54" r="12" fill="var(--card)" stroke="var(--ink)" stroke-width="3"/><circle class="pupil" cx="60" cy="54" r="5.5" fill="var(--ink)"/></g>
+            <g class="eye"><circle cx="100" cy="54" r="12" fill="var(--card)" stroke="var(--ink)" stroke-width="3"/><circle class="pupil" cx="100" cy="54" r="5.5" fill="var(--ink)"/></g>
+            <ellipse class="mouth" cx="80" cy="78" rx="6" ry="4.5" fill="var(--pop)"/>
+          </g>
+        </g>
+        <g class="lg hm">
+          <g class="body"><path d="M24 150C24 118 50 106 80 106C110 106 136 118 136 150Z" fill="var(--pop)" stroke="var(--ink)" stroke-width="4"/></g>
+          <g class="head">
+            <circle cx="80" cy="58" r="38" fill="var(--paper)" stroke="var(--ink)" stroke-width="4"/>
+            <path d="M42 52C44 22 116 22 118 52C102 38 58 38 42 52Z" fill="var(--ink)"/>
+            <g class="eye"><circle cx="64" cy="62" r="7" fill="var(--card)" stroke="var(--ink)" stroke-width="2.5"/><circle class="pupil" cx="64" cy="62" r="3.4" fill="var(--ink)"/></g>
+            <g class="eye"><circle cx="96" cy="62" r="7" fill="var(--card)" stroke="var(--ink)" stroke-width="2.5"/><circle class="pupil" cx="96" cy="62" r="3.4" fill="var(--ink)"/></g>
+            <path class="smile" d="M68 82Q80 90 92 82" fill="none" stroke="var(--ink)" stroke-width="3.5" stroke-linecap="round"/>
+            <ellipse class="mouth" cx="80" cy="84" rx="7" ry="5" fill="var(--ink)"/>
+          </g>
+        </g>
+      </svg>
+      <div class="ttr-bub" id="ttr-said">(Listening)</div>
+      <div class="ttr-word" id="ttr-word" aria-live="polite">You are the speaker</div>
+      <div class="ttr-meter"><div class="ttr-fillbar" id="ttr-fill"></div></div>
+      <div class="ttr-clock" id="ttr-clock">7.0 s</div>
+    </div>
     <textarea id="ttr-text" rows="2" maxlength="220" placeholder="Describe the word. Don't say it." aria-label="Your description" disabled></textarea>
-    <div class="ttr-reply" id="ttr-reply" aria-live="polite">
-      <svg class="ttr-mini rb" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="6" width="24" height="20" rx="7" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.5"/><circle cx="12" cy="16" r="2.6" fill="var(--ink)"/><circle cx="20" cy="16" r="2.6" fill="var(--ink)"/></svg>
-      <svg class="ttr-mini hm" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.5"/><circle cx="12" cy="15" r="2" fill="var(--ink)"/><circle cx="20" cy="15" r="2" fill="var(--ink)"/><path d="M12 20Q16 23 20 20" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round"/></svg>
-      <span class="ttr-said" id="ttr-said">Listening…</span>
-    </div>
-    <div class="ttr-tally" id="ttr-tally" hidden>
-      <div class="ttr-mono">Now count: tap each separate detail you gave</div>
-      <div class="ttr-chips" id="ttr-chips"></div>
-      <div class="ttr-tallyn"><b id="ttr-n">0</b> <span class="ttr-mono">points of detail</span></div>
-    </div>
     <button class="ttr-go" id="ttr-go" type="button">Start</button>
   </div>
 </div>
@@ -280,9 +313,6 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
   var clock = document.getElementById("ttr-clock");
   var box = document.getElementById("ttr-text");
   var said = document.getElementById("ttr-said");
-  var tally = document.getElementById("ttr-tally");
-  var chips = document.getElementById("ttr-chips");
-  var nEl = document.getElementById("ttr-n");
   var pool = ["truck", "umbrella", "kettle", "bicycle"];
   var wi = -1;
   var word = "";
@@ -309,10 +339,11 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
     reset();
     busy = true;
     proc.setAttribute("data-step", "1");
-    tally.hidden = true;
     go.disabled = true;
     go.style.opacity = ".5";
-    said.textContent = "Listening…";
+    said.textContent = "(Listening)";
+    proc.removeAttribute("data-mood");
+    proc.removeAttribute("data-speak");
     wordEl.textContent = word;
     fill.style.width = "100%";
     clock.textContent = "7.0 s";
@@ -332,6 +363,9 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
       busy = false;
       go.disabled = false;
       go.style.opacity = "1";
+      proc.setAttribute("data-speak", "1");
+      setTimeout(function () { proc.removeAttribute("data-speak"); }, 1300);
+      proc.setAttribute("data-mood", wrong ? "puzzled" : "happy");
       if (wrong) {
         said.textContent = "“Hmm, I couldn't find it. Could you describe it again?”";
         go.textContent = "Describe it again";
@@ -340,27 +374,27 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
         said.textContent = "“" + word.charAt(0).toUpperCase() + word.slice(1) + "!”";
         go.textContent = "Try another word";
         round = 1;
-        showTally();
       }
     }, 700);
   }
-  function showTally() {
-    var parts = box.value.replace(/[.,;!?]/g, " ").split(/\s+/).filter(function (x) { return x; });
-    chips.innerHTML = "";
-    nEl.textContent = "0";
-    if (!parts.length) { tally.hidden = true; return; }
-    parts.forEach(function (w) {
-      var b = document.createElement("button");
-      b.type = "button";
-      b.textContent = w;
-      b.addEventListener("click", function () {
-        b.classList.toggle("on");
-        nEl.textContent = chips.querySelectorAll(".on").length;
-      });
-      chips.appendChild(b);
+  var av = document.getElementById("ttr-listener");
+  var nodTimer = 0;
+  box.addEventListener("input", function () {
+    av.classList.remove("nod");
+    void av.getBoundingClientRect();
+    av.classList.add("nod");
+    clearTimeout(nodTimer);
+    nodTimer = setTimeout(function () { av.classList.remove("nod"); }, 400);
+  });
+  var eyesAll = [].slice.call(av.querySelectorAll(".pupil"));
+  addEventListener("pointermove", function (e) {
+    var bb = av.getBoundingClientRect();
+    if (!bb.width) { return; }
+    var a = Math.atan2(e.clientY - (bb.top + bb.height * 0.4), e.clientX - (bb.left + bb.width / 2));
+    eyesAll.forEach(function (p) {
+      p.style.transform = "translate(" + Math.cos(a) * 3.5 + "px," + Math.sin(a) * 3.5 + "px)";
     });
-    tally.hidden = false;
-  }
+  });
   go.addEventListener("click", function () {
     if (busy) { return; }
     if (round === 1) { wi = (wi + 1) % pool.length; word = pool[wi]; }
