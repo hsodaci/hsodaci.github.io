@@ -142,6 +142,12 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
 .ttr-plotsvg circle{transition:r .15s}
 .ttr-plotsvg .pl-small:hover{r:10}
 .ttr-plotsvg .pl-big:hover{r:16}
+.ttr-tldr{margin:34px 0 0;padding:22px 24px;border:2px solid var(--ink);border-radius:22px;background:var(--card)}
+.ttr-tldr .ttr-mono{color:var(--pop);margin-bottom:8px}
+.ttr-tldr ol{margin:0;padding:0;list-style:none!important;counter-reset:tl}
+.ttr-tldr li{counter-increment:tl;display:flex;gap:12px;margin:8px 0!important;padding:0!important;list-style:none!important}
+.ttr-tldr li::before{content:counter(tl);flex:0 0 26px;height:26px;border-radius:50%;background:var(--pop);color:var(--on-pop);border:2px solid var(--ink);box-sizing:border-box;font:700 13px/22px "DM Mono",monospace;text-align:center;margin:0!important;position:static!important}
+.ttr-sub{color:var(--pop);margin:26px 0 6px}
 .ttr-insight{margin:56px 0 10px;background:var(--pop);color:var(--on-pop);border:2px solid var(--ink);border-radius:30px;padding:36px 30px;box-shadow:10px 10px 0 var(--ink)}
 .ttr-insight .ttr-mono{opacity:.9;margin-bottom:12px}
 .ttr-insight p{font-family:Fraunces,serif;font-weight:800;font-size:clamp(20px,2.9vw,28px);line-height:1.25;letter-spacing:-.01em;max-width:760px;margin:0}
@@ -171,17 +177,22 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
   <span class="ttr-tag">A/B Testing</span><span class="ttr-tag">Multivariate Testing</span><span class="ttr-tag">Behavioral Analytics</span><span class="ttr-tag">R</span><span class="ttr-tag">Experimental Design</span>
   <span class="ttr-tag" aria-hidden="true">A/B Testing</span><span class="ttr-tag" aria-hidden="true">Multivariate Testing</span><span class="ttr-tag" aria-hidden="true">Behavioral Analytics</span><span class="ttr-tag" aria-hidden="true">R</span><span class="ttr-tag" aria-hidden="true">Experimental Design</span>
 </div></div>
+<div class="ttr-tldr">
+  <div class="ttr-mono">The short version</div>
+  <ol>
+    <li>People give a robot more detail than a human, even when the robot keeps getting it right.</li>
+    <li>Robot confidence claims and specific praise change nothing.</li>
+    <li>What does change it: the robot visibly failing to understand, and only on the very next attempt.</li>
+  </ol>
+</div>
 <div class="ttr-block">
-  <div class="ttr-mono ttr-label">🤔 The problem</div>
+  <div class="ttr-mono ttr-label">🤔 The question</div>
   <p>How much should a robot, chatbot, or voice assistant signal that it understands you? I tested how people change what they say based on those signals.</p>
+  <p>A robot is a useful test case because it is neither predictable like a person nor simple like a button. People can't lean on social intuition about what it understands, so we can see which signals actually move behavior.</p>
 </div>
 <div class="ttr-block">
-  <div class="ttr-mono ttr-label">🎯 Why this was a useful test environment</div>
-  <p>A robot is neither predictable like a person nor simple like a button, so people can't rely on social intuition about what it understands. That makes it a clean way to see which signals actually change behavior.</p>
-</div>
-<div class="ttr-block">
-  <div class="ttr-mono ttr-label">🎮 The task I built</div>
-  <p>Speakers had seven seconds to describe a word without saying it, while a human or a robot listener tried to guess. Both listeners behaved identically, so the only thing that changed was <em>who</em> was listening.</p>
+  <div class="ttr-mono ttr-label">🎮 The game</div>
+  <p>Speakers had seven seconds to describe a word without saying it, while a human or a robot listener tried to guess. Both listeners behaved identically, so the only thing that changed was <em>who</em> was listening. Play a round below: you are the speaker.</p>
   <div class="ttr-proc" id="ttr-proc" data-l="robot" data-g="ok" data-step="0">
     <div class="ttr-ctl">
       <div class="ttr-seg" data-k="l" role="group" aria-label="Who is listening">
@@ -210,8 +221,10 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
         <g class="lg hm">
           <g class="body"><path d="M24 150C24 118 50 106 80 106C110 106 136 118 136 150Z" fill="var(--pop)" stroke="var(--ink)" stroke-width="4"/></g>
           <g class="head">
-            <circle cx="80" cy="58" r="38" fill="var(--paper)" stroke="var(--ink)" stroke-width="4"/>
-            <path d="M42 52C44 22 116 22 118 52C102 38 58 38 42 52Z" fill="var(--ink)"/>
+            <path d="M36 64C28 8 132 8 124 64L126 104C126 114 112 114 112 104L112 74L48 74L48 104C48 114 34 114 34 104Z" fill="#7a4a2b"/>
+            <circle cx="80" cy="60" r="35" fill="var(--paper)" stroke="var(--ink)" stroke-width="4"/>
+            <path d="M42 56C42 20 118 18 118 56C112 44 100 36 86 34C84 42 66 48 42 56Z" fill="#7a4a2b"/>
+            <circle cx="80" cy="14" r="9" fill="#7a4a2b"/>
             <g class="eye"><circle cx="64" cy="62" r="7" fill="var(--card)" stroke="var(--ink)" stroke-width="2.5"/><circle class="pupil" cx="64" cy="62" r="3.4" fill="var(--ink)"/></g>
             <g class="eye"><circle cx="96" cy="62" r="7" fill="var(--card)" stroke="var(--ink)" stroke-width="2.5"/><circle class="pupil" cx="96" cy="62" r="3.4" fill="var(--ink)"/></g>
             <path class="smile" d="M68 82Q80 90 92 82" fill="none" stroke="var(--ink)" stroke-width="3.5" stroke-linecap="round"/>
@@ -229,8 +242,8 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
   </div>
 </div>
 <div class="ttr-block">
-  <div class="ttr-mono ttr-label">📏 What I built to measure it</div>
-  <p>I built a metric, <strong>semantic detail density</strong>: the number of separate, meaningful pieces of information in a description. <em>"A large vehicle used to carry stuff"</em> scores three.</p>
+  <div class="ttr-mono ttr-label">📏 The measure</div>
+  <p>To compare descriptions, I built a metric, <strong>semantic detail density</strong>: the number of separate, meaningful pieces of information in a description. <em>"A large vehicle used to carry stuff"</em> scores three.</p>
   <div class="ttr-metric">
     <div class="ttr-mono">Try it · tap each detail</div>
     <div class="ttr-say">“a <button type="button" data-d>large</button> <button type="button" data-d>vehicle</button> <button type="button" data-d>used to carry stuff</button>”</div>
@@ -241,7 +254,7 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
   <div class="ttr-num">1</div>
   <div class="ttr-body">
     <h3 class="ttr-steptitle">Does the listener change what people say?</h3>
-    <p>Human listener or robot listener. Everything else stayed the same.</p>
+    <p>First, the baseline: the same game, with a human or a robot on the other side. Everything else stayed the same.</p>
     <div class="ttr-vs">
       <span class="ttr-chip a">Human listener</span>
       <span class="ttr-versus">vs</span>
@@ -253,15 +266,17 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
     </div>
     <div class="ttr-result">
       <span class="ttr-mono ttr-rlabel">Result</span>
-      People gave the robot more detail than the human (2.23 vs 1.98 on average), every time, even after it got several answers right in a row. Published at ACM/IEEE HRI '26 with an Honorable Mention.
+      Yes. People gave the robot more detail than the human (2.23 vs 1.98 on average), in every error-trajectory condition, even after the robot got several answers right in a row. This work was published at ACM/IEEE HRI '26 with an Honorable Mention.
     </div>
   </div>
 </div>
 <div class="ttr-step">
   <div class="ttr-num">2</div>
   <div class="ttr-body">
-    <h3 class="ttr-steptitle">Which signals actually change behavior?</h3>
-    <p>I tested two robot signals together: an upfront competence claim, and specific positive feedback with a correct guess. On some rounds the robot said it couldn't find the answer and asked for another description.</p>
+    <h3 class="ttr-steptitle">Which robot signals change behavior?</h3>
+    <p>Since people gave the robot more detail, I asked whether the robot can influence how much they say. I tested two kinds of signal.</p>
+    <div class="ttr-mono ttr-sub">Test A · Two signals, crossed</div>
+    <p>An upfront competence claim, and specific positive feedback after a correct guess, each present or absent.</p>
     <div class="ttr-matrix">
       <div class="ttr-cell corner"></div>
       <div class="ttr-cell head">No competence claim</div>
@@ -274,19 +289,21 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
       <div class="ttr-cell val">No effect</div>
     </div>
     <div class="ttr-caption">None of the four combinations moved the metric.</div>
-    <div class="ttr-result">
-      <span class="ttr-mono ttr-rlabel">Result</span>
-      Neither signal changed anything, alone or together. But on the trials where the robot said it didn't understand and asked for a retry, people added detail on that attempt only (repair means 2.65 to 2.75, against 2.34 to 2.50 for the error trial just before), then went back to normal.
-    </div>
+    <div class="ttr-mono ttr-sub">Test B · The robot fails</div>
+    <p>On some rounds the robot said it couldn't find the answer and asked for another description. This is where behavior moved.</p>
     <div class="ttr-plot">
       <svg class="ttr-plotsvg" viewBox="0 0 880 420" role="img" aria-label="Mean semantic detail density by trial. On the four trials where the robot erred (4, 9, 11 and 15), the repair attempt is higher than the incorrect trial it followed, while correct trials stay flat around 2.3 to 2.5."><rect class="pl-panel" x="74" y="64" width="790" height="294"/><rect class="pl-band" x="229.5" y="64" width="34.6" height="294"/><rect class="pl-band" x="476.4" y="64" width="34.6" height="294"/><rect class="pl-band" x="575.2" y="64" width="34.6" height="294"/><rect class="pl-band" x="772.7" y="64" width="34.6" height="294"/><line class="pl-grid" x1="74" x2="864" y1="333.5" y2="333.5"/><line class="pl-tick" x1="68" x2="74" y1="333.5" y2="333.5"/><text class="pl-txt" x="64" y="338.5" text-anchor="end">2.00</text><line class="pl-grid" x1="74" x2="864" y1="272.2" y2="272.2"/><line class="pl-tick" x1="68" x2="74" y1="272.2" y2="272.2"/><text class="pl-txt" x="64" y="277.2" text-anchor="end">2.25</text><line class="pl-grid" x1="74" x2="864" y1="211.0" y2="211.0"/><line class="pl-tick" x1="68" x2="74" y1="211.0" y2="211.0"/><text class="pl-txt" x="64" y="216.0" text-anchor="end">2.50</text><line class="pl-grid" x1="74" x2="864" y1="149.8" y2="149.8"/><line class="pl-tick" x1="68" x2="74" y1="149.8" y2="149.8"/><text class="pl-txt" x="64" y="154.8" text-anchor="end">2.75</text><line class="pl-grid" x1="74" x2="864" y1="88.5" y2="88.5"/><line class="pl-tick" x1="68" x2="74" y1="88.5" y2="88.5"/><text class="pl-txt" x="64" y="93.5" text-anchor="end">3.00</text><line class="pl-tick" x1="98.7" x2="98.7" y1="358" y2="364"/><text class="pl-txt" x="98.7" y="382" text-anchor="middle">1</text><line class="pl-tick" x1="148.1" x2="148.1" y1="358" y2="364"/><text class="pl-txt" x="148.1" y="382" text-anchor="middle">2</text><line class="pl-tick" x1="197.4" x2="197.4" y1="358" y2="364"/><text class="pl-txt" x="197.4" y="382" text-anchor="middle">3</text><line class="pl-tick" x1="246.8" x2="246.8" y1="358" y2="364"/><text class="pl-txt" x="246.8" y="382" text-anchor="middle">4</text><line class="pl-tick" x1="296.2" x2="296.2" y1="358" y2="364"/><text class="pl-txt" x="296.2" y="382" text-anchor="middle">5</text><line class="pl-tick" x1="345.6" x2="345.6" y1="358" y2="364"/><text class="pl-txt" x="345.6" y="382" text-anchor="middle">6</text><line class="pl-tick" x1="394.9" x2="394.9" y1="358" y2="364"/><text class="pl-txt" x="394.9" y="382" text-anchor="middle">7</text><line class="pl-tick" x1="444.3" x2="444.3" y1="358" y2="364"/><text class="pl-txt" x="444.3" y="382" text-anchor="middle">8</text><line class="pl-tick" x1="493.7" x2="493.7" y1="358" y2="364"/><text class="pl-txt" x="493.7" y="382" text-anchor="middle">9</text><line class="pl-tick" x1="543.1" x2="543.1" y1="358" y2="364"/><text class="pl-txt" x="543.1" y="382" text-anchor="middle">10</text><line class="pl-tick" x1="592.4" x2="592.4" y1="358" y2="364"/><text class="pl-txt" x="592.4" y="382" text-anchor="middle">11</text><line class="pl-tick" x1="641.8" x2="641.8" y1="358" y2="364"/><text class="pl-txt" x="641.8" y="382" text-anchor="middle">12</text><line class="pl-tick" x1="691.2" x2="691.2" y1="358" y2="364"/><text class="pl-txt" x="691.2" y="382" text-anchor="middle">13</text><line class="pl-tick" x1="740.6" x2="740.6" y1="358" y2="364"/><text class="pl-txt" x="740.6" y="382" text-anchor="middle">14</text><line class="pl-tick" x1="789.9" x2="789.9" y1="358" y2="364"/><text class="pl-txt" x="789.9" y="382" text-anchor="middle">15</text><line class="pl-tick" x1="839.3" x2="839.3" y1="358" y2="364"/><text class="pl-txt" x="839.3" y="382" text-anchor="middle">16</text><path class="pl-line" d="M148.1 240.4L197.4 220.8M197.4 220.8L246.8 223.2M246.8 174.3L296.2 257.5M296.2 257.5L345.6 198.8M345.6 198.8L394.9 211.0M394.9 211.0L444.3 237.9M444.3 237.9L493.7 225.7M493.7 157.1L543.1 240.4M543.1 240.4L592.4 211.0M592.4 149.8L641.8 282.1M641.8 282.1L691.2 237.9M691.2 237.9L740.6 220.8M740.6 220.8L789.9 250.2M789.9 162.0L839.3 240.4M98.7 223.2L148.1 240.4"/><line class="pl-err" x1="98.7" x2="98.7" y1="251.2" y2="195.3"/><line class="pl-err" x1="148.1" x2="148.1" y1="269.8" y2="211.0"/><line class="pl-err" x1="197.4" x2="197.4" y1="249.7" y2="191.9"/><line class="pl-err" x1="246.8" x2="246.8" y1="252.9" y2="193.6"/><line class="pl-err" x1="246.8" x2="246.8" y1="206.8" y2="141.7"/><line class="pl-err" x1="296.2" x2="296.2" y1="282.1" y2="233.0"/><line class="pl-err" x1="345.6" x2="345.6" y1="230.4" y2="167.1"/><line class="pl-err" x1="394.9" x2="394.9" y1="241.1" y2="180.9"/><line class="pl-err" x1="444.3" x2="444.3" y1="266.1" y2="209.8"/><line class="pl-err" x1="493.7" x2="493.7" y1="256.8" y2="194.6"/><line class="pl-err" x1="493.7" x2="493.7" y1="189.7" y2="124.5"/><line class="pl-err" x1="543.1" x2="543.1" y1="269.6" y2="211.2"/><line class="pl-err" x1="592.4" x2="592.4" y1="241.6" y2="180.4"/><line class="pl-err" x1="592.4" x2="592.4" y1="181.4" y2="118.1"/><line class="pl-err" x1="641.8" x2="641.8" y1="310.5" y2="253.6"/><line class="pl-err" x1="691.2" x2="691.2" y1="268.3" y2="207.6"/><line class="pl-err" x1="740.6" x2="740.6" y1="247.0" y2="194.6"/><line class="pl-err" x1="789.9" x2="789.9" y1="278.4" y2="222.0"/><line class="pl-err" x1="789.9" x2="789.9" y1="197.3" y2="126.7"/><line class="pl-err" x1="839.3" x2="839.3" y1="271.3" y2="209.5"/><circle class="pl-dot ok" cx="98.7" cy="223.2" r="7.5"><title>Trial 1 · Correct: 2.45 (SE 0.114)</title></circle><circle class="pl-dot ok" cx="148.1" cy="240.4" r="7.5"><title>Trial 2 · Correct: 2.38 (SE 0.120)</title></circle><circle class="pl-dot ok" cx="197.4" cy="220.8" r="7.5"><title>Trial 3 · Correct: 2.46 (SE 0.118)</title></circle><circle class="pl-dot bad" cx="246.8" cy="223.2" r="7.5"><title>Trial 4 · Incorrect: 2.45 (SE 0.121)</title></circle><circle class="pl-dot rep" cx="246.8" cy="174.3" r="7.5"><title>Trial 4 · Repair: 2.65 (SE 0.133)</title></circle><circle class="pl-dot ok" cx="296.2" cy="257.5" r="7.5"><title>Trial 5 · Correct: 2.31 (SE 0.100)</title></circle><circle class="pl-dot ok" cx="345.6" cy="198.8" r="7.5"><title>Trial 6 · Correct: 2.55 (SE 0.129)</title></circle><circle class="pl-dot ok" cx="394.9" cy="211.0" r="7.5"><title>Trial 7 · Correct: 2.50 (SE 0.123)</title></circle><circle class="pl-dot ok" cx="444.3" cy="237.9" r="7.5"><title>Trial 8 · Correct: 2.39 (SE 0.115)</title></circle><circle class="pl-dot bad" cx="493.7" cy="225.7" r="7.5"><title>Trial 9 · Incorrect: 2.44 (SE 0.127)</title></circle><circle class="pl-dot rep" cx="493.7" cy="157.1" r="7.5"><title>Trial 9 · Repair: 2.72 (SE 0.133)</title></circle><circle class="pl-dot ok" cx="543.1" cy="240.4" r="7.5"><title>Trial 10 · Correct: 2.38 (SE 0.119)</title></circle><circle class="pl-dot bad" cx="592.4" cy="211.0" r="7.5"><title>Trial 11 · Incorrect: 2.50 (SE 0.125)</title></circle><circle class="pl-dot rep" cx="592.4" cy="149.8" r="7.5"><title>Trial 11 · Repair: 2.75 (SE 0.129)</title></circle><circle class="pl-dot ok" cx="641.8" cy="282.1" r="7.5"><title>Trial 12 · Correct: 2.21 (SE 0.116)</title></circle><circle class="pl-dot ok" cx="691.2" cy="237.9" r="7.5"><title>Trial 13 · Correct: 2.39 (SE 0.124)</title></circle><circle class="pl-dot ok" cx="740.6" cy="220.8" r="7.5"><title>Trial 14 · Correct: 2.46 (SE 0.107)</title></circle><circle class="pl-dot bad" cx="789.9" cy="250.2" r="7.5"><title>Trial 15 · Incorrect: 2.34 (SE 0.115)</title></circle><circle class="pl-dot rep" cx="789.9" cy="162.0" r="7.5"><title>Trial 15 · Repair: 2.70 (SE 0.144)</title></circle><circle class="pl-dot ok" cx="839.3" cy="240.4" r="7.5"><title>Trial 16 · Correct: 2.38 (SE 0.126)</title></circle><text class="pl-axis" x="469" y="408" text-anchor="middle">Trial (within-block order)</text><text class="pl-axis" transform="translate(18 211) rotate(-90)" text-anchor="middle">Mean semantic detail density</text><circle class="pl-dot ok" cx="270" cy="28" r="7.5"/><text class="pl-leg" x="284" y="34">Correct</text><circle class="pl-dot bad" cx="390" cy="28" r="7.5"/><text class="pl-leg" x="404" y="34">Incorrect</text><circle class="pl-dot rep" cx="510" cy="28" r="7.5"/><text class="pl-leg" x="524" y="34">Repair</text></svg>
       <div class="ttr-fine" style="margin-bottom:0">Mean semantic detail density per trial, with standard error bars. Shaded columns mark the four trials on which the robot erred. Repair points are the attempts that followed.</div>
+    </div>
+    <div class="ttr-result">
+      <span class="ttr-mono ttr-rlabel">Result</span>
+      Neither the competence claim nor the specific feedback changed anything, alone or together. But when the robot said it didn't understand and asked for a retry, people added detail on that attempt only (repair means 2.65 to 2.75, against 2.34 to 2.50 for the error trial just before), then went back to normal.
     </div>
   </div>
 </div>
 <div class="ttr-insight">
   <div class="ttr-mono">💡 What this means in practice</div>
-  <p>People didn't respond to general confidence or past success. A specific, immediate signal that the robot didn't understand mattered more than a general claim.</p>
+  <p>Who is listening shapes how much people say. Claims of competence and praise did not. In this task, a specific and immediate signal that the robot had not understood was the one that mattered, and only for that retry. A clear failure signal with a request to try again is what bought extra detail.</p>
 </div>
 <div class="ttr-actions">
   <a class="ttr-btn" href="/academia/">Full write-ups &amp; citations</a>
