@@ -45,23 +45,39 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
 .ttr-block p{position:relative;font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(20px,2.8vw,26px);line-height:1.4;max-width:680px}
 .ttr-block em{font-style:italic;color:var(--pop)}
 .ttr-block strong{background:linear-gradient(transparent 62%,var(--mint) 62%);font-weight:700}
-.ttr-game{display:grid;grid-template-columns:1fr;gap:14px;margin:22px 0 4px}
-@media(min-width:720px){.ttr-game{grid-template-columns:1fr 1.2fr 1fr}}
-.ttr-tile{background:var(--card);border:2px solid var(--ink);border-radius:18px;padding:16px;text-align:center}
-.ttr-tile .ttr-mono{color:var(--muted);font-size:11px}
-.ttr-word{font-family:Fraunces,serif;font-weight:800;font-size:36px;line-height:1.2;margin-top:12px;filter:blur(7px);transition:filter .3s;user-select:none}
-.ttr-word.on{filter:none}
-.ttr-ring{position:relative;width:124px;height:124px;margin:8px auto 0}
-.ttr-ring svg{transform:rotate(-90deg);display:block}
-.ttr-ring circle{fill:none;stroke-width:10}
-.ttr-ring .bg{stroke:var(--line)}
-.ttr-ring .fg{stroke:var(--pop);stroke-linecap:round;stroke-dasharray:339.3;stroke-dashoffset:0}
-.ttr-ring b{position:absolute;top:0;right:0;bottom:0;left:0;display:grid;place-items:center;font-family:Fraunces,serif;font-weight:800;font-size:38px}
-.ttr-go{margin-top:10px;font-weight:600;font-size:15px;border:2px solid var(--ink);background:var(--pop);color:var(--on-pop);border-radius:99px;padding:7px 16px;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+.ttr-proc{margin:24px 0 4px;background:var(--card);border:2px solid var(--ink);border-radius:24px;padding:20px;box-shadow:7px 7px 0 var(--ink)}
+.ttr-ptop{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:16px}
+.ttr-seg{display:inline-flex;border:2px solid var(--ink);border-radius:99px;overflow:hidden;background:var(--paper)}
+.ttr-seg button{font-weight:600;font-size:14px;border:0;background:none;color:var(--ink);padding:7px 14px;cursor:pointer}
+.ttr-seg button.on{background:var(--ink);color:var(--paper)}
+.ttr-go{font-weight:600;font-size:15px;border:2px solid var(--ink);background:var(--pop);color:var(--on-pop);border-radius:99px;padding:8px 18px;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
 .ttr-go:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
-.ttr-who{display:flex;gap:10px;justify-content:center;font-size:34px;margin:12px 0 6px}
-.ttr-who span{opacity:.3;transition:.2s}
-.ttr-who span.on{opacity:1;transform:scale(1.15)}
+.ttr-stage{display:grid;gap:14px;align-items:end}
+@media(min-width:720px){.ttr-stage{grid-template-columns:1.25fr 1fr}}
+.ttr-screen{position:relative;background:var(--paper);border:3px solid var(--ink);border-radius:18px;padding:14px 14px 12px;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end}
+.ttr-av{width:150px;height:auto;display:block;margin:6px auto 12px}
+.ttr-proc[data-l="robot"] .av-human,.ttr-proc[data-l="human"] .av-robot{display:none}
+.ttr-lbub{position:absolute;top:12px;right:12px;background:var(--card);border:2px solid var(--ink);border-radius:10px;padding:3px 10px;font-size:14px;font-style:italic;transition:background .2s}
+.ttr-proc[data-step="3"] .ttr-lbub{background:var(--mint);color:var(--on-mint);font-style:normal;font-weight:600}
+.ttr-pbar{display:grid;grid-template-columns:1.2fr 1fr;gap:10px}
+.ttr-wordb,.ttr-timeb{background:#10131a;color:#fff;border-radius:8px;padding:6px 10px;text-align:center;font-family:"DM Mono",monospace;font-weight:500;font-size:20px;letter-spacing:.06em;min-height:40px}
+.ttr-proc[data-step="3"] .ttr-wordb{background:#1f9d55}
+.ttr-proc[data-step="3"] .ttr-timeb{color:transparent}
+.ttr-speaker{display:flex;align-items:flex-end;gap:10px;opacity:.35;transition:opacity .25s}
+.ttr-speaker svg{width:96px;flex:none}
+.ttr-proc[data-step="2"] .ttr-speaker{opacity:1}
+.ttr-proc[data-step="3"] .ttr-speaker{opacity:.6}
+.ttr-sbub{position:relative;flex:1;min-height:64px;background:var(--paper);border:2px solid var(--ink);border-radius:14px;padding:8px 12px;font-size:15px;font-style:italic;line-height:1.4}
+.ttr-sbub::before{content:"";position:absolute;left:-9px;bottom:16px;border:8px solid transparent;border-right-color:var(--ink);border-left:0}
+.ttr-steps{list-style:none;margin:16px 0 8px;padding:0;display:grid;gap:8px}
+@media(min-width:720px){.ttr-steps{grid-template-columns:repeat(3,1fr)}}
+.ttr-steps li{margin:0;padding:0;list-style:none!important;display:block}
+.ttr-steps li::marker{content:""}
+.ttr-steps li::before,.ttr-steps li::after{content:none!important;display:none!important}
+.ttr-steps button{width:100%;height:100%;display:flex;gap:10px;align-items:flex-start;text-align:left;font-size:14px;line-height:1.35;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:14px;padding:10px 12px;cursor:pointer;transition:background .2s}
+.ttr-steps b{flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--paper);font-family:Fraunces,serif;font-size:15px}
+.ttr-proc[data-step="1"] .ttr-steps li:nth-child(1) button,.ttr-proc[data-step="2"] .ttr-steps li:nth-child(2) button,.ttr-proc[data-step="3"] .ttr-steps li:nth-child(3) button{background:var(--pop);color:var(--on-pop)}
+.ttr-proc[data-step="1"] .ttr-steps li:nth-child(1) b,.ttr-proc[data-step="2"] .ttr-steps li:nth-child(2) b,.ttr-proc[data-step="3"] .ttr-steps li:nth-child(3) b{background:var(--paper);color:var(--ink)}
 .ttr-fine{font-family:"DM Mono",monospace;font-size:12px;line-height:1.5;color:var(--muted);max-width:640px;margin:8px 0 18px}
 .ttr-metric{background:var(--deep);color:var(--on-deep);border:2px solid var(--ink);border-radius:22px;padding:26px 24px;margin:22px 0 0}
 .ttr-metric .ttr-mono{color:var(--mint)}
@@ -82,13 +98,6 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
 .ttr-chip.a{background:var(--mint);color:var(--on-mint)}
 .ttr-chip.b{background:var(--pop);color:var(--on-pop)}
 .ttr-versus{font-family:Fraunces,serif;font-style:italic;font-weight:500;font-size:20px;color:var(--muted)}
-.ttr-bars{display:grid;gap:10px;margin:14px 0 6px;max-width:580px}
-.ttr-row{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center}
-.ttr-trk{height:34px;border-radius:99px;border:2px solid var(--ink);position:relative;overflow:hidden;background:var(--paper)}
-.ttr-trk i{position:absolute;top:0;bottom:0;left:0;width:0;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
-.ttr-trk.a i{background:var(--mint)}
-.ttr-trk.b i{background:var(--pop)}
-.ttr-bars.in-view .ttr-trk i{width:var(--w,50%)}
 .ttr-matrix{display:grid;grid-template-columns:110px 1fr 1fr;gap:8px;margin:20px 0 6px;max-width:580px}
 .ttr-cell{border:2px solid var(--ink);border-radius:14px;padding:14px 8px;text-align:center;background:var(--paper);font-size:15px}
 .ttr-cell.corner{border:0;background:none}
@@ -110,16 +119,25 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
 .ttr-plotsvg .pl-dot.ok{fill:var(--c-ok)}
 .ttr-plotsvg .pl-dot.bad{fill:var(--c-bad)}
 .ttr-plotsvg .pl-dot.rep{fill:var(--ink)}
+.ttr-plotsvg .pl-conn{stroke:var(--muted);stroke-width:3;stroke-dasharray:2 7;stroke-linecap:round;opacity:.7}
+.ttr-plotsvg .pl-small{fill:var(--card);stroke-width:3}
+.ttr-plotsvg .pl-small.h{stroke:var(--mint)}
+.ttr-plotsvg .pl-small.r{stroke:var(--pop)}
+.ttr-plotsvg .pl-big{stroke:var(--ink);stroke-width:3}
+.ttr-plotsvg .pl-big.h{fill:var(--mint)}
+.ttr-plotsvg .pl-big.r{fill:var(--pop)}
+.ttr-plotsvg .pl-val{fill:var(--ink);font-family:Fraunces,serif;font-weight:800;font-size:22px}
 .ttr-plotsvg circle{transition:r .15s}
-.ttr-plotsvg circle:hover{r:10}
+.ttr-plotsvg .pl-small:hover{r:10}
+.ttr-plotsvg .pl-big:hover{r:16}
 .ttr-insight{margin:56px 0 10px;background:var(--pop);color:var(--on-pop);border:2px solid var(--ink);border-radius:30px;padding:36px 30px;box-shadow:10px 10px 0 var(--ink)}
 .ttr-insight .ttr-mono{opacity:.9;margin-bottom:12px}
 .ttr-insight p{font-family:Fraunces,serif;font-weight:800;font-size:clamp(20px,2.9vw,28px);line-height:1.25;letter-spacing:-.01em;max-width:760px;margin:0}
 .ttr-actions{margin:34px 0 6px}
 .ttr a.ttr-btn{display:inline-block;text-decoration:none;font-weight:600;font-size:16px;padding:14px 24px;border:2px solid var(--ink);border-radius:99px;background:var(--ink);color:var(--paper);box-shadow:4px 4px 0 var(--pop);transition:transform .12s,box-shadow .12s}
 .ttr a.ttr-btn:hover{transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--pop)}
-@media(max-width:600px){.ttr{padding:6px 16px 32px;border-radius:22px;font-size:16px}.ttr-ticker{margin-inline:-16px}.ttr-robot{display:none}.ttr h1.ttr-title{padding-right:0}.ttr-card{grid-template-columns:40px 1fr}.ttr-card i{font-size:32px}.ttr-num{flex-basis:44px;font-size:28px}.ttr-body{padding:18px 16px}.ttr-matrix{grid-template-columns:76px 1fr 1fr}.ttr-row{grid-template-columns:70px 1fr}.ttr-insight{padding:26px 20px}}
-@media(prefers-reduced-motion:reduce){.ttr-track{animation:none}.ttr-trk i{transition:none}}
+@media(max-width:600px){.ttr{padding:6px 16px 32px;border-radius:22px;font-size:16px}.ttr-ticker{margin-inline:-16px}.ttr-robot{display:none}.ttr h1.ttr-title{padding-right:0}.ttr-card{grid-template-columns:40px 1fr}.ttr-card i{font-size:32px}.ttr-num{flex-basis:44px;font-size:28px}.ttr-body{padding:18px 16px}.ttr-matrix{grid-template-columns:76px 1fr 1fr}.ttr-insight{padding:26px 20px}}
+@media(prefers-reduced-motion:reduce){.ttr-track{animation:none}}
 </style>
 <div class="ttr">
 <div class="ttr-hero">
@@ -152,14 +170,55 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
 <div class="ttr-block">
   <div class="ttr-mono ttr-label">🎮 The task I built</div>
   <p>Speakers had seven seconds to describe a word without saying it, while a human or a robot listener tried to guess. Both listeners behaved identically, so the only thing that changed was <em>who</em> was listening.</p>
-  <div class="ttr-game">
-    <div class="ttr-tile"><div class="ttr-mono">1 · The word</div><div class="ttr-word" id="ttr-word">truck</div></div>
-    <div class="ttr-tile"><div class="ttr-mono">2 · Seven seconds</div>
-      <div class="ttr-ring"><svg width="124" height="124" viewBox="0 0 132 132"><circle class="bg" cx="66" cy="66" r="54"/><circle class="fg" id="ttr-fg" cx="66" cy="66" r="54"/></svg><b id="ttr-t">7</b></div>
-      <button class="ttr-go" id="ttr-go" type="button">▶ Play</button></div>
-    <div class="ttr-tile"><div class="ttr-mono">3 · Who listens?</div>
-      <div class="ttr-who" aria-hidden="true"><span id="ttr-p1">🧑</span><span id="ttr-p2">🤖</span></div>
-      <div class="ttr-fine" style="text-align:center;margin:0 auto">Human or robot, same behavior.</div></div>
+  <div class="ttr-proc" id="ttr-proc" data-l="robot" data-step="1">
+    <div class="ttr-ptop">
+      <div class="ttr-seg" role="group" aria-label="Choose the listener">
+        <button type="button" data-l="robot" class="on" aria-pressed="true">🤖 Robot listener</button>
+        <button type="button" data-l="human" aria-pressed="false">🧑 Human listener</button>
+      </div>
+      <button class="ttr-go" id="ttr-go" type="button">▶ Play a trial</button>
+    </div>
+    <div class="ttr-stage">
+      <div class="ttr-screen">
+        <svg class="ttr-av av-robot" viewBox="0 0 140 120" aria-hidden="true">
+          <circle cx="70" cy="9" r="5" fill="var(--pop)"/>
+          <rect x="30" y="14" width="80" height="62" rx="22" fill="var(--paper)" stroke="var(--ink)" stroke-width="3.5"/>
+          <circle cx="53" cy="44" r="10" fill="var(--card)" stroke="var(--ink)" stroke-width="3"/>
+          <circle cx="87" cy="44" r="10" fill="var(--card)" stroke="var(--ink)" stroke-width="3"/>
+          <circle cx="53" cy="44" r="4.5" fill="var(--ink)"/>
+          <circle cx="87" cy="44" r="4.5" fill="var(--ink)"/>
+          <ellipse cx="70" cy="62" rx="5" ry="4" fill="var(--pop)"/>
+          <path d="M18 120C18 92 38 84 70 84C102 84 122 92 122 120Z" fill="var(--mint)" stroke="var(--ink)" stroke-width="3.5"/>
+          <circle cx="70" cy="108" r="9" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+        </svg>
+        <svg class="ttr-av av-human" viewBox="0 0 140 120" aria-hidden="true">
+          <circle cx="70" cy="44" r="30" fill="var(--paper)" stroke="var(--ink)" stroke-width="3.5"/>
+          <path d="M40 40C42 18 98 18 100 40C88 30 54 30 40 40Z" fill="var(--ink)"/>
+          <circle cx="58" cy="48" r="3.5" fill="var(--ink)"/>
+          <circle cx="82" cy="48" r="3.5" fill="var(--ink)"/>
+          <path d="M60 62Q70 69 80 62" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M18 120C18 94 38 82 70 82C102 82 122 94 122 120Z" fill="var(--pop)" stroke="var(--ink)" stroke-width="3.5"/>
+        </svg>
+        <div class="ttr-lbub" id="ttr-lbub">(Listening)</div>
+        <div class="ttr-pbar"><div class="ttr-wordb" id="ttr-wordb">TRUCK</div><div class="ttr-timeb" id="ttr-timeb">07:00</div></div>
+      </div>
+      <div class="ttr-speaker">
+        <svg viewBox="0 0 120 100" aria-hidden="true">
+          <circle cx="44" cy="30" r="18" fill="var(--paper)" stroke="var(--ink)" stroke-width="3.5"/>
+          <path d="M26 24C28 8 62 8 64 24C56 18 34 18 26 24Z" fill="var(--ink)"/>
+          <path d="M8 100C8 74 24 62 44 62C64 62 80 74 80 100Z" fill="var(--mint)" stroke="var(--ink)" stroke-width="3.5"/>
+          <rect x="78" y="58" width="34" height="24" rx="4" fill="var(--card)" stroke="var(--ink)" stroke-width="3"/>
+          <rect x="72" y="84" width="46" height="6" rx="3" fill="var(--ink)"/>
+        </svg>
+        <div class="ttr-sbub" id="ttr-sbub"></div>
+      </div>
+    </div>
+    <ol class="ttr-steps">
+      <li><button type="button" data-s="1"><b>1</b><span>Target word appears, timer starts</span></button></li>
+      <li><button type="button" data-s="2"><b>2</b><span>Speaker describes target word in 7s</span></button></li>
+      <li><button type="button" data-s="3"><b>3</b><span>Audience guesses the word when time is up</span></button></li>
+    </ol>
+    <div class="ttr-fine">↻ This loop repeats on every trial. Both listeners behave identically.</div>
   </div>
 </div>
 <div class="ttr-block">
@@ -181,14 +240,13 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
       <span class="ttr-versus">vs</span>
       <span class="ttr-chip b">Robot listener</span>
     </div>
-    <div class="ttr-bars" id="ttr-bars">
-      <div class="ttr-row"><span class="ttr-mono">Human</span><div class="ttr-trk a"><i style="--w:38%"></i></div></div>
-      <div class="ttr-row"><span class="ttr-mono">Robot</span><div class="ttr-trk b"><i style="--w:84%"></i></div></div>
+    <div class="ttr-plot">
+      <svg class="ttr-plotsvg" viewBox="0 0 880 250" role="img" aria-label="Mean semantic detail by listener. Robot listeners received more detail (about 2.23) than human listeners (about 1.98), averaged across the three error trajectories."><rect class="pl-panel" x="120" y="24" width="720" height="164"/><line class="pl-grid" x1="120.0" x2="120.0" y1="24" y2="188"/><line class="pl-tick" x1="120.0" x2="120.0" y1="188" y2="194"/><text class="pl-txt" x="120.0" y="212" text-anchor="middle">1.50</text><line class="pl-grid" x1="300.0" x2="300.0" y1="24" y2="188"/><line class="pl-tick" x1="300.0" x2="300.0" y1="188" y2="194"/><text class="pl-txt" x="300.0" y="212" text-anchor="middle">1.75</text><line class="pl-grid" x1="480.0" x2="480.0" y1="24" y2="188"/><line class="pl-tick" x1="480.0" x2="480.0" y1="188" y2="194"/><text class="pl-txt" x="480.0" y="212" text-anchor="middle">2.00</text><line class="pl-grid" x1="660.0" x2="660.0" y1="24" y2="188"/><line class="pl-tick" x1="660.0" x2="660.0" y1="188" y2="194"/><text class="pl-txt" x="660.0" y="212" text-anchor="middle">2.25</text><line class="pl-grid" x1="840.0" x2="840.0" y1="24" y2="188"/><line class="pl-tick" x1="840.0" x2="840.0" y1="188" y2="194"/><text class="pl-txt" x="840.0" y="212" text-anchor="middle">2.50</text><text class="pl-axis" x="480" y="238" text-anchor="middle">Mean semantic detail density</text><line class="pl-conn" x1="468.0" y1="69.9" x2="643.2" y2="142.1"/><text class="pl-axis" x="104" y="75.9" text-anchor="end">Human</text><circle class="pl-small h" cx="480.0" cy="69.9" r="7"><title>Human · Correct-First: M = 2.00, SD = 0.95</title></circle><circle class="pl-small h" cx="422.4" cy="69.9" r="7"><title>Human · Error-First: M = 1.92, SD = 1.02</title></circle><circle class="pl-small h" cx="501.6" cy="69.9" r="7"><title>Human · Mixed: M = 2.03, SD = 0.97</title></circle><circle class="pl-big h" cx="468.0" cy="69.9" r="13"><title>Human · average of the three conditions: 1.98</title></circle><text class="pl-val" x="468.0" y="45.9" text-anchor="middle">1.98</text><text class="pl-axis" x="104" y="148.1" text-anchor="end">Robot</text><circle class="pl-small r" cx="688.8" cy="142.1" r="7"><title>Robot · Correct-First: M = 2.29, SD = 0.95</title></circle><circle class="pl-small r" cx="638.4" cy="142.1" r="7"><title>Robot · Error-First: M = 2.22, SD = 0.93</title></circle><circle class="pl-small r" cx="602.4" cy="142.1" r="7"><title>Robot · Mixed: M = 2.17, SD = 0.87</title></circle><circle class="pl-big r" cx="643.2" cy="142.1" r="13"><title>Robot · average of the three conditions: 2.23</title></circle><text class="pl-val" x="643.2" y="118.1" text-anchor="middle">2.23</text></svg>
+      <div class="ttr-fine">Large markers: mean semantic detail for each listener, averaged across the three error-trajectory conditions (Correct-First, Error-First, Mixed). Small markers: the individual condition means. Simple average, conditions not weighted by size.</div>
     </div>
-    <div class="ttr-fine">Schematic of the direction of the effect. Replace with your original figure.</div>
     <div class="ttr-result">
       <span class="ttr-mono ttr-rlabel">Result</span>
-      People gave the robot more detail than the human, every time, even after it got several answers right in a row. Published at ACM/IEEE HRI '26 with an Honorable Mention.
+      People gave the robot more detail than the human (2.23 vs 1.98 on average), every time, even after it got several answers right in a row. Published at ACM/IEEE HRI '26 with an Honorable Mention.
     </div>
   </div>
 </div>
@@ -241,37 +299,72 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
       p.style.transform = "translate(" + Math.cos(a) * 5 + "px," + Math.sin(a) * 5 + "px)";
     });
   });
+  var proc = document.getElementById("ttr-proc");
   var go = document.getElementById("ttr-go");
-  var fg = document.getElementById("ttr-fg");
-  var t = document.getElementById("ttr-t");
-  var w = document.getElementById("ttr-word");
-  var p1 = document.getElementById("ttr-p1");
-  var p2 = document.getElementById("ttr-p2");
-  var run = false;
-  var who = 1;
-  go.addEventListener("click", function () {
-    if (run) { return; }
-    run = true;
-    who = who ^ 1;
-    w.classList.add("on");
-    p1.classList.toggle("on", who === 0);
-    p2.classList.toggle("on", who === 1);
-    var s = Date.now();
-    var L = 339.3;
-    var iv = setInterval(function () {
-      var e = (Date.now() - s) / 1000;
-      var left = Math.max(0, 7 - e);
-      fg.style.strokeDashoffset = L * (e / 7);
-      t.textContent = Math.ceil(left);
-      if (left <= 0) {
-        clearInterval(iv);
-        run = false;
-        w.classList.remove("on");
-        t.textContent = "7";
-        fg.style.strokeDashoffset = 0;
-        go.textContent = "▶ Play again";
+  var lbub = document.getElementById("ttr-lbub");
+  var sbub = document.getElementById("ttr-sbub");
+  var timeb = document.getElementById("ttr-timeb");
+  var words = "Large vehicle, used for transport…".split(" ");
+  var timers = [];
+  var raf = 0;
+  function fmt(ms) {
+    var left = Math.max(0, ms);
+    var sec = Math.floor(left / 1000);
+    var cs = Math.floor((left % 1000) / 10);
+    return (sec < 10 ? "0" : "") + sec + ":" + (cs < 10 ? "0" : "") + cs;
+  }
+  function stop() {
+    timers.forEach(clearTimeout);
+    timers = [];
+    cancelAnimationFrame(raf);
+  }
+  function show(step, ms, nWords) {
+    proc.setAttribute("data-step", step);
+    lbub.textContent = step === 3 ? "“Truck!”" : "(Listening)";
+    timeb.textContent = fmt(ms);
+    sbub.textContent = step === 1 ? "" : "“" + words.slice(0, nWords).join(" ") + (nWords >= words.length ? "”" : "");
+  }
+  function setStatic(step) {
+    stop();
+    go.textContent = "▶ Play a trial";
+    if (step === 1) { show(1, 7000, 0); }
+    if (step === 2) { show(2, 3500, words.length); }
+    if (step === 3) { show(3, 0, words.length); }
+  }
+  function play() {
+    stop();
+    go.textContent = "↻ Restart";
+    show(1, 7000, 0);
+    timers.push(setTimeout(function () {
+      var start = Date.now();
+      function tick() {
+        var left = 7000 - (Date.now() - start);
+        var n = Math.min(words.length, Math.ceil(words.length * (1 - left / 7000)));
+        show(2, left, n);
+        if (left > 0) { raf = requestAnimationFrame(tick); } else {
+          show(2, 0, words.length);
+          timers.push(setTimeout(function () {
+            show(3, 0, words.length);
+            go.textContent = "▶ Play again";
+          }, 450));
+        }
       }
-    }, 50);
+      tick();
+    }, 1300));
+  }
+  go.addEventListener("click", play);
+  [].forEach.call(proc.querySelectorAll("[data-s]"), function (b) {
+    b.addEventListener("click", function () { setStatic(+b.getAttribute("data-s")); });
+  });
+  [].forEach.call(proc.querySelectorAll(".ttr-seg button"), function (b) {
+    b.addEventListener("click", function () {
+      proc.setAttribute("data-l", b.getAttribute("data-l"));
+      [].forEach.call(proc.querySelectorAll(".ttr-seg button"), function (o) {
+        var on = o === b;
+        o.classList.toggle("on", on);
+        o.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    });
   });
   var score = document.getElementById("ttr-score");
   [].forEach.call(root.querySelectorAll("[data-d]"), function (el) {
@@ -280,16 +373,5 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
       score.textContent = root.querySelectorAll("[data-d].on").length;
     });
   });
-  var targets = [document.getElementById("ttr-bars")];
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("in-view"); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.4 });
-    targets.forEach(function (el) { io.observe(el); });
-  } else {
-    targets.forEach(function (el) { el.classList.add("in-view"); });
-  }
 })();
 </script>
