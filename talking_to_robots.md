@@ -28,31 +28,19 @@ body[data-theme="dark"] .ttr{--paper:#11132a;--ink:#f5f0e6;--pop:#ff6aab;--mint:
 
 .ttr-hero{position:relative;padding:44px 0 8px}
 .ttr p.ttr-meta{display:inline-block;background:var(--ink);color:var(--paper);padding:4px 10px;margin:0 0 6px!important;max-width:none!important}
-.ttr h1.ttr-title{display:flex;flex-direction:column;align-items:flex-start;gap:.3em;font-weight:800;font-size:clamp(44px,10vw,112px);line-height:1;letter-spacing:-.045em;margin:22px 0 30px;cursor:pointer}
-.ttr-tb{position:relative;display:inline-block;border:3px solid var(--ink);border-radius:.3em;padding:.04em .26em .13em;transition:opacity .2s,transform .45s cubic-bezier(.34,1.56,.64,1)}
-.ttr-tb::after{content:"";position:absolute;width:.26em;height:.26em;background:inherit;border:3px solid var(--ink);border-top:0;border-left:0}
-.ttr-tb.me{background:var(--pop);color:#1d2b6b;box-shadow:7px 6px 0 var(--mint);transform:rotate(-1.5deg);transform-origin:10% 100%}
-.ttr-tb.me::after{left:.5em;bottom:-.15em;transform:rotate(45deg)}
-.ttr-row2{display:flex;align-items:center;gap:.28em;margin-left:clamp(28px,9vw,140px)}
-.ttr-tb.bot{background-color:#1d2b6b;background-image:radial-gradient(rgba(255,255,255,.1) 1.2px,transparent 1.6px);background-size:.07em .07em;color:var(--sun);box-shadow:7px 6px 0 var(--pop);transform-origin:100% 50%;min-width:1.6em;text-align:center}
-body[data-theme="dark"] .ttr-tb.bot{background-color:#070818}
-.ttr-tb.bot::after{right:-.16em;top:calc(50% - .13em);transform:rotate(-45deg);background-image:none}
-.ttr-led{display:inline-block}
-@supports ((-webkit-background-clip:text) or (background-clip:text)){.ttr-led{color:transparent;background:radial-gradient(circle,var(--sun) 50%,transparent 58%) 0 0/.058em .058em;-webkit-background-clip:text;background-clip:text}}
-.ttr-typing{display:none;gap:.13em;align-items:center;height:1em;padding:0 .05em;vertical-align:top}
-.ttr-typing i{width:.17em;height:.17em;border-radius:50%;background:var(--sun);animation:ttr-type 1s ease-in-out infinite}
-.ttr-typing i:nth-child(2){animation-delay:.15s}.ttr-typing i:nth-child(3){animation-delay:.3s}
-@keyframes ttr-type{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-.1em);opacity:1}}
-.ttr-title.run .ttr-tb{opacity:0;transform:scale(.5)}
-.ttr-title.run.s1 .ttr-tb.me{opacity:1;transform:rotate(-1.5deg)}
-.ttr-title.run.s2 .ttr-tb.bot{opacity:1;transform:none}
-.ttr-title.run:not(.s3) .ttr-led{display:none}
-.ttr-title.run.s2:not(.s3) .ttr-typing{display:inline-flex}
-.ttr-title.s3 .ttr-led{animation:ttr-flick .6s steps(1)}
-@keyframes ttr-flick{0%{opacity:0}20%{opacity:1}35%{opacity:.2}50%{opacity:1}65%{opacity:.4}80%,100%{opacity:1}}
-.ttr-title.s3 .ttr-robot{animation:ttr-hopR .5s ease-out}
-@keyframes ttr-hopR{35%{transform:translateY(-10%)}}
-.ttr-robot{flex:0 0 auto;width:1.15em;height:auto;color:var(--ink);filter:drop-shadow(5px 4px 0 var(--pop))}
+.ttr h1.ttr-title{cursor:pointer;font-weight:800;font-size:clamp(54px,12vw,132px);line-height:1;letter-spacing:-.045em;margin:18px 0 22px;padding-right:140px;text-shadow:5px 4px 0 var(--pop)}
+.ttr-title em{font-family:var(--f-d);font-style:normal;font-weight:800;letter-spacing:-.045em;color:var(--mint);text-shadow:5px 4px 0 var(--sun)}
+.ttr-ins b{display:inline-block;vertical-align:.32em;max-width:0;opacity:0;margin:0;padding:.1em 0;overflow:hidden;white-space:nowrap;font-size:.3em;font-weight:800;letter-spacing:-.02em;line-height:1.05;color:#1d2b6b!important;text-shadow:none;border:0 solid var(--ink);border-radius:.35em;transform:scale(.3);transition:max-width .5s cubic-bezier(.3,.7,.3,1),opacity .25s,margin .5s,padding .5s,border-width .2s,transform .5s cubic-bezier(.34,1.56,.64,1)}
+.ttr-ins b:nth-child(1){background:#ff4f9a;--r:-4deg}
+.ttr-ins b:nth-child(2){background:#ffd23f;--r:3deg}
+.ttr-ins b:nth-child(3){background:#7fd6c2;--r:-2deg}
+.ttr-title[data-mode="robot"] .ttr-ins b{max-width:12em;opacity:1;margin:0 .22em 0 0;padding:.1em .32em;border-width:3px;transform:rotate(var(--r));box-shadow:3px 3px 0 var(--ink)}
+.ttr-title[data-mode="robot"] .ttr-ins b:nth-child(2){transition-delay:.3s}
+.ttr-title[data-mode="robot"] .ttr-ins b:nth-child(3){transition-delay:.6s}
+.ttr-said{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:-6px 0 22px}
+.ttr-said .ttr-mono{font-weight:700}
+.ttr-saidnote{font-size:15px;color:var(--muted)}
+.ttr-robot{position:absolute;right:4px;top:48px;width:132px;color:var(--ink);filter:drop-shadow(6px 5px 0 var(--pop))}
 .ttr-stamp{display:inline-block;border:2px solid var(--ink);padding:7px 14px;transform:rotate(-2.5deg);background:var(--sun);color:var(--on-sun);font-family:var(--f-m);font-size:13px;font-weight:700;box-shadow:4px 4px 0 var(--ink)}
 .ttr-ticker{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin:36px -30px 0;overflow:hidden;white-space:nowrap;background:var(--mint)}
 .ttr-track{display:inline-block;padding:10px 0;animation:ttr-m 26s linear infinite}
@@ -230,15 +218,12 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
 .ttr-actions{margin:36px 0 6px}
 .ttr a.ttr-btn{display:inline-block;text-decoration:none;font-family:var(--f-d);font-weight:700;font-size:17px;padding:14px 24px;border:2px solid var(--ink);border-radius:6px;background:var(--sun);color:var(--on-sun);box-shadow:5px 5px 0 var(--ink);transition:transform .12s,box-shadow .12s}
 .ttr a.ttr-btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
-@media(max-width:600px){.ttr-proc{padding:16px 10px 14px}.ttr-screen{border-width:5px;padding:10px}.ttr-video{width:100%;height:180px}.ttr-hud{width:100%;gap:8px;margin-top:10px}.ttr-listener{left:29%}.ttr-listener .rb,.ttr-listener .hm{width:124px}.ttr-bub{max-width:50%;font-size:12.5px;padding:6px 10px 7px;top:10px;right:10px;box-shadow:3px 3px 0 #1a1a1a}.ttr-proc[data-mood="happy"] .ttr-bub{font-size:17px}.ttr-wbox,.ttr-tbox{font-size:20px}.ttr{padding:6px 16px 32px;font-size:16px}.ttr-ticker{margin-inline:-16px}.ttr-row2{margin-left:16px}.ttr-block{padding:20px 18px}.ttr-label span{width:42px;height:42px;font-size:14px}.ttr-num{flex-basis:50px;font-size:32px}.ttr-num::before{font-size:8px}.ttr-body{padding:18px 16px}.ttr-matrix{grid-template-columns:76px 1fr 1fr}.ttr-insight{padding:26px 20px}.ttr-tldr{padding:20px 18px}}
+@media(max-width:600px){.ttr-proc{padding:16px 10px 14px}.ttr-screen{border-width:5px;padding:10px}.ttr-video{width:100%;height:180px}.ttr-hud{width:100%;gap:8px;margin-top:10px}.ttr-listener{left:29%}.ttr-listener .rb,.ttr-listener .hm{width:124px}.ttr-bub{max-width:50%;font-size:12.5px;padding:6px 10px 7px;top:10px;right:10px;box-shadow:3px 3px 0 #1a1a1a}.ttr-proc[data-mood="happy"] .ttr-bub{font-size:17px}.ttr-wbox,.ttr-tbox{font-size:20px}.ttr{padding:6px 16px 32px;font-size:16px}.ttr-ticker{margin-inline:-16px}.ttr-robot{display:none}.ttr h1.ttr-title{padding-right:0}.ttr-block{padding:20px 18px}.ttr-label span{width:42px;height:42px;font-size:14px}.ttr-num{flex-basis:50px;font-size:32px}.ttr-num::before{font-size:8px}.ttr-body{padding:18px 16px}.ttr-matrix{grid-template-columns:76px 1fr 1fr}.ttr-insight{padding:26px 20px}.ttr-tldr{padding:20px 18px}}
 @media(prefers-reduced-motion:reduce){.ttr-track,.ttr-listener *{animation:none!important}}
 </style>
 <div class="ttr">
 <div class="ttr-hero">
-  <p class="ttr-mono ttr-meta">PhD research on how people talk to machines &middot; Koç University &middot; 2020–2026</p>
-  <h1 class="ttr-title" aria-label="Talking to Robots.">
-    <span class="ttr-tb me" aria-hidden="true">Talking to</span>
-    <span class="ttr-row2" aria-hidden="true"><span class="ttr-tb bot"><span class="ttr-typing"><i></i><i></i><i></i></span><span class="ttr-led">Robots.</span></span><svg class="ttr-robot" viewBox="0 0 120 120" aria-hidden="true">
+  <svg class="ttr-robot" viewBox="0 0 120 120" aria-hidden="true">
     <line x1="60" y1="6" x2="60" y2="22" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
     <circle cx="60" cy="8" r="6" fill="var(--pop)"/>
     <rect x="12" y="22" width="96" height="82" rx="26" fill="var(--card)" stroke="currentColor" stroke-width="4"/>
@@ -247,8 +232,10 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
     <circle class="ttr-pupil" cx="42" cy="58" r="6" fill="currentColor"/>
     <circle class="ttr-pupil" cx="78" cy="58" r="6" fill="currentColor"/>
     <rect x="40" y="82" width="40" height="8" rx="4" fill="var(--pop)"/>
-  </svg></span>
-  </h1>
+  </svg>
+  <p class="ttr-mono ttr-meta">PhD research on how people talk to machines &middot; Koç University &middot; 2020–2026</p>
+  <h1 class="ttr-title" id="ttr-title" data-mode="human" aria-label="Talking to Robots."><span aria-hidden="true">Talking</span> <span class="ttr-ins" aria-hidden="true"><b>carefully</b><b>in more detail</b><b>just to be sure</b></span><span aria-hidden="true">to <em>Robots.</em></span></h1>
+  <div class="ttr-said" role="group" aria-label="Who the title is said to"><span class="ttr-mono">Said to</span><span class="ttr-seg"><button type="button" data-m="human" aria-pressed="true" class="on">a human</button><button type="button" data-m="robot" aria-pressed="false">a robot</button></span><span class="ttr-saidnote">People give robots more detail. So does this title.</span></div>
   <div class="ttr-stamp">★ HRI '26 · Honorable Mention</div>
 </div>
 <div class="ttr-ticker" aria-label="Skills"><div class="ttr-track">
@@ -428,19 +415,19 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
   var root = document.querySelector(".ttr");
   if (!root) { return; }
   var robot = root.querySelector(".ttr-robot");
-  var title = root.querySelector(".ttr-title");
-  var titleT = [];
-  function playTitle() {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) { return; }
-    titleT.forEach(clearTimeout);
-    title.className = "ttr-title run";
-    void title.offsetWidth;
-    titleT = [setTimeout(function () { title.classList.add("s1"); }, 80),
-              setTimeout(function () { title.classList.add("s2"); }, 750),
-              setTimeout(function () { title.classList.add("s3"); }, 2000)];
+  var title = document.getElementById("ttr-title");
+  var saidBtns = [].slice.call(root.querySelectorAll(".ttr-said button"));
+  function mode(m) {
+    title.setAttribute("data-mode", m);
+    saidBtns.forEach(function (b) {
+      var on = b.getAttribute("data-m") === m;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
   }
-  title.addEventListener("click", playTitle);
-  playTitle();
+  saidBtns.forEach(function (b) { b.addEventListener("click", function () { mode(b.getAttribute("data-m")); }); });
+  title.addEventListener("click", function () { mode(title.getAttribute("data-mode") === "robot" ? "human" : "robot"); });
+  setTimeout(function () { mode("robot"); }, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1400);
   var pupils = [].slice.call(root.querySelectorAll(".ttr-pupil"));
   addEventListener("pointermove", function (e) {
     var bb = robot.getBoundingClientRect();
