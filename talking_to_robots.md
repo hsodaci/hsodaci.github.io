@@ -387,14 +387,20 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
     nodTimer = setTimeout(function () { av.classList.remove("nod"); }, 400);
   });
   var eyesAll = [].slice.call(av.querySelectorAll(".pupil"));
-  addEventListener("pointermove", function (e) {
-    var bb = av.getBoundingClientRect();
-    if (!bb.width) { return; }
-    var a = Math.atan2(e.clientY - (bb.top + bb.height * 0.4), e.clientX - (bb.left + bb.width / 2));
-    eyesAll.forEach(function (p) {
-      p.style.transform = "translate(" + Math.cos(a) * 3.5 + "px," + Math.sin(a) * 3.5 + "px)";
-    });
-  });
+  function gaze(x, y) {
+    eyesAll.forEach(function (p) { p.style.transform = "translate(" + x + "px," + y + "px)"; });
+  }
+  function glance() {
+    var r = Math.random();
+    var spots = [[-3.5, -1], [3.5, -1], [-3, 2], [3, 2], [0, -3], [2, 0]];
+    var d = spots[Math.floor(Math.random() * spots.length)];
+    if (r < 0.25) { gaze(((Math.random() - .5) * 1.2).toFixed(1), ((Math.random() - .5) * 1.2).toFixed(1)); }
+    else { gaze(d[0], d[1]); }
+    setTimeout(function () { gaze(0, 0); }, 500 + Math.random() * 900);
+    setTimeout(glance, 2200 + Math.random() * 3800);
+  }
+  gaze(0, 0);
+  setTimeout(glance, 2500);
   go.addEventListener("click", function () {
     if (busy) { return; }
     if (round === 1) { wi = (wi + 1) % pool.length; word = pool[wi]; }
