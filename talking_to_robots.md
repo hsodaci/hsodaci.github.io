@@ -125,6 +125,16 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
 .ttr-cell.head{font-family:var(--f-m);font-weight:400;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;justify-content:center;padding:6px}
 .ttr-cell.val::before{content:"";display:block;width:40px;height:3px;background:var(--ink);margin:0 auto 8px}
 .ttr-caption{font-family:var(--f-m);font-size:12px;line-height:1.5;color:var(--muted);margin-top:8px}
+.ttr-ex{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0 18px}
+.ttr-excard{background:var(--paper);border:2px solid var(--ink);border-radius:8px;padding:14px 16px}
+.ttr-exk{font-weight:700;color:var(--pop);margin-bottom:10px}
+.ttr-exrow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:8px 0;border-top:1px dashed var(--line)}
+.ttr-exrow:first-of-type{border-top:0}
+.ttr-exrow span{flex:0 0 72px;font-size:11px;font-weight:700;color:var(--muted)}
+.ttr-exrow.on span{color:var(--ink)}
+.ttr-exrow q{flex:1;font-family:var(--f-s);font-style:italic;font-size:19px;line-height:1.3;quotes:"“" "”"}
+.ttr-exrow i{flex-basis:100%;padding-left:82px;font-style:normal;font-family:var(--f-m);font-size:11px;color:var(--muted);margin-top:-4px}
+@media(max-width:700px){.ttr-ex{grid-template-columns:1fr}}
 .ttr-sub{display:inline-block;font-weight:700;background:var(--ink);color:var(--paper);padding:3px 10px;margin:28px 0 10px}
 
 .ttr-story{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:8px;align-items:stretch;margin:16px 0 6px}
@@ -208,7 +218,7 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
   <div class="ttr-mono">The short version</div>
   <ol>
     <li>People give a robot more detail than a human, even when the robot keeps getting it right.</li>
-    <li>Robot confidence claims and specific praise change nothing.</li>
+    <li>Robot competence claims and explicit praise change nothing.</li>
     <li>What does change it: the robot visibly failing to understand, and only on the very next attempt.</li>
   </ol>
 </div>
@@ -297,23 +307,36 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
   <div class="ttr-num">2</div>
   <div class="ttr-body">
     <h3 class="ttr-steptitle">Which robot signals change behavior?</h3>
-    <p>Since people gave the robot more detail, I asked whether the robot can influence how much they say. I tested two kinds of signal.</p>
+    <p>Since people gave the robot more detail, I wondered if the result would change if the robot signaled its understanding more explicitly. I tested two kinds of signal at different times of interaction.</p>
     <div class="ttr-mono ttr-sub">Test A · Two signals, crossed</div>
-    <p>An upfront competence claim, and specific positive feedback after a correct guess, each present or absent.</p>
+    <p>The robot gave two kinds of verbal cue. Half the speakers heard each version.</p>
+    <div class="ttr-ex">
+      <div class="ttr-excard">
+        <div class="ttr-mono ttr-exk">1 · Before the game: a competence claim</div>
+        <div class="ttr-exrow on"><span class="ttr-mono">Claim</span><q>I have been trained on millions of words, so I can usually grasp what is said to me easily.</q></div>
+        <div class="ttr-exrow"><span class="ttr-mono">No claim</span><q>It will be a nice game.</q></div>
+      </div>
+      <div class="ttr-excard">
+        <div class="ttr-mono ttr-exk">2 · After a correct description: feedback</div>
+        <div class="ttr-exrow on"><span class="ttr-mono">Explicit</span><q>Very clear!</q> <i>then guesses right</i></div>
+        <div class="ttr-exrow"><span class="ttr-mono">Minimal</span><q>Okay.</q> <i>then guesses right</i></div>
+      </div>
+    </div>
+    <p>Every combination was tested:</p>
     <div class="ttr-matrix">
       <div class="ttr-cell corner"></div>
-      <div class="ttr-cell head">No competence claim</div>
+      <div class="ttr-cell head">No claim</div>
       <div class="ttr-cell head">Competence claim</div>
-      <div class="ttr-cell head">Generic feedback</div>
+      <div class="ttr-cell head">Minimal feedback</div>
       <div class="ttr-cell val">No effect</div>
       <div class="ttr-cell val">No effect</div>
-      <div class="ttr-cell head">Specific feedback</div>
+      <div class="ttr-cell head">Explicit feedback</div>
       <div class="ttr-cell val">No effect</div>
       <div class="ttr-cell val">No effect</div>
     </div>
     <div class="ttr-caption">None of the four combinations moved the metric.</div>
     <div class="ttr-mono ttr-sub">Test B · The robot fails</div>
-    <p>On some rounds the robot said it couldn't find the answer and asked for another description. This is where behavior moved.</p>
+    <p>This was not a manipulation. On a few scripted rounds, the same for everyone, the robot guessed wrong, said it couldn't find the word, and asked the speaker to describe it again. This is where behavior moved.</p>
     <div class="ttr-story">
       <div class="ttr-frame">
         <div class="ttr-fk">Trial 4 · the robot errs</div>
@@ -343,7 +366,7 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
     </div>
     <div class="ttr-result">
       <span class="ttr-mono ttr-rlabel">Result</span>
-      Neither the competence claim nor the specific feedback changed anything, alone or together. But when the robot said it didn't understand and asked for a retry, people added detail on that attempt only (repair means 2.65 to 2.75, against 2.34 to 2.50 for the error trial just before), then went back to normal.
+      Neither the competence claim nor the explicit feedback changed anything, alone or together. But when the robot said it didn't understand and asked for a retry, people added detail on that attempt only (repair means 2.65 to 2.75, against 2.34 to 2.50 for the error trial just before), then went back to normal.
     </div>
   </div>
 </div>
