@@ -114,7 +114,11 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
 .ttr-metric .ttr-mono{color:var(--sun)}
 .ttr-say{font-family:var(--f-s);font-size:clamp(26px,4vw,36px);line-height:1.5;margin:12px 0 16px}
 .ttr-say button{font:inherit;color:inherit;background:none;border:0;border-bottom:3px dashed #a3a8c9;padding:0 3px;cursor:pointer;transition:.2s}
-.ttr-say button.on{background:var(--pop);border-color:var(--pop);color:#1d2b6b}
+.ttr-say button:nth-of-type(1){--d:#ff4f9a}
+.ttr-say button:nth-of-type(2){--d:#ffd23f}
+.ttr-say button:nth-of-type(3){--d:#7fd6c2}
+.ttr-say button{border-bottom-color:var(--d)}
+.ttr-say button.on{background:var(--d);border-color:var(--d);color:#1d2b6b;border-radius:4px}
 .ttr-scorebox{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .ttr-score{font-family:var(--f-d);font-weight:800;font-size:64px;line-height:1;color:var(--sun);min-width:40px}
 
