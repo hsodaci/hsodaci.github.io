@@ -137,12 +137,12 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
 @media(max-width:700px){.ttr-ex{grid-template-columns:1fr}}
 .ttr-sub{display:inline-block;font-weight:700;background:var(--ink);color:var(--paper);padding:3px 10px;margin:28px 0 10px}
 
-.ttr-story{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:8px;align-items:stretch;margin:16px 0 22px}
-.ttr-frame{background:var(--paper);border:2px solid var(--ink);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:8px}
-.ttr-frame.hot{--ink:#1d2b6b;--paper:#f5f0e6;--card:#fffdf7;background:var(--sun);color:#1d2b6b;border-color:#1d2b6b;box-shadow:5px 5px 0 var(--pop);transform:rotate(-1deg)}
+.ttr-story{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:6px;align-items:stretch;margin:14px 0 18px;max-width:760px}
+.ttr-frame{background:var(--paper);border:2px solid var(--ink);border-radius:8px;padding:10px 12px 12px;display:flex;flex-direction:column;gap:8px}
+.ttr-frame.hot{--ink:#1d2b6b;--paper:#f5f0e6;--card:#fffdf7;background:var(--sun);color:#1d2b6b;border-color:#1d2b6b}
 .ttr-fk{font-family:var(--f-m);font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
 .ttr-chat{flex:1;display:flex;flex-direction:column;gap:8px}
-.ttr-chat div{max-width:94%;border:2px solid var(--ink);border-radius:12px;padding:6px 10px 7px;font-size:15px;line-height:1.3;font-weight:600}
+.ttr-chat div{max-width:94%;border:2px solid var(--ink);border-radius:12px;padding:5px 9px 6px;font-size:14px;line-height:1.3;font-weight:600}
 .ttr-chat div::before{content:attr(data-who);display:block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.65;margin-bottom:1px}
 .ttr-chat .me{align-self:flex-end;background:var(--pop);color:#1d2b6b;border-bottom-right-radius:3px}
 .ttr-chat .bot{align-self:flex-start;background:var(--card);color:var(--ink);border-bottom-left-radius:3px}
@@ -223,9 +223,9 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
 <div class="ttr-tldr">
   <div class="ttr-mono">The short version</div>
   <ol>
-    <li>People give a robot more detail than a human, even when the robot keeps getting it right.</li>
-    <li>Robot competence claims and explicit praise change nothing.</li>
-    <li>What does change it: the robot visibly failing to understand, and only on the very next attempt.</li>
+    <li>Speakers give a robot more detail than a human, even when the robot keeps guessing correctly.</li>
+    <li>The robot's competence claim and explicit feedback do not change how much detail speakers give.</li>
+    <li>When the robot is unable to guess, speakers add detail in their second attempt, then return to baseline in the next round.</li>
   </ol>
 </div>
 <div class="ttr-part"><span>Part one</span>The setup</div>
@@ -287,7 +287,7 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
 </div>
 <div class="ttr-block">
   <h2 class="ttr-label"><span>03</span>The measure</h2>
-  <p>To compare descriptions, I built a metric, <strong>semantic detail density</strong>: the number of separate, meaningful pieces of information in a description. <em>"A large vehicle used to carry stuff"</em> scores three.</p>
+  <p>To compare descriptions, I built my own metric of <strong>semantic detail</strong>: I counted the number of separate, meaningful pieces of information in a description. An example scoring is below.</p>
   <div class="ttr-metric">
     <div class="ttr-mono">Try it · tap each detail</div>
     <div class="ttr-say">“a <button type="button" data-d>large</button> <button type="button" data-d>vehicle</button> <button type="button" data-d>used to carry stuff</button>”</div>
@@ -305,7 +305,7 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
     </div>
     <div class="ttr-result">
       <span class="ttr-mono ttr-rlabel">Result</span>
-      Yes. People gave the robot more detail than the human (2.23 vs 1.98 on average), in every error-trajectory condition, even after the robot got several answers right in a row. This work was published at ACM/IEEE HRI '26 with an Honorable Mention.
+      Yes. Speakers gave the robot more detail than the human (2.23 vs 1.98 on average), even when the robot kept guessing correctly. This work was published at ACM/IEEE HRI '26 with an Honorable Mention.
     </div>
   </div>
 </div>
@@ -340,32 +340,25 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
       <div class="ttr-cell val">No effect</div>
       <div class="ttr-cell val">No effect</div>
     </div>
-    <div class="ttr-caption">None of the four combinations moved the metric.</div>
-    <div class="ttr-mono ttr-sub">Test B · The robot fails</div>
+    <div class="ttr-caption">None of the four combinations changed how much detail speakers gave.</div>
+    <div class="ttr-mono ttr-sub">Test B · The robot is unable to guess</div>
     <p>In some rounds, the robot said it couldn't find the word and asked the speaker to describe it again. Speakers responded right away: they added detail in their second attempt.</p>
     <div class="ttr-story">
       <div class="ttr-frame">
-        <div class="ttr-fk">1 · The robot fails</div>
+        <div class="ttr-fk">1 · Unable to guess</div>
         <div class="ttr-chat"><div class="me" data-who="Speaker">“A big vehicle.”</div><div class="bot" data-who="Robot">“Hmm, I couldn't find it. Could you describe it again?”</div></div>
-        <div class="ttr-fmeta"><span>Average detail</span><b>2.45</b></div>
-        <div class="ttr-fbar"><i style="width:81.7%"></i></div>
       </div>
       <div class="ttr-farrow" aria-hidden="true">→</div>
       <div class="ttr-frame hot">
-        <div class="ttr-fk">2 · The speaker adds detail</div>
+        <div class="ttr-fk">2 · Second attempt</div>
         <div class="ttr-chat"><div class="me" data-who="Speaker">“A big vehicle with a trailer that carries goods on the highway.”</div><div class="bot" data-who="Robot">“Truck!”</div></div>
-        <div class="ttr-fmeta"><span>Average detail</span><b>2.65</b><em>▲ +0.20</em></div>
-        <div class="ttr-fbar"><i style="width:88.3%"></i></div>
       </div>
       <div class="ttr-farrow" aria-hidden="true">→</div>
       <div class="ttr-frame">
-        <div class="ttr-fk">3 · New word, back to baseline</div>
+        <div class="ttr-fk">3 · Next round, back to baseline</div>
         <div class="ttr-chat"><div class="me" data-who="Speaker">“You open it when it rains.”</div><div class="bot" data-who="Robot">“Umbrella!”</div></div>
-        <div class="ttr-fmeta"><span>Average detail</span><b>2.31</b><em>▼ baseline</em></div>
-        <div class="ttr-fbar"><i style="width:77%"></i></div>
       </div>
     </div>
-    <div class="ttr-fine">The descriptions are illustrative. The detail values are real averages for round 4, its second attempt, and round 5.</div>
     <p>This increase was limited to the second attempt. When the next round started, speakers returned to their baseline level of detail.</p>
     <div class="ttr-plot">
       <svg class="ttr-plotsvg" viewBox="0 0 880 420" role="img" aria-label="Mean detail by game round. In the four rounds where the robot was unable to guess (4, 9, 11 and 15), the second attempt has more detail than the first, while correctly guessed rounds stay flat around 2.3 to 2.5."><rect class="pl-panel" x="74" y="64" width="790" height="294"/><rect class="pl-band" x="229.5" y="64" width="34.6" height="294"/><rect class="pl-band" x="476.4" y="64" width="34.6" height="294"/><rect class="pl-band" x="575.2" y="64" width="34.6" height="294"/><rect class="pl-band" x="772.7" y="64" width="34.6" height="294"/><line class="pl-grid" x1="74" x2="864" y1="333.5" y2="333.5"/><line class="pl-tick" x1="68" x2="74" y1="333.5" y2="333.5"/><text class="pl-txt" x="64" y="338.5" text-anchor="end">2.00</text><line class="pl-grid" x1="74" x2="864" y1="272.2" y2="272.2"/><line class="pl-tick" x1="68" x2="74" y1="272.2" y2="272.2"/><text class="pl-txt" x="64" y="277.2" text-anchor="end">2.25</text><line class="pl-grid" x1="74" x2="864" y1="211.0" y2="211.0"/><line class="pl-tick" x1="68" x2="74" y1="211.0" y2="211.0"/><text class="pl-txt" x="64" y="216.0" text-anchor="end">2.50</text><line class="pl-grid" x1="74" x2="864" y1="149.8" y2="149.8"/><line class="pl-tick" x1="68" x2="74" y1="149.8" y2="149.8"/><text class="pl-txt" x="64" y="154.8" text-anchor="end">2.75</text><line class="pl-grid" x1="74" x2="864" y1="88.5" y2="88.5"/><line class="pl-tick" x1="68" x2="74" y1="88.5" y2="88.5"/><text class="pl-txt" x="64" y="93.5" text-anchor="end">3.00</text><line class="pl-tick" x1="98.7" x2="98.7" y1="358" y2="364"/><text class="pl-txt" x="98.7" y="382" text-anchor="middle">1</text><line class="pl-tick" x1="148.1" x2="148.1" y1="358" y2="364"/><text class="pl-txt" x="148.1" y="382" text-anchor="middle">2</text><line class="pl-tick" x1="197.4" x2="197.4" y1="358" y2="364"/><text class="pl-txt" x="197.4" y="382" text-anchor="middle">3</text><line class="pl-tick" x1="246.8" x2="246.8" y1="358" y2="364"/><text class="pl-txt" x="246.8" y="382" text-anchor="middle">4</text><line class="pl-tick" x1="296.2" x2="296.2" y1="358" y2="364"/><text class="pl-txt" x="296.2" y="382" text-anchor="middle">5</text><line class="pl-tick" x1="345.6" x2="345.6" y1="358" y2="364"/><text class="pl-txt" x="345.6" y="382" text-anchor="middle">6</text><line class="pl-tick" x1="394.9" x2="394.9" y1="358" y2="364"/><text class="pl-txt" x="394.9" y="382" text-anchor="middle">7</text><line class="pl-tick" x1="444.3" x2="444.3" y1="358" y2="364"/><text class="pl-txt" x="444.3" y="382" text-anchor="middle">8</text><line class="pl-tick" x1="493.7" x2="493.7" y1="358" y2="364"/><text class="pl-txt" x="493.7" y="382" text-anchor="middle">9</text><line class="pl-tick" x1="543.1" x2="543.1" y1="358" y2="364"/><text class="pl-txt" x="543.1" y="382" text-anchor="middle">10</text><line class="pl-tick" x1="592.4" x2="592.4" y1="358" y2="364"/><text class="pl-txt" x="592.4" y="382" text-anchor="middle">11</text><line class="pl-tick" x1="641.8" x2="641.8" y1="358" y2="364"/><text class="pl-txt" x="641.8" y="382" text-anchor="middle">12</text><line class="pl-tick" x1="691.2" x2="691.2" y1="358" y2="364"/><text class="pl-txt" x="691.2" y="382" text-anchor="middle">13</text><line class="pl-tick" x1="740.6" x2="740.6" y1="358" y2="364"/><text class="pl-txt" x="740.6" y="382" text-anchor="middle">14</text><line class="pl-tick" x1="789.9" x2="789.9" y1="358" y2="364"/><text class="pl-txt" x="789.9" y="382" text-anchor="middle">15</text><line class="pl-tick" x1="839.3" x2="839.3" y1="358" y2="364"/><text class="pl-txt" x="839.3" y="382" text-anchor="middle">16</text><path class="pl-line" d="M148.1 240.4L197.4 220.8M197.4 220.8L246.8 223.2M246.8 174.3L296.2 257.5M296.2 257.5L345.6 198.8M345.6 198.8L394.9 211.0M394.9 211.0L444.3 237.9M444.3 237.9L493.7 225.7M493.7 157.1L543.1 240.4M543.1 240.4L592.4 211.0M592.4 149.8L641.8 282.1M641.8 282.1L691.2 237.9M691.2 237.9L740.6 220.8M740.6 220.8L789.9 250.2M789.9 162.0L839.3 240.4M98.7 223.2L148.1 240.4"/><line class="pl-err" x1="98.7" x2="98.7" y1="251.2" y2="195.3"/><line class="pl-err" x1="148.1" x2="148.1" y1="269.8" y2="211.0"/><line class="pl-err" x1="197.4" x2="197.4" y1="249.7" y2="191.9"/><line class="pl-err" x1="246.8" x2="246.8" y1="252.9" y2="193.6"/><line class="pl-err" x1="246.8" x2="246.8" y1="206.8" y2="141.7"/><line class="pl-err" x1="296.2" x2="296.2" y1="282.1" y2="233.0"/><line class="pl-err" x1="345.6" x2="345.6" y1="230.4" y2="167.1"/><line class="pl-err" x1="394.9" x2="394.9" y1="241.1" y2="180.9"/><line class="pl-err" x1="444.3" x2="444.3" y1="266.1" y2="209.8"/><line class="pl-err" x1="493.7" x2="493.7" y1="256.8" y2="194.6"/><line class="pl-err" x1="493.7" x2="493.7" y1="189.7" y2="124.5"/><line class="pl-err" x1="543.1" x2="543.1" y1="269.6" y2="211.2"/><line class="pl-err" x1="592.4" x2="592.4" y1="241.6" y2="180.4"/><line class="pl-err" x1="592.4" x2="592.4" y1="181.4" y2="118.1"/><line class="pl-err" x1="641.8" x2="641.8" y1="310.5" y2="253.6"/><line class="pl-err" x1="691.2" x2="691.2" y1="268.3" y2="207.6"/><line class="pl-err" x1="740.6" x2="740.6" y1="247.0" y2="194.6"/><line class="pl-err" x1="789.9" x2="789.9" y1="278.4" y2="222.0"/><line class="pl-err" x1="789.9" x2="789.9" y1="197.3" y2="126.7"/><line class="pl-err" x1="839.3" x2="839.3" y1="271.3" y2="209.5"/><circle class="pl-dot ok" cx="98.7" cy="223.2" r="7.5"><title>Round 1 · Correctly guessed: 2.45 (SE 0.114)</title></circle><circle class="pl-dot ok" cx="148.1" cy="240.4" r="7.5"><title>Round 2 · Correctly guessed: 2.38 (SE 0.120)</title></circle><circle class="pl-dot ok" cx="197.4" cy="220.8" r="7.5"><title>Round 3 · Correctly guessed: 2.46 (SE 0.118)</title></circle><circle class="pl-dot bad" cx="246.8" cy="223.2" r="7.5"><title>Round 4 · Unable to guess: 2.45 (SE 0.121)</title></circle><circle class="pl-dot rep" cx="246.8" cy="174.3" r="7.5"><title>Round 4 · Second attempt: 2.65 (SE 0.133)</title></circle><circle class="pl-dot ok" cx="296.2" cy="257.5" r="7.5"><title>Round 5 · Correctly guessed: 2.31 (SE 0.100)</title></circle><circle class="pl-dot ok" cx="345.6" cy="198.8" r="7.5"><title>Round 6 · Correctly guessed: 2.55 (SE 0.129)</title></circle><circle class="pl-dot ok" cx="394.9" cy="211.0" r="7.5"><title>Round 7 · Correctly guessed: 2.50 (SE 0.123)</title></circle><circle class="pl-dot ok" cx="444.3" cy="237.9" r="7.5"><title>Round 8 · Correctly guessed: 2.39 (SE 0.115)</title></circle><circle class="pl-dot bad" cx="493.7" cy="225.7" r="7.5"><title>Round 9 · Unable to guess: 2.44 (SE 0.127)</title></circle><circle class="pl-dot rep" cx="493.7" cy="157.1" r="7.5"><title>Round 9 · Second attempt: 2.72 (SE 0.133)</title></circle><circle class="pl-dot ok" cx="543.1" cy="240.4" r="7.5"><title>Round 10 · Correctly guessed: 2.38 (SE 0.119)</title></circle><circle class="pl-dot bad" cx="592.4" cy="211.0" r="7.5"><title>Round 11 · Unable to guess: 2.50 (SE 0.125)</title></circle><circle class="pl-dot rep" cx="592.4" cy="149.8" r="7.5"><title>Round 11 · Second attempt: 2.75 (SE 0.129)</title></circle><circle class="pl-dot ok" cx="641.8" cy="282.1" r="7.5"><title>Round 12 · Correctly guessed: 2.21 (SE 0.116)</title></circle><circle class="pl-dot ok" cx="691.2" cy="237.9" r="7.5"><title>Round 13 · Correctly guessed: 2.39 (SE 0.124)</title></circle><circle class="pl-dot ok" cx="740.6" cy="220.8" r="7.5"><title>Round 14 · Correctly guessed: 2.46 (SE 0.107)</title></circle><circle class="pl-dot bad" cx="789.9" cy="250.2" r="7.5"><title>Round 15 · Unable to guess: 2.34 (SE 0.115)</title></circle><circle class="pl-dot rep" cx="789.9" cy="162.0" r="7.5"><title>Round 15 · Second attempt: 2.70 (SE 0.144)</title></circle><circle class="pl-dot ok" cx="839.3" cy="240.4" r="7.5"><title>Round 16 · Correctly guessed: 2.38 (SE 0.126)</title></circle><text class="pl-axis" x="469" y="408" text-anchor="middle">Game round</text><text class="pl-axis" transform="translate(18 211) rotate(-90)" text-anchor="middle">Mean detail</text><circle class="pl-dot ok" cx="231" cy="28" r="7.5"/><text class="pl-leg" x="245" y="34">Correctly guessed</text><circle class="pl-dot bad" cx="415" cy="28" r="7.5"/><text class="pl-leg" x="429" y="34">Unable to guess</text><circle class="pl-dot rep" cx="589" cy="28" r="7.5"/><text class="pl-leg" x="603" y="34">Second attempt</text><text class="pl-delta" x="246.8" y="132.7" text-anchor="middle">+0.20</text><text class="pl-delta" x="493.7" y="115.5" text-anchor="middle">+0.28</text><text class="pl-delta" x="592.4" y="109.1" text-anchor="middle">+0.25</text><text class="pl-delta" x="789.9" y="117.7" text-anchor="middle">+0.36</text></svg>
@@ -373,20 +366,20 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
     </div>
     <div class="ttr-result">
       <span class="ttr-mono ttr-rlabel">Result</span>
-      Neither the competence claim nor the explicit feedback changed anything, alone or together. But when the robot said it didn't understand and asked for a retry, people added detail on that attempt only (repair means 2.65 to 2.75, against 2.34 to 2.50 for the error trial just before), then went back to normal.
+      The robot's competence claim and explicit feedback did not change how much detail speakers gave, alone or together. When the robot was unable to guess, speakers added detail in their second attempt (2.65 to 2.75, against 2.34 to 2.50 in the first attempt), then returned to baseline in the next round.
     </div>
   </div>
 </div>
 <div class="ttr-part"><span>Part three</span>What it means for products</div>
 <div class="ttr-biz">
-  <div class="ttr-bcard"><div class="ttr-mono ttr-bk">Before speaking</div><div class="ttr-btitle">Who users think they are talking to sets how much they say.</div><p>Speakers gave a robot more detail than a human listener who behaved identically (2.23 vs 1.98).</p></div>
-  <div class="ttr-bcard"><div class="ttr-mono ttr-bk">After success</div><div class="ttr-btitle">Success does not make users briefer.</div><p>Correct guesses, competence claims and positive feedback did not reduce detail. Success lets the interaction continue without showing what the system understood.</p></div>
-  <div class="ttr-bcard"><div class="ttr-mono ttr-bk">After failure</div><div class="ttr-btitle">Explicit trouble prompts repair, but only locally.</div><p>When the robot signalled it had not understood, detail rose on the retry (2.65 to 2.75) and then returned to baseline.</p></div>
-  <div class="ttr-bcard"><div class="ttr-mono ttr-bk">Design principle</div><div class="ttr-btitle">Make understanding interpretable.</div><p>Feedback on what the system has understood may help users calibrate their speech. That speech is the system's input, so the two form a reciprocal loop that shapes efficiency and repair.</p></div>
+  <div class="ttr-bcard"><div class="ttr-mono ttr-bk">Finding 1</div><div class="ttr-btitle">Speakers give a robot more detail than a human, even when the robot keeps guessing correctly.</div><p>For products: correct answers alone do not show users what the system understood.</p></div>
+  <div class="ttr-bcard"><div class="ttr-mono ttr-bk">Finding 2</div><div class="ttr-btitle">The robot's competence claim and explicit feedback do not change how much detail speakers give.</div><p>For products: telling users the system understands is not the same as showing it.</p></div>
+  <div class="ttr-bcard"><div class="ttr-mono ttr-bk">Finding 3</div><div class="ttr-btitle">When the robot is unable to guess, speakers add detail in their second attempt, then return to baseline in the next round.</div><p>For products: a clear failure gives users a basis for revision, but the effect does not carry over to the next exchange.</p></div>
+  <div class="ttr-bcard"><div class="ttr-mono ttr-bk">Design principle</div><div class="ttr-btitle">Show users what the system understood.</div><p>Feedback on what the system has understood may help users calibrate their speech. That speech is the system's input, so the two form a reciprocal loop that shapes efficiency and repair.</p></div>
 </div>
 <div class="ttr-insight">
   <div class="ttr-mono">The takeaway</div>
-  <p>Success lets an interaction continue without revealing understanding. Explicit trouble gives users a clearer basis for revision.</p>
+  <p>Correct answers let the interaction continue without showing what the robot understood. A clear failure gives speakers a basis for revision.</p>
 </div>
 <div class="ttr-actions">
   <a class="ttr-btn" href="/academia/">Full write-ups &amp; citations</a>
