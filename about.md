@@ -28,9 +28,8 @@ body[data-theme="dark"] .abt{--wall:#1e1a17;--ink:#efe6d8;--muted:#b3a698}
 .abt-hoop::before{content:"";position:absolute;left:50%;top:-16px;width:26px;height:26px;margin-left:-13px;border-radius:6px;background:linear-gradient(#b8bcc4,#7d828c);box-shadow:0 2px 3px rgba(0,0,0,.3)}
 .abt-hoopin{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;overflow:hidden;box-shadow:inset 0 0 0 5px var(--wood2),inset 0 6px 14px rgba(60,35,10,.25)}
 .abt-hoopin svg{width:82%;height:auto;display:block}
-.abt h1.abt-h1{font-weight:700;font-size:clamp(38px,6vw,58px);line-height:1.05;letter-spacing:-.02em;margin-bottom:16px}
-.abt-h1 span{color:var(--red)}
-body[data-theme="dark"] .abt-h1 span{color:#ef7a6f}
+.abt h1.abt-h1{font-weight:700;font-size:clamp(30px,4.4vw,42px);line-height:1.15;letter-spacing:-.015em;margin-bottom:16px;max-width:16ch}
+.abt-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .abt p.abt-intro{font-size:20px;line-height:1.55;max-width:34ch;margin-bottom:12px}
 .abt p.abt-note{font-size:16px;color:var(--muted);max-width:36ch}
 
@@ -54,7 +53,7 @@ body[data-theme="dark"] .abt-h1 span{color:#ef7a6f}
 .abt a.abt-patch:nth-child(2){--r:1.5deg;--c:var(--blu)}
 .abt a.abt-patch:nth-child(3){--r:-1deg;--c:var(--grn)}
 
-@media(max-width:760px){.abt-top{grid-template-columns:1fr;gap:28px;justify-items:center;text-align:center}.abt p.abt-intro,.abt p.abt-note{margin-left:auto;margin-right:auto}.abt-motifs{grid-template-columns:repeat(2,1fr);gap:26px 18px}.abt-m.next{grid-column:span 2}}
+@media(max-width:760px){.abt-top{grid-template-columns:1fr;gap:28px;justify-items:center;text-align:center}.abt h1.abt-h1,.abt p.abt-note{margin-left:auto;margin-right:auto}.abt-motifs{grid-template-columns:repeat(2,1fr);gap:26px 18px}.abt-m.next{grid-column:span 2}}
 @media(max-width:420px){.abt{padding:14px 14px 40px}.abt-hoop{width:270px;height:270px}.abt-sampler{padding:30px 18px 24px}}
 @media(prefers-reduced-motion:reduce){.abt-needle{animation:none}}
 </style>
@@ -62,8 +61,8 @@ body[data-theme="dark"] .abt-h1 span{color:#ef7a6f}
 <div class="abt-top">
   <div class="abt-hoop" aria-hidden="true"><div class="abt-hoopin abt-cloth" id="abt-name"></div></div>
   <div>
-    <h1 class="abt-h1">Hi, I'm <span>Hande.</span></h1>
-    <p class="abt-intro">I'm a UX and behavioral researcher in Istanbul. My PhD asked how much people explain when they talk to a machine.</p>
+    <h1 class="abt-h1"><span class="abt-sr">About</span>A few stitches from the path that brought me here.</h1>
+    <p class="abt-note">This site is my little home on the web. I set it up myself, one stitch at a time.</p>
   </div>
 </div>
 <div class="abt-sampler abt-cloth">
@@ -72,8 +71,8 @@ body[data-theme="dark"] .abt-h1 span{color:#ef7a6f}
     <div class="abt-m" data-motif="tulip"><b>Istanbul</b><p>Psychology at Boğaziçi, with a certificate in linguistics.</p></div>
     <div class="abt-m" data-motif="mill"><b>The Netherlands</b><p>A research master's in language at Radboud.</p></div>
     <div class="abt-m" data-motif="robot"><b>Tilburg</b><p>My first robot, teaching Dutch words to Turkish–Dutch children.</p></div>
-    <div class="abt-m" data-motif="talk"><b>Koç University</b><p>A PhD on how people talk to robots.</p></div>
-    <div class="abt-m next" data-motif="heart"><b>Next</b><p>Still stitching.</p></div>
+    <div class="abt-m" data-motif="talk"><b>Koç University</b><p>A PhD asking how much people explain when they talk to a machine.</p></div>
+    <div class="abt-m next" data-motif="heart"><b>Next</b><p>UX research. Still stitching.</p></div>
   </div>
 </div>
 <div class="abt-patches">
@@ -95,7 +94,11 @@ body[data-theme="dark"] .abt-h1 span{color:#ef7a6f}
     A: [".XXX.", "X...X", "X...X", "XXXXX", "X...X", "X...X", "X...X"],
     N: ["X...X", "XX..X", "XX..X", "X.X.X", "X..XX", "X..XX", "X...X"],
     D: ["XXXX.", "X...X", "X...X", "X...X", "X...X", "X...X", "XXXX."],
-    E: ["XXXXX", "X....", "X....", "XXXX.", "X....", "X....", "XXXXX"]
+    E: ["XXXXX", "X....", "X....", "XXXX.", "X....", "X....", "XXXXX"],
+    B: ["XXXX.", "X...X", "X...X", "XXXX.", "X...X", "X...X", "XXXX."],
+    O: [".XXX.", "X...X", "X...X", "X...X", "X...X", "X...X", ".XXX."],
+    U: ["X...X", "X...X", "X...X", "X...X", "X...X", "X...X", ".XXX."],
+    T: ["XXXXX", "..X..", "..X..", "..X..", "..X..", "..X..", "..X.."]
   };
   var MOTIFS = {
     tulip: ["...R.R.R...", "..RRRRRRR..", "..RRRRRRR..", "..RRRRRRR..", "...RRRRR...", "....RRR....", ".....G.....", ".LL..G..LL.", "..LL.G.LL..", "...LLGLL...", ".....G.....", ".....G....."],
@@ -139,7 +142,7 @@ body[data-theme="dark"] .abt-h1 span{color:#ef7a6f}
     });
   }
 
-  var word = ["H", "A", "N", "D", "E"];
+  var word = ["A", "B", "O", "U", "T"];
   var rows = [];
   for (var r = 0; r < 7; r++) {
     rows.push(word.map(function (L) { return FONT[L][r].replace(/X/g, "R"); }).join("."));
