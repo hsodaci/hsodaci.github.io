@@ -14,4 +14,4 @@ I am Hande Sodacı, a behavioral researcher with a PhD in Cognitive Psychology f
 
 **Where I am headed.** I am moving that experimental mindset into product and research roles — work that tests how people actually behave and turns that into something useful, at a faster pace than academic research allows.
 
-You can see my research and past projects under [projects](/projects/talking-to-robots/) in the nav above, and my full background on my [resume](/assets/HS_resume_202609.pdf). Feel free to [get in touch](/contact/).
+You can see my research and past projects under [projects](/projects/talking-to-robots/) in the nav above, and my full background on my [resume](/assets/HS_resume_202611.pdf). Feel free to [get in touch](/contact/).
