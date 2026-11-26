@@ -45,39 +45,35 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
 .ttr-block p{position:relative;font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(20px,2.8vw,26px);line-height:1.4;max-width:680px}
 .ttr-block em{font-style:italic;color:var(--pop)}
 .ttr-block strong{background:linear-gradient(transparent 62%,var(--mint) 62%);font-weight:700}
-.ttr-proc{margin:24px 0 4px;background:var(--card);border:2px solid var(--ink);border-radius:24px;padding:20px;box-shadow:7px 7px 0 var(--ink)}
-.ttr-ptop{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:16px}
+.ttr-proc{margin:24px 0 4px;background:var(--card);border:2px solid var(--ink);border-radius:24px;padding:22px 22px 20px;box-shadow:7px 7px 0 var(--ink);text-align:center}
+.ttr-ctl{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px}
 .ttr-seg{display:inline-flex;border:2px solid var(--ink);border-radius:99px;overflow:hidden;background:var(--paper)}
-.ttr-seg button{font-weight:600;font-size:14px;border:0;background:none;color:var(--ink);padding:7px 14px;cursor:pointer}
+.ttr-seg button{font-weight:600;font-size:13px;border:0;background:none;color:var(--ink);padding:6px 13px;cursor:pointer}
 .ttr-seg button.on{background:var(--ink);color:var(--paper)}
-.ttr-go{font-weight:600;font-size:15px;border:2px solid var(--ink);background:var(--pop);color:var(--on-pop);border-radius:99px;padding:8px 18px;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+.ttr-steps{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ttr-steps span{padding:3px 10px;border-radius:99px;border:2px solid transparent;transition:.2s}
+.ttr-proc[data-step="1"] .ttr-steps span:nth-child(1),.ttr-proc[data-step="2"] .ttr-steps span:nth-child(2),.ttr-proc[data-step="3"] .ttr-steps span:nth-child(3){border-color:var(--ink);background:var(--pop);color:var(--on-pop)}
+.ttr-word{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(44px,9vw,76px);line-height:1.05;letter-spacing:-.03em;margin:18px 0 14px;min-height:1.1em}
+.ttr-proc[data-step="0"] .ttr-word{font-size:clamp(26px,5vw,38px);font-style:italic;font-weight:500;color:var(--muted);letter-spacing:-.01em}
+.ttr-meter{height:6px;border-radius:99px;background:var(--line);overflow:hidden;max-width:420px;margin:0 auto}
+.ttr-fillbar{height:100%;width:100%;background:var(--pop);border-radius:99px}
+.ttr-clock{font-family:"DM Mono",monospace;font-size:12px;letter-spacing:.1em;color:var(--muted);margin:8px 0 16px}
+.ttr-proc textarea{display:block;width:100%;max-width:560px;margin:0 auto;min-height:78px;resize:none;font-family:"Instrument Sans",sans-serif;font-size:17px;line-height:1.5;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:14px;padding:12px 14px;text-align:left}
+.ttr-proc textarea:disabled{opacity:.55}
+.ttr-proc textarea:focus{outline:none;box-shadow:4px 4px 0 var(--pop)}
+.ttr-reply{display:flex;align-items:center;justify-content:center;gap:10px;min-height:46px;margin:14px 0 4px;opacity:.35;transition:opacity .25s}
+.ttr-proc[data-step="3"] .ttr-reply{opacity:1}
+.ttr-mini{width:30px;height:30px;flex:none}
+.ttr-proc[data-l="robot"] .ttr-mini.hm,.ttr-proc[data-l="human"] .ttr-mini.rb{display:none}
+.ttr-said{font-family:Fraunces,serif;font-style:italic;font-weight:500;font-size:clamp(18px,2.6vw,22px)}
+.ttr-tally{margin:12px auto 4px;max-width:560px}
+.ttr-tally .ttr-mono{color:var(--muted);font-size:11px}
+.ttr-chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0}
+.ttr-chips button{font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:99px;padding:3px 12px;cursor:pointer}
+.ttr-chips button.on{background:var(--mint);color:var(--on-mint)}
+.ttr-tallyn b{font-family:Fraunces,serif;font-weight:800;font-size:34px;color:var(--pop);margin-right:6px}
+.ttr-go{margin-top:12px;font-weight:600;font-size:15px;border:2px solid var(--ink);background:var(--pop);color:var(--on-pop);border-radius:99px;padding:9px 22px;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
 .ttr-go:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
-.ttr-stage{display:grid;gap:14px;align-items:end}
-@media(min-width:720px){.ttr-stage{grid-template-columns:1.25fr 1fr}}
-.ttr-screen{position:relative;background:var(--paper);border:3px solid var(--ink);border-radius:18px;padding:14px 14px 12px;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end}
-.ttr-av{width:150px;height:auto;display:block;margin:6px auto 12px}
-.ttr-proc[data-l="robot"] .av-human,.ttr-proc[data-l="human"] .av-robot{display:none}
-.ttr-lbub{position:absolute;top:12px;right:12px;background:var(--card);border:2px solid var(--ink);border-radius:10px;padding:3px 10px;font-size:14px;font-style:italic;transition:background .2s}
-.ttr-proc[data-step="3"] .ttr-lbub{background:var(--mint);color:var(--on-mint);font-style:normal;font-weight:600}
-.ttr-pbar{display:grid;grid-template-columns:1.2fr 1fr;gap:10px}
-.ttr-wordb,.ttr-timeb{background:#10131a;color:#fff;border-radius:8px;padding:6px 10px;text-align:center;font-family:"DM Mono",monospace;font-weight:500;font-size:20px;letter-spacing:.06em;min-height:40px}
-.ttr-proc[data-step="3"] .ttr-wordb{background:#1f9d55}
-.ttr-proc[data-step="3"] .ttr-timeb{color:transparent}
-.ttr-speaker{display:flex;align-items:flex-end;gap:10px;opacity:.35;transition:opacity .25s}
-.ttr-speaker svg{width:96px;flex:none}
-.ttr-proc[data-step="2"] .ttr-speaker{opacity:1}
-.ttr-proc[data-step="3"] .ttr-speaker{opacity:.6}
-.ttr-sbub{position:relative;flex:1;min-height:64px;background:var(--paper);border:2px solid var(--ink);border-radius:14px;padding:8px 12px;font-size:15px;font-style:italic;line-height:1.4}
-.ttr-sbub::before{content:"";position:absolute;left:-9px;bottom:16px;border:8px solid transparent;border-right-color:var(--ink);border-left:0}
-.ttr-steps{list-style:none;margin:16px 0 8px;padding:0;display:grid;gap:8px}
-@media(min-width:720px){.ttr-steps{grid-template-columns:repeat(3,1fr)}}
-.ttr-steps li{margin:0;padding:0;list-style:none!important;display:block}
-.ttr-steps li::marker{content:""}
-.ttr-steps li::before,.ttr-steps li::after{content:none!important;display:none!important}
-.ttr-steps button{width:100%;height:100%;display:flex;gap:10px;align-items:flex-start;text-align:left;font-size:14px;line-height:1.35;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:14px;padding:10px 12px;cursor:pointer;transition:background .2s}
-.ttr-steps b{flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--paper);font-family:Fraunces,serif;font-size:15px}
-.ttr-proc[data-step="1"] .ttr-steps li:nth-child(1) button,.ttr-proc[data-step="2"] .ttr-steps li:nth-child(2) button,.ttr-proc[data-step="3"] .ttr-steps li:nth-child(3) button{background:var(--pop);color:var(--on-pop)}
-.ttr-proc[data-step="1"] .ttr-steps li:nth-child(1) b,.ttr-proc[data-step="2"] .ttr-steps li:nth-child(2) b,.ttr-proc[data-step="3"] .ttr-steps li:nth-child(3) b{background:var(--paper);color:var(--ink)}
 .ttr-fine{font-family:"DM Mono",monospace;font-size:12px;line-height:1.5;color:var(--muted);max-width:640px;margin:8px 0 18px}
 .ttr-metric{background:var(--deep);color:var(--on-deep);border:2px solid var(--ink);border-radius:22px;padding:26px 24px;margin:22px 0 0}
 .ttr-metric .ttr-mono{color:var(--mint)}
@@ -170,55 +166,33 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
 <div class="ttr-block">
   <div class="ttr-mono ttr-label">🎮 The task I built</div>
   <p>Speakers had seven seconds to describe a word without saying it, while a human or a robot listener tried to guess. Both listeners behaved identically, so the only thing that changed was <em>who</em> was listening.</p>
-  <div class="ttr-proc" id="ttr-proc" data-l="robot" data-step="1">
-    <div class="ttr-ptop">
-      <div class="ttr-seg" role="group" aria-label="Choose the listener">
-        <button type="button" data-l="robot" class="on" aria-pressed="true">🤖 Robot listener</button>
-        <button type="button" data-l="human" aria-pressed="false">🧑 Human listener</button>
+  <div class="ttr-proc" id="ttr-proc" data-l="robot" data-g="ok" data-step="0">
+    <div class="ttr-ctl">
+      <div class="ttr-seg" data-k="l" role="group" aria-label="Who is listening">
+        <button type="button" data-v="robot" class="on" aria-pressed="true">Robot listener</button>
+        <button type="button" data-v="human" aria-pressed="false">Human listener</button>
       </div>
-      <button class="ttr-go" id="ttr-go" type="button">▶ Play a trial</button>
-    </div>
-    <div class="ttr-stage">
-      <div class="ttr-screen">
-        <svg class="ttr-av av-robot" viewBox="0 0 140 120" aria-hidden="true">
-          <circle cx="70" cy="9" r="5" fill="var(--pop)"/>
-          <rect x="30" y="14" width="80" height="62" rx="22" fill="var(--paper)" stroke="var(--ink)" stroke-width="3.5"/>
-          <circle cx="53" cy="44" r="10" fill="var(--card)" stroke="var(--ink)" stroke-width="3"/>
-          <circle cx="87" cy="44" r="10" fill="var(--card)" stroke="var(--ink)" stroke-width="3"/>
-          <circle cx="53" cy="44" r="4.5" fill="var(--ink)"/>
-          <circle cx="87" cy="44" r="4.5" fill="var(--ink)"/>
-          <ellipse cx="70" cy="62" rx="5" ry="4" fill="var(--pop)"/>
-          <path d="M18 120C18 92 38 84 70 84C102 84 122 92 122 120Z" fill="var(--mint)" stroke="var(--ink)" stroke-width="3.5"/>
-          <circle cx="70" cy="108" r="9" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
-        </svg>
-        <svg class="ttr-av av-human" viewBox="0 0 140 120" aria-hidden="true">
-          <circle cx="70" cy="44" r="30" fill="var(--paper)" stroke="var(--ink)" stroke-width="3.5"/>
-          <path d="M40 40C42 18 98 18 100 40C88 30 54 30 40 40Z" fill="var(--ink)"/>
-          <circle cx="58" cy="48" r="3.5" fill="var(--ink)"/>
-          <circle cx="82" cy="48" r="3.5" fill="var(--ink)"/>
-          <path d="M60 62Q70 69 80 62" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
-          <path d="M18 120C18 94 38 82 70 82C102 82 122 94 122 120Z" fill="var(--pop)" stroke="var(--ink)" stroke-width="3.5"/>
-        </svg>
-        <div class="ttr-lbub" id="ttr-lbub">(Listening)</div>
-        <div class="ttr-pbar"><div class="ttr-wordb" id="ttr-wordb">TRUCK</div><div class="ttr-timeb" id="ttr-timeb">07:00</div></div>
-      </div>
-      <div class="ttr-speaker">
-        <svg viewBox="0 0 120 100" aria-hidden="true">
-          <circle cx="44" cy="30" r="18" fill="var(--paper)" stroke="var(--ink)" stroke-width="3.5"/>
-          <path d="M26 24C28 8 62 8 64 24C56 18 34 18 26 24Z" fill="var(--ink)"/>
-          <path d="M8 100C8 74 24 62 44 62C64 62 80 74 80 100Z" fill="var(--mint)" stroke="var(--ink)" stroke-width="3.5"/>
-          <rect x="78" y="58" width="34" height="24" rx="4" fill="var(--card)" stroke="var(--ink)" stroke-width="3"/>
-          <rect x="72" y="84" width="46" height="6" rx="3" fill="var(--ink)"/>
-        </svg>
-        <div class="ttr-sbub" id="ttr-sbub"></div>
+      <div class="ttr-seg" data-k="g" role="group" aria-label="What the listener does">
+        <button type="button" data-v="ok" class="on" aria-pressed="true">Guesses right</button>
+        <button type="button" data-v="bad" aria-pressed="false">Gets it wrong</button>
       </div>
     </div>
-    <ol class="ttr-steps">
-      <li><button type="button" data-s="1"><b>1</b><span>Target word appears, timer starts</span></button></li>
-      <li><button type="button" data-s="2"><b>2</b><span>Speaker describes target word in 7s</span></button></li>
-      <li><button type="button" data-s="3"><b>3</b><span>Audience guesses the word when time is up</span></button></li>
-    </ol>
-    <div class="ttr-fine">↻ This loop repeats on every trial. Both listeners behave identically.</div>
+    <div class="ttr-steps" aria-hidden="true"><span>1 · Word appears</span><span>2 · You describe it</span><span>3 · Listener guesses</span></div>
+    <div class="ttr-word" id="ttr-word" aria-live="polite">You are the speaker</div>
+    <div class="ttr-meter"><div class="ttr-fillbar" id="ttr-fill"></div></div>
+    <div class="ttr-clock" id="ttr-clock">7.0 s</div>
+    <textarea id="ttr-text" rows="2" maxlength="220" placeholder="Describe the word. Don't say it." aria-label="Your description" disabled></textarea>
+    <div class="ttr-reply" id="ttr-reply" aria-live="polite">
+      <svg class="ttr-mini rb" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="6" width="24" height="20" rx="7" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.5"/><circle cx="12" cy="16" r="2.6" fill="var(--ink)"/><circle cx="20" cy="16" r="2.6" fill="var(--ink)"/></svg>
+      <svg class="ttr-mini hm" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.5"/><circle cx="12" cy="15" r="2" fill="var(--ink)"/><circle cx="20" cy="15" r="2" fill="var(--ink)"/><path d="M12 20Q16 23 20 20" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <span class="ttr-said" id="ttr-said">Listening…</span>
+    </div>
+    <div class="ttr-tally" id="ttr-tally" hidden>
+      <div class="ttr-mono">Now count: tap each separate detail you gave</div>
+      <div class="ttr-chips" id="ttr-chips"></div>
+      <div class="ttr-tallyn"><b id="ttr-n">0</b> <span class="ttr-mono">points of detail</span></div>
+    </div>
+    <button class="ttr-go" id="ttr-go" type="button">Start</button>
   </div>
 </div>
 <div class="ttr-block">
@@ -301,68 +275,108 @@ body[data-theme="dark"] .ttr{--paper:#0f1424;--ink:#f3ede2;--pop:#ff7a45;--mint:
   });
   var proc = document.getElementById("ttr-proc");
   var go = document.getElementById("ttr-go");
-  var lbub = document.getElementById("ttr-lbub");
-  var sbub = document.getElementById("ttr-sbub");
-  var timeb = document.getElementById("ttr-timeb");
-  var words = "Large vehicle, used for transport…".split(" ");
-  var timers = [];
+  var wordEl = document.getElementById("ttr-word");
+  var fill = document.getElementById("ttr-fill");
+  var clock = document.getElementById("ttr-clock");
+  var box = document.getElementById("ttr-text");
+  var said = document.getElementById("ttr-said");
+  var tally = document.getElementById("ttr-tally");
+  var chips = document.getElementById("ttr-chips");
+  var nEl = document.getElementById("ttr-n");
+  var pool = ["truck", "umbrella", "kettle", "bicycle"];
+  var wi = -1;
+  var word = "";
+  var round = 1;
   var raf = 0;
-  function fmt(ms) {
-    var left = Math.max(0, ms);
-    var sec = Math.floor(left / 1000);
-    var cs = Math.floor((left % 1000) / 10);
-    return (sec < 10 ? "0" : "") + sec + ":" + (cs < 10 ? "0" : "") + cs;
-  }
-  function stop() {
-    timers.forEach(clearTimeout);
-    timers = [];
+  var tm = 0;
+  var busy = false;
+  function reset() {
     cancelAnimationFrame(raf);
+    clearTimeout(tm);
+    busy = false;
   }
-  function show(step, ms, nWords) {
-    proc.setAttribute("data-step", step);
-    lbub.textContent = step === 3 ? "“Truck!”" : "(Listening)";
-    timeb.textContent = fmt(ms);
-    sbub.textContent = step === 1 ? "" : "“" + words.slice(0, nWords).join(" ") + (nWords >= words.length ? "”" : "");
+  function counting() {
+    var start = Date.now();
+    function tick() {
+      var left = Math.max(0, 7000 - (Date.now() - start));
+      fill.style.width = (left / 7000 * 100) + "%";
+      clock.textContent = (left / 1000).toFixed(1) + " s";
+      if (left > 0) { raf = requestAnimationFrame(tick); } else { finish(); }
+    }
+    tick();
   }
-  function setStatic(step) {
-    stop();
-    go.textContent = "▶ Play a trial";
-    if (step === 1) { show(1, 7000, 0); }
-    if (step === 2) { show(2, 3500, words.length); }
-    if (step === 3) { show(3, 0, words.length); }
+  function begin(repair) {
+    reset();
+    busy = true;
+    proc.setAttribute("data-step", "1");
+    tally.hidden = true;
+    go.disabled = true;
+    go.style.opacity = ".5";
+    said.textContent = "Listening…";
+    wordEl.textContent = word;
+    fill.style.width = "100%";
+    clock.textContent = "7.0 s";
+    box.value = "";
+    tm = setTimeout(function () {
+      proc.setAttribute("data-step", "2");
+      box.disabled = false;
+      box.focus();
+      counting();
+    }, 800);
   }
-  function play() {
-    stop();
-    go.textContent = "↻ Restart";
-    show(1, 7000, 0);
-    timers.push(setTimeout(function () {
-      var start = Date.now();
-      function tick() {
-        var left = 7000 - (Date.now() - start);
-        var n = Math.min(words.length, Math.ceil(words.length * (1 - left / 7000)));
-        show(2, left, n);
-        if (left > 0) { raf = requestAnimationFrame(tick); } else {
-          show(2, 0, words.length);
-          timers.push(setTimeout(function () {
-            show(3, 0, words.length);
-            go.textContent = "▶ Play again";
-          }, 450));
-        }
+  function finish() {
+    box.disabled = true;
+    proc.setAttribute("data-step", "3");
+    var wrong = proc.getAttribute("data-g") === "bad" && round === 1;
+    tm = setTimeout(function () {
+      busy = false;
+      go.disabled = false;
+      go.style.opacity = "1";
+      if (wrong) {
+        said.textContent = "“Hmm, I couldn't find it. Could you describe it again?”";
+        go.textContent = "Describe it again";
+        round = 2;
+      } else {
+        said.textContent = "“" + word.charAt(0).toUpperCase() + word.slice(1) + "!”";
+        go.textContent = "Try another word";
+        round = 1;
+        showTally();
       }
-      tick();
-    }, 1300));
+    }, 700);
   }
-  go.addEventListener("click", play);
-  [].forEach.call(proc.querySelectorAll("[data-s]"), function (b) {
-    b.addEventListener("click", function () { setStatic(+b.getAttribute("data-s")); });
+  function showTally() {
+    var parts = box.value.replace(/[.,;!?]/g, " ").split(/\s+/).filter(function (x) { return x; });
+    chips.innerHTML = "";
+    nEl.textContent = "0";
+    if (!parts.length) { tally.hidden = true; return; }
+    parts.forEach(function (w) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = w;
+      b.addEventListener("click", function () {
+        b.classList.toggle("on");
+        nEl.textContent = chips.querySelectorAll(".on").length;
+      });
+      chips.appendChild(b);
+    });
+    tally.hidden = false;
+  }
+  go.addEventListener("click", function () {
+    if (busy) { return; }
+    if (round === 1) { wi = (wi + 1) % pool.length; word = pool[wi]; }
+    go.textContent = "Start";
+    begin();
   });
-  [].forEach.call(proc.querySelectorAll(".ttr-seg button"), function (b) {
-    b.addEventListener("click", function () {
-      proc.setAttribute("data-l", b.getAttribute("data-l"));
-      [].forEach.call(proc.querySelectorAll(".ttr-seg button"), function (o) {
-        var on = o === b;
-        o.classList.toggle("on", on);
-        o.setAttribute("aria-pressed", on ? "true" : "false");
+  [].forEach.call(proc.querySelectorAll(".ttr-seg"), function (seg) {
+    var key = seg.getAttribute("data-k");
+    [].forEach.call(seg.querySelectorAll("button"), function (b) {
+      b.addEventListener("click", function () {
+        proc.setAttribute("data-" + key, b.getAttribute("data-v"));
+        [].forEach.call(seg.querySelectorAll("button"), function (o) {
+          var on = o === b;
+          o.classList.toggle("on", on);
+          o.setAttribute("aria-pressed", on ? "true" : "false");
+        });
       });
     });
   });
