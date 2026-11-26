@@ -148,9 +148,6 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
 .rat-flow span{font-family:var(--f-d);font-weight:500;font-size:15px;background:var(--bg);border-radius:12px;padding:6px 12px}
 .rat-flow span.later{background:#e2d8fb;color:#1c2540}
 .rat-flow i{font-weight:700;color:var(--muted)}
-.rat-res{margin:34px 0 0;padding-top:26px;border-top:3px dashed var(--line)}
-.rat-rk{font-family:var(--f-d);font-weight:600;font-size:clamp(20px,2.8vw,25px);line-height:1.25;margin-bottom:16px;max-width:760px}
-.rat-rk span{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--fc);color:var(--fo);border-radius:999px;padding:3px 11px;margin:0 10px 6px 0;vertical-align:middle}
 .rat-plot{max-width:620px;margin:0 0 16px}
 .rat-bars{width:100%;height:auto;display:block;overflow:visible}
 .rat-bars .g{stroke:var(--line);stroke-width:1.5}
@@ -179,10 +176,43 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
 .rat-gap .d{background:var(--deniz)}.rat-gap .r{background:var(--robin)}
 .rat-gap span{display:block;font-weight:800;font-size:14px;opacity:.9}
 .rat-gap b{font-family:var(--f-d);font-weight:700;font-size:30px;line-height:1.1}
-.rat-why{margin:34px 0 4px;background:var(--bg);border-radius:22px;padding:20px 22px 12px}
+.rat-why{margin:30px 0 4px 82px;background:var(--card);border-radius:24px;padding:20px 22px 12px;box-shadow:0 8px 0 var(--sh)}
 .rat-why li{position:relative;padding-left:30px!important;margin:0 0 10px!important;font-size:17px}
 .rat-why li::before{content:"?";position:absolute;left:0;top:2px;width:21px;height:21px;border-radius:7px;background:var(--plum);color:#fff;font-family:var(--f-d);font-weight:700;font-size:13px;display:grid;place-items:center}
 
+.rat-plan{margin:34px 0 0}
+.rat-plangrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rat a.rat-plangrid a,.rat-plangrid a{display:block;text-decoration:none;background:var(--card);color:var(--ink);border-radius:20px;padding:14px 16px 16px;font-family:var(--f-d);font-weight:600;font-size:18px;line-height:1.25;box-shadow:0 6px 0 var(--sh);border-top:7px solid var(--fc);transition:transform .15s}
+.rat .rat-plangrid a,.rat .rat-plangrid a:visited{color:var(--ink)!important}
+.rat-plangrid a:hover{transform:translateY(-2px)}
+.rat-plangrid a span{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.rat-ch{position:relative;display:grid;grid-template-columns:64px 1fr;gap:18px;margin:28px 0 0;scroll-margin-top:20px}
+.rat-ch::before{content:"";position:absolute;left:30px;top:70px;bottom:-30px;border-left:3px dashed var(--line)}
+.rat-chn{position:relative;width:64px;height:64px;border-radius:20px;display:grid;place-items:center;background:var(--fc);color:var(--fo);font-family:var(--f-d);font-weight:700;font-size:30px;box-shadow:inset 0 -5px 0 rgba(0,0,0,.18)}
+.rat-chb{background:var(--card);border-radius:28px;padding:24px 26px 18px;box-shadow:0 8px 0 var(--sh);min-width:0}
+.rat-chk{font-family:var(--f-d);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.rat h3.rat-cht{font-weight:600;font-size:clamp(23px,3.4vw,30px);line-height:1.2;margin:0 0 16px}
+.rat-guess{background:var(--bg);border-radius:22px;padding:16px 18px 6px;margin:0 0 16px}
+.rat p.rat-gq{font-family:var(--f-d);font-weight:600;font-size:18px;margin:0 0 10px}
+.rat-gb{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.rat-gb button{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-d);font-weight:600;font-size:17px;border:0;background:var(--card);color:var(--ink);border-radius:16px;padding:10px 18px;cursor:pointer;box-shadow:0 4px 0 var(--sh);transition:transform .15s}
+.rat-gb button:hover{transform:translateY(-2px)}
+.rat-gb button i{width:14px;height:14px;border-radius:50%;background:var(--robin)}
+.rat-gb button[data-g="deniz"] i{background:var(--deniz)}
+.rat-ch[data-g] .rat-gb button{cursor:default;opacity:.45;transform:none}
+.rat-ch[data-g="robin"] .rat-gb button[data-g="robin"],.rat-ch[data-g="deniz"] .rat-gb button[data-g="deniz"]{opacity:1;box-shadow:0 0 0 3px var(--ink)}
+.rat-guess .rat-plot{transition:filter .5s,opacity .5s}
+.rat-ch:not([data-g]) .rat-guess .rat-plot{filter:blur(7px);opacity:.45}
+.rat p.rat-gmsg{font-family:var(--f-d);font-weight:600;font-size:18px;min-height:0;margin:0 0 10px}
+.rat-ch#rat-ch1:not([data-g]) .rat-after{display:none}
+.rat-after{animation:rat-up .5s ease-out}
+@keyframes rat-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.rat-verdict{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-d);font-weight:600;font-size:18px;background:var(--bg);border-radius:999px;padding:6px 16px 6px 6px;margin:4px 0 16px}
+.rat-verdict b{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:17px}
+.rat-verdict.yes b{background:var(--grass)}
+.rat-verdict.no b{background:#e5484d}
+.rat-find{font-family:var(--f-d);font-weight:600;font-size:clamp(19px,2.6vw,23px);line-height:1.28;margin:0 0 14px;max-width:760px}
+.rat-find span{display:inline-block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:var(--fc);color:var(--fo);border-radius:999px;padding:3px 11px;margin:0 10px 6px 0;vertical-align:middle}
 .rat-biz{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
 .rat-bcard{background:var(--card);border-radius:24px;padding:20px 20px 8px;box-shadow:0 8px 0 var(--sh);display:flex;flex-direction:column}
 .rat-bcard span{align-self:flex-start;font-family:var(--f-d);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:var(--fc);color:var(--fo);border-radius:999px;padding:3px 11px;margin-bottom:12px}
@@ -211,7 +241,7 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
 @keyframes rat-hop{0%{transform:translateY(0)}35%{transform:translateY(-8px)}100%{transform:translateY(0)}}
 @keyframes rat-nod{0%,100%{transform:translateY(0)}40%{transform:translateY(5px)}}
 
-@media(max-width:760px){.rat-biz{grid-template-columns:1fr}.rat-stage{grid-template-columns:1fr}.rat-tutor{min-height:290px}.rat-pair{grid-template-columns:1fr}.rat-vs br{display:none}}
+@media(max-width:760px){.rat-biz,.rat-plangrid{grid-template-columns:1fr}.rat-ch{grid-template-columns:44px 1fr;gap:10px}.rat-chn{width:44px;height:44px;font-size:22px;border-radius:14px}.rat-ch::before{left:20px;top:50px}.rat-why{margin-left:54px}.rat-chb{padding:18px 12px 12px}.rat-guess{padding:12px 8px 4px}.rat-ch{grid-template-columns:36px 1fr;gap:8px}.rat-chn{width:36px;height:36px;font-size:19px;border-radius:12px}.rat-ch::before{left:16px;top:44px}.rat-why{margin-left:44px}.rat-stage{grid-template-columns:1fr}.rat-tutor{min-height:290px}.rat-pair{grid-template-columns:1fr}.rat-vs br{display:none}}
 @media(max-width:600px){.rat{padding:8px 16px 34px;font-size:16px}.rat-herobots{display:none}.rat p.rat-meta,.rat h1.rat-title{padding-right:0}.rat-card{padding:22px 18px 16px}.rat-lesson{padding:12px;margin-inline:-6px}.rat-h span{flex-basis:42px;height:42px;font-size:15px}.rat-dots{gap:4px}.rat-gap b{font-size:24px}.rat-bars .v{font-size:30px}.rat-bars .n{font-size:21px}.rat-bars .gl{font-size:19px}.rat-bars .t{font-size:18px}.rat-bars .cht{font-size:17px}.rat-bub{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.rat *{animation:none!important;transition:none!important}.rat-bars .b,.rat-dots i{transform:none!important}}
 </style>
@@ -250,11 +280,7 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
   <p>The study focused on Turkish-Dutch kindergartners, a group whose Dutch language skills and school outcomes tend to lag behind their monolingual Dutch peers. The aim was not to replace teachers, but to test whether a robot could offer one-on-one language support alongside them. The project was part of <a href="http://l2tor.eu" target="_blank" rel="noopener">L2TOR</a>, funded by the European Union's Horizon 2020 programme.</p>
 </div>
 <div class="rat-card">
-  <h2 class="rat-h"><span>02</span>My role</h2>
-  <p>This project spanned Tilburg and Utrecht Universities in the Netherlands. I took part in several critical stages of the project, including experimental design, developing the gamified lesson materials, programming the lesson into the robot, pilot testing, and data analysis.</p>
-</div>
-<div class="rat-card">
-  <h2 class="rat-h"><span>03</span>The lesson</h2>
+  <h2 class="rat-h"><span>02</span>The lesson</h2>
   <p>67 Turkish-Dutch kindergartners, aged 4 to 6, each learned six Dutch words from a robot through a tablet game. Each child already knew these words in Turkish, but not yet in Dutch. Play a round below: you are the child.</p>
   <div class="rat-lesson" id="rat-lesson" data-r="robin" data-step="0">
     <div class="rat-pick" role="group" aria-label="Which robot teaches">
@@ -313,7 +339,7 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
   </div>
 </div>
 <div class="rat-card">
-  <h2 class="rat-h"><span>04</span>The test</h2>
+  <h2 class="rat-h"><span>03</span>The test</h2>
   <p>To check which words stuck, children saw three pictures, heard a Dutch word, and picked the matching picture. Guessing alone would get one in three right. They took this test right after the lesson and again about a week later.</p>
   <div class="rat-three" aria-hidden="true"><div><b>?</b></div><div class="ok"><b>✓</b></div><div><b>?</b></div><p>Chance = 1 in 3 = 33%</p></div>
 </div>
@@ -348,35 +374,69 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
     <span>Lesson with one robot</span><i>→</i><span>Shirt change</span><i>→</i><span>Lesson with the other robot</span><i>→</i><span>“Which robot do you want to play with again?”</span><i>→</i><span>Test</span><i>→</i><span class="later">A week later: test again</span>
   </div>
   <p class="rat-small">Half of the children met Robin first and half met Deniz first, so the order could not favor either robot.</p>
-  <div class="rat-res">
-    <div class="rat-rk f1"><span>Finding 1</span>Children learned more Dutch words from the Dutch-only robot than from the robot that added Turkish translations.</div>
-    <div class="rat-plot" data-anim><svg class="rat-bars" viewBox="0 0 640 320" role="img" aria-label="Correct answers by robot. Right after the lesson: Robin 66%, Deniz 62%. A week later: Robin 69%, Deniz 69%. Chance is 33%."><line class="g" x1="64" x2="624" y1="246.0" y2="246.0"/><text class="t" x="54" y="251.0" text-anchor="end">0%</text><line class="g" x1="64" x2="624" y1="189.0" y2="189.0"/><text class="t" x="54" y="194.0" text-anchor="end">25%</text><line class="g" x1="64" x2="624" y1="132.0" y2="132.0"/><text class="t" x="54" y="137.0" text-anchor="end">50%</text><line class="g" x1="64" x2="624" y1="75.0" y2="75.0"/><text class="t" x="54" y="80.0" text-anchor="end">75%</text><line class="g" x1="64" x2="624" y1="18.0" y2="18.0"/><text class="t" x="54" y="23.0" text-anchor="end">100%</text><line class="ch" x1="64" x2="624" y1="170.0" y2="170.0"/><text class="cht" x="344.0" y="142.0" text-anchor="middle">Chance</text><text class="cht" x="344.0" y="160.0" text-anchor="middle">33%</text><rect class="b robin" x="130.2" y="95.5" width="78" height="150.5" rx="10"><title>Right after the lesson, Robin: 66%</title></rect><text class="v" x="169.2" y="85.5" text-anchor="middle">66%</text><text class="n" x="169.2" y="268.0" text-anchor="middle">Robin</text><rect class="b deniz" x="222.2" y="104.6" width="78" height="141.4" rx="10"><title>Right after the lesson, Deniz: 62%</title></rect><text class="v" x="261.2" y="94.6" text-anchor="middle">62%</text><text class="n" x="261.2" y="268.0" text-anchor="middle">Deniz</text><text class="gl" x="215.2" y="298.0" text-anchor="middle">Right after the lesson</text><rect class="b robin" x="387.8" y="88.7" width="78" height="157.3" rx="10"><title>A week later, Robin: 69%</title></rect><text class="v" x="426.8" y="78.7" text-anchor="middle">69%</text><text class="n" x="426.8" y="268.0" text-anchor="middle">Robin</text><rect class="b deniz" x="479.8" y="88.7" width="78" height="157.3" rx="10"><title>A week later, Deniz: 69%</title></rect><text class="v" x="518.8" y="78.7" text-anchor="middle">69%</text><text class="n" x="518.8" y="268.0" text-anchor="middle">Deniz</text><text class="gl" x="472.8" y="298.0" text-anchor="middle">A week later</text><line class="ax" x1="64" x2="624" y1="246" y2="246"/></svg></div>
-    <p>Children learned new words from both robots: on every test they picked the right picture well above chance. On average, they answered 66% of Robin's words and 62% of Deniz's words correctly right after the lesson, and 69% of both a week later. Accounting for how many times each child heard each word, a mixed-effects model found higher scores for Robin's words across both tests (odds ratio 2.11). This was the opposite of what the team expected.</p>
+</div>
+<div class="rat-plan">
+  <div class="rat-k">Going in, the team had two predictions and one open question</div>
+  <div class="rat-plangrid">
+    <a href="#rat-ch1" class="f1"><span>Prediction 1</span>Translations help children learn</a>
+    <a href="#rat-ch2" class="f2"><span>Prediction 2</span>Children prefer the bilingual robot</a>
+    <a href="#rat-ch3" class="f3"><span>Open question</span>Does what children already know matter?</a>
   </div>
-  <div class="rat-res">
-    <div class="rat-rk f2"><span>Finding 2</span>Most children preferred the bilingual robot, but their preference did not change how much they learned.</div>
+</div>
+<div class="rat-ch f1" id="rat-ch1">
+  <div class="rat-chn">1</div>
+  <div class="rat-chb">
+    <div class="rat-chk">Prediction 1</div>
+    <h3 class="rat-cht">Turkish translations will help children learn Dutch words.</h3>
+    <div class="rat-guess" id="rat-guess">
+      <p class="rat-gq">Your guess: whose words did children remember better?</p>
+      <div class="rat-gb"><button type="button" data-g="robin"><i></i>Robin's</button><button type="button" data-g="deniz"><i></i>Deniz's</button></div>
+      <div class="rat-plot"><svg class="rat-bars" viewBox="0 0 640 320" role="img" aria-label="Correct answers by robot. Right after the lesson: Robin 66%, Deniz 62%. A week later: Robin 69%, Deniz 69%. Chance is 33%."><line class="g" x1="64" x2="624" y1="246.0" y2="246.0"/><text class="t" x="54" y="251.0" text-anchor="end">0%</text><line class="g" x1="64" x2="624" y1="189.0" y2="189.0"/><text class="t" x="54" y="194.0" text-anchor="end">25%</text><line class="g" x1="64" x2="624" y1="132.0" y2="132.0"/><text class="t" x="54" y="137.0" text-anchor="end">50%</text><line class="g" x1="64" x2="624" y1="75.0" y2="75.0"/><text class="t" x="54" y="80.0" text-anchor="end">75%</text><line class="g" x1="64" x2="624" y1="18.0" y2="18.0"/><text class="t" x="54" y="23.0" text-anchor="end">100%</text><line class="ch" x1="64" x2="624" y1="170.0" y2="170.0"/><text class="cht" x="344.0" y="142.0" text-anchor="middle">Chance</text><text class="cht" x="344.0" y="160.0" text-anchor="middle">33%</text><rect class="b robin" x="130.2" y="95.5" width="78" height="150.5" rx="10"><title>Right after the lesson, Robin: 66%</title></rect><text class="v" x="169.2" y="85.5" text-anchor="middle">66%</text><text class="n" x="169.2" y="268.0" text-anchor="middle">Robin</text><rect class="b deniz" x="222.2" y="104.6" width="78" height="141.4" rx="10"><title>Right after the lesson, Deniz: 62%</title></rect><text class="v" x="261.2" y="94.6" text-anchor="middle">62%</text><text class="n" x="261.2" y="268.0" text-anchor="middle">Deniz</text><text class="gl" x="215.2" y="298.0" text-anchor="middle">Right after the lesson</text><rect class="b robin" x="387.8" y="88.7" width="78" height="157.3" rx="10"><title>A week later, Robin: 69%</title></rect><text class="v" x="426.8" y="78.7" text-anchor="middle">69%</text><text class="n" x="426.8" y="268.0" text-anchor="middle">Robin</text><rect class="b deniz" x="479.8" y="88.7" width="78" height="157.3" rx="10"><title>A week later, Deniz: 69%</title></rect><text class="v" x="518.8" y="78.7" text-anchor="middle">69%</text><text class="n" x="518.8" y="268.0" text-anchor="middle">Deniz</text><text class="gl" x="472.8" y="298.0" text-anchor="middle">A week later</text><line class="ax" x1="64" x2="624" y1="246" y2="246"/></svg></div>
+      <p class="rat-gmsg" id="rat-gmsg"></p>
+    </div>
+    <div class="rat-after">
+      <div class="rat-verdict no"><b>✗</b>Not supported. The opposite happened.</div>
+      <div class="rat-find"><span>Finding 1</span>Children learned more Dutch words from the Dutch-only robot than from the robot that added Turkish translations.</div>
+      <p>Children learned new words from both robots: on every test they picked the right picture well above chance. On average, they answered 66% of Robin's words and 62% of Deniz's words correctly right after the lesson, and 69% of both a week later. Accounting for how many times each child heard each word, a mixed-effects model found higher scores for Robin's words across both tests (odds ratio 2.11).</p>
+    </div>
+  </div>
+</div>
+<div class="rat-ch f2" id="rat-ch2">
+  <div class="rat-chn">2</div>
+  <div class="rat-chb">
+    <div class="rat-chk">Prediction 2</div>
+    <h3 class="rat-cht">Children will prefer the bilingual robot.</h3>
+    <p>After both lessons, each child was asked: “Which robot do you want to play with again?”</p>
     <div class="rat-pref" data-anim>
       <div class="rat-dots" role="img" aria-label="48 of 67 children chose Deniz, 19 chose Robin"><i class="d" style="--i:0"></i><i class="d" style="--i:1"></i><i class="d" style="--i:2"></i><i class="d" style="--i:3"></i><i class="d" style="--i:4"></i><i class="d" style="--i:5"></i><i class="d" style="--i:6"></i><i class="d" style="--i:7"></i><i class="d" style="--i:8"></i><i class="d" style="--i:9"></i><i class="d" style="--i:10"></i><i class="d" style="--i:11"></i><i class="d" style="--i:12"></i><i class="d" style="--i:13"></i><i class="d" style="--i:14"></i><i class="d" style="--i:15"></i><i class="d" style="--i:16"></i><i class="d" style="--i:17"></i><i class="d" style="--i:18"></i><i class="d" style="--i:19"></i><i class="d" style="--i:20"></i><i class="d" style="--i:21"></i><i class="d" style="--i:22"></i><i class="d" style="--i:23"></i><i class="d" style="--i:24"></i><i class="d" style="--i:25"></i><i class="d" style="--i:26"></i><i class="d" style="--i:27"></i><i class="d" style="--i:28"></i><i class="d" style="--i:29"></i><i class="d" style="--i:30"></i><i class="d" style="--i:31"></i><i class="d" style="--i:32"></i><i class="d" style="--i:33"></i><i class="d" style="--i:34"></i><i class="d" style="--i:35"></i><i class="d" style="--i:36"></i><i class="d" style="--i:37"></i><i class="d" style="--i:38"></i><i class="d" style="--i:39"></i><i class="d" style="--i:40"></i><i class="d" style="--i:41"></i><i class="d" style="--i:42"></i><i class="d" style="--i:43"></i><i class="d" style="--i:44"></i><i class="d" style="--i:45"></i><i class="d" style="--i:46"></i><i class="d" style="--i:47"></i><i class="r" style="--i:48"></i><i class="r" style="--i:49"></i><i class="r" style="--i:50"></i><i class="r" style="--i:51"></i><i class="r" style="--i:52"></i><i class="r" style="--i:53"></i><i class="r" style="--i:54"></i><i class="r" style="--i:55"></i><i class="r" style="--i:56"></i><i class="r" style="--i:57"></i><i class="r" style="--i:58"></i><i class="r" style="--i:59"></i><i class="r" style="--i:60"></i><i class="r" style="--i:61"></i><i class="r" style="--i:62"></i><i class="r" style="--i:63"></i><i class="r" style="--i:64"></i><i class="r" style="--i:65"></i><i class="r" style="--i:66"></i></div>
       <div class="rat-prefkey"><div class="d"><b>48</b> chose Deniz</div><div class="r"><b>19</b> chose Robin</div></div>
     </div>
-    <p>After both lessons, 48 of 67 children (72%) said they would rather play again with Deniz, the bilingual robot. Their choice did not change how much they learned from either robot.</p>
+    <div class="rat-verdict yes"><b>✓</b>Supported. 72% chose Deniz.</div>
+    <div class="rat-find"><span>Finding 2</span>Most children preferred the bilingual robot, but their preference did not change how much they learned.</div>
     <div class="rat-gap">
       <div class="d"><span>Liked more</span><b>Deniz</b></div>
       <div class="r"><span>Learned more from</span><b>Robin</b></div>
     </div>
   </div>
-  <div class="rat-res">
-    <div class="rat-rk f3"><span>Finding 3</span>Children who already knew more words, in Turkish or in Dutch, learned more from both robots.</div>
-    <p>Children with larger vocabularies in Turkish and in Dutch scored higher on the words of both robots. The study found no sign that translations helped children with smaller vocabularies more.</p>
+</div>
+<div class="rat-ch f3" id="rat-ch3">
+  <div class="rat-chn">3</div>
+  <div class="rat-chb">
+    <div class="rat-chk">Open question</div>
+    <h3 class="rat-cht">Does what children already know change the result?</h3>
+    <p>A week after the lesson, children also took standard vocabulary tests in Turkish and in Dutch.</p>
+    <div class="rat-verdict yes"><b>✓</b>Yes, with both robots.</div>
+    <div class="rat-find"><span>Finding 3</span>Children who already knew more words, in Turkish or in Dutch, learned more from both robots.</div>
+    <p>The study found no sign that translations helped children with smaller vocabularies more.</p>
   </div>
-  <div class="rat-why">
-    <div class="rat-k">Why might translations not help?</div>
-    <ul>
-      <li>Turkish is rarely heard in Dutch classrooms, and children were often surprised by it.</li>
-      <li>Switching between two languages may have added extra mental effort.</li>
-      <li>Excitement about the bilingual robot may have distracted children from learning.</li>
-    </ul>
-  </div>
+</div>
+<div class="rat-why">
+  <div class="rat-k">So why might translations not help?</div>
+  <ul>
+    <li>Turkish is rarely heard in Dutch classrooms, and children were often surprised by it.</li>
+    <li>Switching between two languages may have added extra mental effort.</li>
+    <li>Excitement about the bilingual robot may have distracted children from learning.</li>
+  </ul>
 </div>
 <div class="rat-part"><span>Part three</span>What it means for products</div>
 <div class="rat-biz">
@@ -408,6 +468,20 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
     anims.forEach(function (a) { io.observe(a); });
   } else {
     anims.forEach(function (a) { a.classList.add("rat-in"); });
+  }
+
+  var ch1 = document.getElementById("rat-ch1");
+  var gmsg = document.getElementById("rat-gmsg");
+  if (ch1) {
+    [].forEach.call(ch1.querySelectorAll(".rat-gb button"), function (b) {
+      b.addEventListener("click", function () {
+        if (ch1.hasAttribute("data-g")) { return; }
+        var g = b.getAttribute("data-g");
+        ch1.setAttribute("data-g", g);
+        gmsg.textContent = g === "deniz" ? "That was the team's prediction too." : "Good call. The team expected the opposite.";
+        setTimeout(function () { ch1.querySelector(".rat-plot").classList.add("rat-in"); }, 250);
+      });
+    });
   }
 
   var L = document.getElementById("rat-lesson");
