@@ -428,14 +428,15 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
     busy = false;
   }
   function fmt(ms) {
-    var sec = Math.floor(ms / 1000), cs = Math.floor((ms % 1000) / 10);
-    return (sec < 10 ? "0" : "") + sec + ":" + (cs < 10 ? "0" : "") + cs;
+    var sec = Math.ceil(ms / 1000);
+    return (sec < 10 ? "0" : "") + sec + ":00";
   }
   function counting() {
     var start = Date.now();
     function tick() {
       var left = Math.max(0, 7000 - (Date.now() - start));
-      clock.textContent = fmt(left);
+      var t = fmt(left);
+      if (clock.textContent !== t) { clock.textContent = t; }
       if (left > 0) { raf = requestAnimationFrame(tick); } else { finish(); }
     }
     tick();
