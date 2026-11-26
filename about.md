@@ -2,11 +2,11 @@
 title: About
 permalink: /about/
 layout: page
-excerpt: Behavioral researcher with a PhD in Cognitive Psychology (Koç University), moving that experimental mindset into product and research work.
+excerpt: Behavioral researcher with a recent PhD in Psychology (Cognitive Track) from Koç University, moving that experimental mindset into product and research work.
 comments: false
 ---
 
-I am Hande Sodacı, a behavioral researcher with a PhD in Cognitive Psychology from Koç University (2020–2026) and extensive experience designing controlled experiments and making sense of real behavioral data. My work looks at how people change the way they communicate — what they say, when, and how much detail they give — when talking to a robot or another conversational agent instead of another person.
+I am Hande Sodacı, a user experience and behavioral researcher with a PhD in Psychology from Koç University (2020–2026) and extensive experience designing controlled experiments and making sense of real behavioral data. My work looks at how people change the way they communicate — what they say, when, and how much detail they give — when talking to a robot or another conversational agent instead of another person.
 
 **Background.** I did my BA in Psychology, with a certificate in Linguistics, at Boğaziçi University, then a research master's in Language and Communication at Radboud University in the Netherlands. During that time I worked as a research assistant at Tilburg University on the EU Horizon 2020 [L2TOR](/academia/) project, designing a personalized language-learning study for bilingual children using a social robot, which is where my interest in human–robot interaction started. I later coordinated a TÜBİTAK-funded longitudinal study at MEF University in the earlier years of my PhD at Koç University.
 
