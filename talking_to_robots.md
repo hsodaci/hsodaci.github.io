@@ -167,10 +167,13 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
 .ttr-biz{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0 0}
 .ttr-bcard{background:var(--card);border:2px solid var(--ink);border-radius:8px;padding:20px 22px 6px;box-shadow:6px 6px 0 var(--mint)}
 .ttr-bcard:nth-child(4n+1),.ttr-bcard:nth-child(4n){box-shadow:6px 6px 0 var(--pop)}
+.ttr-bk{display:inline-block;font-weight:700;background:var(--pop);color:var(--on-pop);border:2px solid var(--ink);padding:3px 9px;margin-bottom:12px}
+.ttr-bcard:nth-child(even) .ttr-bk{background:var(--mint);color:var(--on-mint)}
+.ttr-bcard:last-child .ttr-bk{background:var(--sun);color:var(--on-sun)}
 .ttr-bstat{display:inline-block;font-family:var(--f-d);font-weight:800;font-size:clamp(40px,6vw,56px);line-height:1;letter-spacing:-.04em;color:var(--pop);text-shadow:3px 3px 0 var(--sun);margin-bottom:10px}
 .ttr-bcard:nth-child(even) .ttr-bstat{color:var(--mint)}
 .ttr-btitle{font-family:var(--f-d);font-weight:800;font-size:clamp(22px,2.8vw,27px);line-height:1.1;letter-spacing:-.02em;margin-bottom:6px}
-.ttr-bcard p{font-size:16px;line-height:1.5;color:var(--muted)}
+.ttr-bcard p{font-size:16px;line-height:1.5}
 @media(max-width:700px){.ttr-biz{grid-template-columns:1fr}}
 .ttr-insight{margin:40px 0 10px;background-color:var(--mint);background-image:radial-gradient(rgba(255,255,255,.18) 1.3px,transparent 1.7px);background-size:9px 9px;color:var(--on-mint);border:2px solid var(--ink);border-radius:8px;padding:34px 30px;box-shadow:10px 10px 0 var(--pop)}
 .ttr-insight .ttr-mono{display:inline-block;background:var(--sun);color:var(--on-sun);font-weight:700;padding:3px 10px;margin-bottom:14px}
@@ -346,14 +349,14 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
 </div>
 <div class="ttr-part"><span>Part three</span>What it means for products</div>
 <div class="ttr-biz">
-  <div class="ttr-bcard"><div class="ttr-bstat">+12%</div><div class="ttr-btitle">Users over-explain to bots.</div><p>Expect wordier input. Success won't shrink it.</p></div>
-  <div class="ttr-bcard"><div class="ttr-bstat">0 / 4</div><div class="ttr-btitle">Self-promotion doesn't work.</div><p>Competence claims and praise changed nothing.</p></div>
-  <div class="ttr-bcard"><div class="ttr-bstat">4 / 4</div><div class="ttr-btitle">Failure gets better input.</div><p>A clear “I didn't get that” raised detail on every retry.</p></div>
-  <div class="ttr-bcard"><div class="ttr-bstat">1 turn</div><div class="ttr-btitle">One fix doesn't last.</div><p>So show what the system understood, every turn.</p></div>
+  <div class="ttr-bcard"><div class="ttr-mono ttr-bk">Before speaking</div><div class="ttr-btitle">Who users think they are talking to sets how much they say.</div><p>Speakers gave a robot more detail than a human listener who behaved identically (2.23 vs 1.98).</p></div>
+  <div class="ttr-bcard"><div class="ttr-mono ttr-bk">After success</div><div class="ttr-btitle">Success does not make users briefer.</div><p>Correct guesses, competence claims and positive feedback did not reduce detail. Success lets the interaction continue without showing what the system understood.</p></div>
+  <div class="ttr-bcard"><div class="ttr-mono ttr-bk">After failure</div><div class="ttr-btitle">Explicit trouble prompts repair, but only locally.</div><p>When the robot signalled it had not understood, detail rose on the retry (2.65 to 2.75) and then returned to baseline.</p></div>
+  <div class="ttr-bcard"><div class="ttr-mono ttr-bk">Design principle</div><div class="ttr-btitle">Make understanding interpretable.</div><p>Feedback on what the system has understood may help users calibrate their speech. That speech is the system's input, so the two form a reciprocal loop that shapes efficiency and repair.</p></div>
 </div>
 <div class="ttr-insight">
   <div class="ttr-mono">The takeaway</div>
-  <p>Who users think they are talking to sets how much they say. What moved it was not what the system claimed about itself, but clear evidence that it had not understood.</p>
+  <p>Success lets an interaction continue without revealing understanding. Explicit trouble gives users a clearer basis for revision.</p>
 </div>
 <div class="ttr-actions">
   <a class="ttr-btn" href="/academia/">Full write-ups &amp; citations</a>
