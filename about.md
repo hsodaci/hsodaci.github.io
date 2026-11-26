@@ -64,7 +64,6 @@ body[data-theme="dark"] .abt-h1 span{color:#ef7a6f}
   <div>
     <h1 class="abt-h1">Hi, I'm <span>Hande.</span></h1>
     <p class="abt-intro">I'm a UX and behavioral researcher in Istanbul. My PhD asked how much people explain when they talk to a machine.</p>
-    <p class="abt-note">This site is my little home on the web. I set it up myself, one stitch at a time.</p>
   </div>
 </div>
 <div class="abt-sampler abt-cloth">
@@ -74,7 +73,7 @@ body[data-theme="dark"] .abt-h1 span{color:#ef7a6f}
     <div class="abt-m" data-motif="mill"><b>The Netherlands</b><p>A research master's in language at Radboud.</p></div>
     <div class="abt-m" data-motif="robot"><b>Tilburg</b><p>My first robot, teaching Dutch words to Turkish–Dutch children.</p></div>
     <div class="abt-m" data-motif="talk"><b>Koç University</b><p>A PhD on how people talk to robots.</p></div>
-    <div class="abt-m next" data-motif="heart"><b>Next</b><p>UX research. Still stitching.</p></div>
+    <div class="abt-m next" data-motif="heart"><b>Next</b><p>Still stitching.</p></div>
   </div>
 </div>
 <div class="abt-patches">
