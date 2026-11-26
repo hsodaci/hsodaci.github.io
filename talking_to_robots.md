@@ -48,7 +48,7 @@ comments: false
     </div>
     <div class="case-result">
       <span class="case-result-label">Result</span>
-      People gave the robot more detail than the human, every time. They kept doing this even after the robot got several answers right in a row. Doing well was not enough to make people explain less. This became a published paper at ACM/IEEE HRI '26 and won an Honorable Mention.
+      People gave the robot more detail than the human, every time. They kept doing this even after the robot got several answers right in a row. Doing well was not enough to make people explain less. This was published as a short paper at ACM/IEEE HRI '26 and won an Honorable Mention award.
     </div>
   </div>
 </div>
