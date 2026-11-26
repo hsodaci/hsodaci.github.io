@@ -164,19 +164,13 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
 .ttr-plotsvg circle{transition:r .15s}
 .ttr-plotsvg .pl-dot:hover{r:10}
 
-.ttr p.ttr-lede{font-family:var(--f-s);font-size:clamp(21px,2.8vw,26px);line-height:1.35;max-width:720px;margin:18px 0 0}
-.ttr-biz{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0 0}
-.ttr-bcard{background:var(--card);border:2px solid var(--ink);border-radius:8px;padding:22px 22px 8px;box-shadow:6px 6px 0 var(--mint);display:flex;flex-direction:column}
+.ttr-biz{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0 0}
+.ttr-bcard{background:var(--card);border:2px solid var(--ink);border-radius:8px;padding:20px 22px 6px;box-shadow:6px 6px 0 var(--mint)}
 .ttr-bcard:nth-child(4n+1),.ttr-bcard:nth-child(4n){box-shadow:6px 6px 0 var(--pop)}
-.ttr-bcard.wide{grid-column:1/-1;background:var(--sun);color:var(--on-sun);box-shadow:6px 6px 0 var(--ink)}
-.ttr-bk{color:var(--pop);font-weight:700;margin-bottom:8px}
-.ttr-bcard.wide .ttr-bk{color:var(--on-sun)}
-.ttr-btitle{font-family:var(--f-d);font-weight:800;font-size:clamp(21px,2.6vw,25px);line-height:1.15;letter-spacing:-.02em;margin-bottom:12px}
-.ttr-bev{align-self:flex-start;font-size:11px;background:var(--ink);color:var(--paper);padding:3px 8px;margin-bottom:12px;letter-spacing:.04em}
-.ttr-bcard p{font-size:16px;line-height:1.55}
-.ttr-careful{margin:24px 0 0;padding:16px 20px;border:2px dashed var(--ink);border-radius:8px;max-width:780px}
-.ttr-careful .ttr-mono{font-weight:700;color:var(--pop)}
-.ttr-careful p{font-size:15px;line-height:1.55;margin:6px 0 0;color:var(--muted)}
+.ttr-bstat{display:inline-block;font-family:var(--f-d);font-weight:800;font-size:clamp(40px,6vw,56px);line-height:1;letter-spacing:-.04em;color:var(--pop);text-shadow:3px 3px 0 var(--sun);margin-bottom:10px}
+.ttr-bcard:nth-child(even) .ttr-bstat{color:var(--mint)}
+.ttr-btitle{font-family:var(--f-d);font-weight:800;font-size:clamp(22px,2.8vw,27px);line-height:1.1;letter-spacing:-.02em;margin-bottom:6px}
+.ttr-bcard p{font-size:16px;line-height:1.5;color:var(--muted)}
 @media(max-width:700px){.ttr-biz{grid-template-columns:1fr}}
 .ttr-insight{margin:40px 0 10px;background-color:var(--mint);background-image:radial-gradient(rgba(255,255,255,.18) 1.3px,transparent 1.7px);background-size:9px 9px;color:var(--on-mint);border:2px solid var(--ink);border-radius:8px;padding:34px 30px;box-shadow:10px 10px 0 var(--pop)}
 .ttr-insight .ttr-mono{display:inline-block;background:var(--sun);color:var(--on-sun);font-weight:700;padding:3px 10px;margin-bottom:14px}
@@ -351,41 +345,11 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
   </div>
 </div>
 <div class="ttr-part"><span>Part three</span>What it means for products</div>
-<p class="ttr-lede">The experiments used one controlled task, but the questions behind them matter to anyone building voice assistants, chatbots or service robots. Here is how I would translate the findings for a product team.</p>
 <div class="ttr-biz">
-  <div class="ttr-bcard">
-    <div class="ttr-mono ttr-bk">Insight 1</div>
-    <div class="ttr-btitle">Users over-explain to machines, and success doesn't talk them down.</div>
-    <div class="ttr-mono ttr-bev">Study 1 · 2.23 vs 1.98 · no drop after correct guesses</div>
-    <p>People bring an assumption about what a machine can follow, and a run of correct answers did not loosen it. Expect longer, more redundant input to a bot than to a person. Build parsing and speech recognition to handle it instead of counting on users to become terse. There is an upside too: people abandoned hard descriptions less often with the robot, so they persist when the system seems to need help.</p>
-  </div>
-  <div class="ttr-bcard">
-    <div class="ttr-mono ttr-bk">Insight 2</div>
-    <div class="ttr-btitle">Confidence claims and generic praise are low-leverage.</div>
-    <div class="ttr-mono ttr-bev">Study 2 · four combinations · no effect</div>
-    <p>Telling users the system is capable, or praising them after a correct answer, did not change how much they said. Onboarding copy and upbeat feedback may serve other goals. On this evidence, they are not the levers that shape how people talk to a system.</p>
-  </div>
-  <div class="ttr-bcard">
-    <div class="ttr-mono ttr-bk">Insight 3</div>
-    <div class="ttr-btitle">A clear, specific failure message buys better input.</div>
-    <div class="ttr-mono ttr-bev">Study 2 · +0.20 to +0.36 on every retry</div>
-    <p>When the robot said it couldn't find the answer and asked for another description, people immediately added detail. A legible failure gives users something to act on. A silent wrong guess or a vague fallback gives them nothing to calibrate against.</p>
-  </div>
-  <div class="ttr-bcard">
-    <div class="ttr-mono ttr-bk">Insight 4</div>
-    <div class="ttr-btitle">One error message won't retrain users. Visible understanding might.</div>
-    <div class="ttr-mono ttr-bev">Study 2 · the boost was gone by the next word</div>
-    <p>The extra detail lasted for the retry only: people adjusted locally instead of learning a new way of talking. The design principle I propose is to make the system's understanding visible throughout, for example by showing which details it picked up. User speech is the system's input, so feedback and speech form a loop that shapes efficiency, repair and system performance. This principle follows from the findings but was not tested directly.</p>
-  </div>
-  <div class="ttr-bcard wide">
-    <div class="ttr-mono ttr-bk">Bonus · a metric to borrow</div>
-    <div class="ttr-btitle">Measure how users talk, not only whether the task succeeded.</div>
-    <p>Semantic detail density turns "how users talk" into a number that can be A/B tested. Paired with a matched design, where only the partner's identity changes, it separates the effect of who users think they are talking to from what the system actually does.</p>
-  </div>
-</div>
-<div class="ttr-careful">
-  <span class="ttr-mono">Where to be careful</span>
-  <p>These results come from one word-guessing task, one robot (NAO) and single sessions with university students in Istanbul. Some participants suspected the listener's responses were prerecorded, and the competence claim may have been too weak to register. Treat the insights as hypotheses to test in your own product, not settled rules.</p>
+  <div class="ttr-bcard"><div class="ttr-bstat">+12%</div><div class="ttr-btitle">Users over-explain to bots.</div><p>Expect wordier input. Success won't shrink it.</p></div>
+  <div class="ttr-bcard"><div class="ttr-bstat">0 / 4</div><div class="ttr-btitle">Self-promotion doesn't work.</div><p>Competence claims and praise changed nothing.</p></div>
+  <div class="ttr-bcard"><div class="ttr-bstat">4 / 4</div><div class="ttr-btitle">Failure gets better input.</div><p>A clear “I didn't get that” raised detail on every retry.</p></div>
+  <div class="ttr-bcard"><div class="ttr-bstat">1 turn</div><div class="ttr-btitle">One fix doesn't last.</div><p>So show what the system understood, every turn.</p></div>
 </div>
 <div class="ttr-insight">
   <div class="ttr-mono">The takeaway</div>
