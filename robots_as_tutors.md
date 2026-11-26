@@ -130,10 +130,6 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
 .rat-legend{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:center;margin-top:14px;font-size:13px;color:var(--muted)}
 .rat-legend span{font-size:13px}
 
-.rat-three{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:8px}
-.rat-three div{width:64px;height:64px;border-radius:16px;background:var(--bg);display:grid;place-items:center;font-family:var(--f-d);font-size:26px;color:var(--muted);border:2px dashed var(--line)}
-.rat-three div.ok{background:#c9efd6;color:#1c4a2c;border:0;box-shadow:inset 0 -4px 0 rgba(0,0,0,.12)}
-.rat-three p{margin:0 0 0 8px;font-family:var(--f-d);font-weight:600;font-size:18px}
 
 .rat h3.rat-st{font-weight:700;font-size:clamp(26px,4vw,36px);line-height:1.12;margin:0 0 14px}
 .rat-pair{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch;margin:20px 0 18px}
@@ -176,9 +172,6 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
 .rat-gap .d{background:var(--deniz)}.rat-gap .r{background:var(--robin)}
 .rat-gap span{display:block;font-weight:800;font-size:14px;opacity:.9}
 .rat-gap b{font-family:var(--f-d);font-weight:700;font-size:30px;line-height:1.1}
-.rat-why{margin:30px 0 4px 82px;background:var(--card);border-radius:24px;padding:20px 22px 12px;box-shadow:0 8px 0 var(--sh)}
-.rat-why li{position:relative;padding-left:30px!important;margin:0 0 10px!important;font-size:17px}
-.rat-why li::before{content:"?";position:absolute;left:0;top:2px;width:21px;height:21px;border-radius:7px;background:var(--plum);color:#fff;font-family:var(--f-d);font-weight:700;font-size:13px;display:grid;place-items:center}
 
 .rat-plan{margin:34px 0 0}
 .rat-plangrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -202,9 +195,10 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
 .rat-ch[data-g] .rat-gb button{cursor:default;opacity:.45;transform:none}
 .rat-ch[data-g="robin"] .rat-gb button[data-g="robin"],.rat-ch[data-g="deniz"] .rat-gb button[data-g="deniz"]{opacity:1;box-shadow:0 0 0 3px var(--ink)}
 .rat-guess .rat-plot{transition:filter .5s,opacity .5s}
-.rat-ch:not([data-g]) .rat-guess .rat-plot{filter:blur(7px);opacity:.45}
+.rat-guess .rat-pref{transition:filter .5s,opacity .5s}
+.rat-ch[data-guess]:not([data-g]) .rat-guess .rat-plot,.rat-ch[data-guess]:not([data-g]) .rat-guess .rat-pref{filter:blur(7px);opacity:.45}
 .rat p.rat-gmsg{font-family:var(--f-d);font-weight:600;font-size:18px;min-height:0;margin:0 0 10px}
-.rat-ch#rat-ch1:not([data-g]) .rat-after{display:none}
+.rat-ch[data-guess]:not([data-g]) .rat-after{display:none}
 .rat-after{animation:rat-up .5s ease-out}
 @keyframes rat-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .rat-verdict{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-d);font-weight:600;font-size:18px;background:var(--bg);border-radius:999px;padding:6px 16px 6px 6px;margin:4px 0 16px}
@@ -213,6 +207,33 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
 .rat-verdict.no b{background:#e5484d}
 .rat-find{font-family:var(--f-d);font-weight:600;font-size:clamp(19px,2.6vw,23px);line-height:1.28;margin:0 0 14px;max-width:760px}
 .rat-find span{display:inline-block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:var(--fc);color:var(--fo);border-radius:999px;padding:3px 11px;margin:0 10px 6px 0;vertical-align:middle}
+.rat-test{background:var(--bg);border-radius:22px;padding:18px;margin:6px 0 16px;text-align:center}
+.rat-tq{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 10px;font-family:var(--f-d);font-weight:600;font-size:22px;margin-bottom:14px}
+.rat-tq small{flex-basis:100%;font-size:15px;color:var(--muted)}
+.rat-tcards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:520px;margin:0 auto}
+.rat-tcards button{border:0;padding:6px;background:#222838;border-radius:16px;cursor:pointer;box-shadow:0 5px 0 var(--sh);transition:transform .15s,box-shadow .2s}
+.rat-tcards button:hover{transform:translateY(-3px)}
+.rat-tcards svg{display:block;width:100%;height:auto;border-radius:11px}
+.rat-tcards button.ok{box-shadow:0 0 0 4px var(--grass),0 5px 0 var(--sh)}
+.rat-tcards button.no{animation:rat-no .4s;box-shadow:0 0 0 4px #e5484d,0 5px 0 var(--sh)}
+.rat-tcards .tree1,.rat-tcards .monkey{transform-box:fill-box;transform-origin:50% 100%;animation:rat-shake .5s ease-in-out infinite}
+.rat-tcards .pawl{animation:rat-clapl2 .6s ease-in-out infinite}
+.rat-tcards .pawr{animation:rat-clapr2 .6s ease-in-out infinite}
+@keyframes rat-clapl2{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+@keyframes rat-clapr2{0%,100%{transform:translateX(0)}50%{transform:translateX(-8px)}}
+.rat-tcards .wing{transform-box:fill-box;transform-origin:0 100%;animation:rat-flap .35s ease-in-out infinite alternate}
+@keyframes rat-flap{from{transform:rotate(0)}to{transform:rotate(-35deg)}}
+.rat-tcards .bird{animation:rat-bob 1.2s ease-in-out infinite}
+.rat p.rat-tmsg{font-family:var(--f-d);font-weight:600;font-size:17px;margin:14px auto 0;max-width:none}
+.rat-whyx{margin:44px 0 0;background:#5b45b0;color:#fff;border-radius:30px;padding:30px 30px 22px;box-shadow:inset 0 -8px 0 rgba(0,0,0,.18)}
+body[data-theme="dark"] .rat-whyx{background:#4a3a96}
+.rat h3.rat-whyh{font-weight:700;font-size:clamp(26px,4vw,36px);line-height:1.15;margin:0 0 20px;color:#fff}
+.rat-reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rat-reasons div{background:#fff;color:#1c2540;border-radius:22px;padding:18px 18px 8px;box-shadow:0 6px 0 rgba(0,0,0,.18)}
+.rat-reasons b{display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:var(--sun);color:#1c2540;font-family:var(--f-d);font-weight:700;font-size:20px;margin-bottom:10px;box-shadow:inset 0 -3px 0 rgba(0,0,0,.15)}
+.rat .rat-reasons strong{display:block;font-family:var(--f-d);font-weight:700;font-size:21px;margin-bottom:6px;color:#1c2540}
+.rat-reasons p{font-size:16px;line-height:1.5}
+.rat p.rat-whynote{margin:16px 0 0;font-size:14px;font-weight:700;opacity:.85}
 .rat-biz{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
 .rat-bcard{background:var(--card);border-radius:24px;padding:20px 20px 8px;box-shadow:0 8px 0 var(--sh);display:flex;flex-direction:column}
 .rat-bcard span{align-self:flex-start;font-family:var(--f-d);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:var(--fc);color:var(--fo);border-radius:999px;padding:3px 11px;margin-bottom:12px}
@@ -241,7 +262,7 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
 @keyframes rat-hop{0%{transform:translateY(0)}35%{transform:translateY(-8px)}100%{transform:translateY(0)}}
 @keyframes rat-nod{0%,100%{transform:translateY(0)}40%{transform:translateY(5px)}}
 
-@media(max-width:760px){.rat-biz,.rat-plangrid{grid-template-columns:1fr}.rat-ch{grid-template-columns:44px 1fr;gap:10px}.rat-chn{width:44px;height:44px;font-size:22px;border-radius:14px}.rat-ch::before{left:20px;top:50px}.rat-why{margin-left:54px}.rat-chb{padding:18px 12px 12px}.rat-guess{padding:12px 8px 4px}.rat-ch{grid-template-columns:36px 1fr;gap:8px}.rat-chn{width:36px;height:36px;font-size:19px;border-radius:12px}.rat-ch::before{left:16px;top:44px}.rat-why{margin-left:44px}.rat-stage{grid-template-columns:1fr}.rat-tutor{min-height:290px}.rat-pair{grid-template-columns:1fr}.rat-vs br{display:none}}
+@media(max-width:760px){.rat-biz,.rat-plangrid,.rat-reasons{grid-template-columns:1fr}.rat-whyx{padding:24px 16px 18px}.rat-ch{grid-template-columns:44px 1fr;gap:10px}.rat-chn{width:44px;height:44px;font-size:22px;border-radius:14px}.rat-ch::before{left:20px;top:50px}.rat-chb{padding:18px 12px 12px}.rat-guess{padding:12px 8px 4px}.rat-ch{grid-template-columns:36px 1fr;gap:8px}.rat-chn{width:36px;height:36px;font-size:19px;border-radius:12px}.rat-ch::before{left:16px;top:44px}.rat-stage{grid-template-columns:1fr}.rat-tutor{min-height:290px}.rat-pair{grid-template-columns:1fr}.rat-vs br{display:none}}
 @media(max-width:600px){.rat{padding:8px 16px 34px;font-size:16px}.rat-herobots{display:none}.rat p.rat-meta,.rat h1.rat-title{padding-right:0}.rat-card{padding:22px 18px 16px}.rat-lesson{padding:12px;margin-inline:-6px}.rat-h span{flex-basis:42px;height:42px;font-size:15px}.rat-dots{gap:4px}.rat-gap b{font-size:24px}.rat-bars .v{font-size:30px}.rat-bars .n{font-size:21px}.rat-bars .gl{font-size:19px}.rat-bars .t{font-size:18px}.rat-bars .cht{font-size:17px}.rat-bub{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.rat *{animation:none!important;transition:none!important}.rat-bars .b,.rat-dots i{transform:none!important}}
 </style>
@@ -340,8 +361,17 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
 </div>
 <div class="rat-card">
   <h2 class="rat-h"><span>03</span>The test</h2>
-  <p>To check which words stuck, children saw three pictures, heard a Dutch word, and picked the matching picture. Guessing alone would get one in three right. They took this test right after the lesson and again about a week later.</p>
-  <div class="rat-three" aria-hidden="true"><div><b>?</b></div><div class="ok"><b>✓</b></div><div><b>?</b></div><p>Chance = 1 in 3 = 33%</p></div>
+  <p>To check which words stuck, children heard a Dutch word and picked the matching picture out of three. Try one:</p>
+  <div class="rat-test" id="rat-test">
+    <div class="rat-tq"><span aria-hidden="true">🔊</span><span>“<b class="nl">Klappen</b>”</span><small>Which picture shows it?</small></div>
+    <div class="rat-tcards">
+      <button type="button" data-ok="0" aria-label="Monkey shaking a tree"><svg viewBox="0 0 120 96" aria-hidden="true"><rect width="120" height="96" fill="#cdeeff"/><rect y="74" width="120" height="22" fill="#9edb8c"/><g class="tree1"><rect x="44" y="40" width="12" height="40" rx="4" fill="#8b5a3c"/><circle cx="50" cy="32" r="22" fill="#3fae6a"/></g><g class="monkey"><ellipse cx="68" cy="66" rx="8" ry="10" fill="#9b6b43"/><path d="M62 60L54 54" stroke="#9b6b43" stroke-width="5" stroke-linecap="round"/><circle cx="69" cy="52" r="7" fill="#9b6b43"/><ellipse cx="69.5" cy="54" rx="4.5" ry="4" fill="#f2cfa4"/></g></svg></button>
+      <button type="button" data-ok="1" aria-label="Bear clapping"><svg viewBox="0 0 120 96" aria-hidden="true"><rect width="120" height="96" fill="#cdeeff"/><rect y="74" width="120" height="22" fill="#9edb8c"/><g class="bear"><ellipse cx="60" cy="66" rx="17" ry="20" fill="#7a5136"/><ellipse cx="60" cy="70" rx="10" ry="12" fill="#a77a55"/><circle cx="49" cy="32" r="5.5" fill="#7a5136"/><circle cx="71" cy="32" r="5.5" fill="#7a5136"/><circle cx="60" cy="40" r="13" fill="#7a5136"/><ellipse cx="60" cy="44" rx="5.5" ry="4" fill="#a77a55"/><circle cx="55" cy="38" r="1.5" fill="#222"/><circle cx="65" cy="38" r="1.5" fill="#222"/><g class="pawl"><circle cx="47" cy="60" r="5" fill="#6a452d"/></g><g class="pawr"><circle cx="73" cy="60" r="5" fill="#6a452d"/></g></g></svg></button>
+      <button type="button" data-ok="0" aria-label="Bird flying"><svg viewBox="0 0 120 96" aria-hidden="true"><rect width="120" height="96" fill="#cdeeff"/><rect y="74" width="120" height="22" fill="#9edb8c"/><g class="bird"><ellipse cx="60" cy="46" rx="13" ry="10" fill="#ff8a5b"/><circle cx="50" cy="40" r="7" fill="#ff8a5b"/><path d="M43 40L36 42L43 44Z" fill="#f2b51d"/><circle cx="49" cy="39" r="1.6" fill="#222"/><path class="wing" d="M60 42Q70 26 80 34Q72 44 60 46Z" fill="#e5703f"/></g></svg></button>
+    </div>
+    <p class="rat-tmsg" id="rat-tmsg">Tap a picture.</p>
+  </div>
+  <p>Each word was tested three times, right after the lesson and again about a week later. Guessing alone gets one in three right (33%), so scores above that mean children really learned the words.</p>
 </div>
 <div class="rat-part"><span>Part two</span>The experiment</div>
 <div class="rat-card rat-exp">
@@ -383,39 +413,45 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
     <a href="#rat-ch3" class="f3"><span>Open question</span>Does what children already know matter?</a>
   </div>
 </div>
-<div class="rat-ch f1" id="rat-ch1">
+<div class="rat-ch f1" id="rat-ch1" data-guess>
   <div class="rat-chn">1</div>
   <div class="rat-chb">
     <div class="rat-chk">Prediction 1</div>
     <h3 class="rat-cht">Turkish translations will help children learn Dutch words.</h3>
-    <div class="rat-guess" id="rat-guess">
+    <div class="rat-guess">
       <p class="rat-gq">Your guess: whose words did children remember better?</p>
-      <div class="rat-gb"><button type="button" data-g="robin"><i></i>Robin's</button><button type="button" data-g="deniz"><i></i>Deniz's</button></div>
+      <div class="rat-gb"><button type="button" data-g="robin" data-msg="Good call. The team expected the opposite."><i></i>Robin's</button><button type="button" data-g="deniz" data-msg="That was the team's prediction too."><i></i>Deniz's</button></div>
       <div class="rat-plot"><svg class="rat-bars" viewBox="0 0 640 320" role="img" aria-label="Correct answers by robot. Right after the lesson: Robin 66%, Deniz 62%. A week later: Robin 69%, Deniz 69%. Chance is 33%."><line class="g" x1="64" x2="624" y1="246.0" y2="246.0"/><text class="t" x="54" y="251.0" text-anchor="end">0%</text><line class="g" x1="64" x2="624" y1="189.0" y2="189.0"/><text class="t" x="54" y="194.0" text-anchor="end">25%</text><line class="g" x1="64" x2="624" y1="132.0" y2="132.0"/><text class="t" x="54" y="137.0" text-anchor="end">50%</text><line class="g" x1="64" x2="624" y1="75.0" y2="75.0"/><text class="t" x="54" y="80.0" text-anchor="end">75%</text><line class="g" x1="64" x2="624" y1="18.0" y2="18.0"/><text class="t" x="54" y="23.0" text-anchor="end">100%</text><line class="ch" x1="64" x2="624" y1="170.0" y2="170.0"/><text class="cht" x="344.0" y="142.0" text-anchor="middle">Chance</text><text class="cht" x="344.0" y="160.0" text-anchor="middle">33%</text><rect class="b robin" x="130.2" y="95.5" width="78" height="150.5" rx="10"><title>Right after the lesson, Robin: 66%</title></rect><text class="v" x="169.2" y="85.5" text-anchor="middle">66%</text><text class="n" x="169.2" y="268.0" text-anchor="middle">Robin</text><rect class="b deniz" x="222.2" y="104.6" width="78" height="141.4" rx="10"><title>Right after the lesson, Deniz: 62%</title></rect><text class="v" x="261.2" y="94.6" text-anchor="middle">62%</text><text class="n" x="261.2" y="268.0" text-anchor="middle">Deniz</text><text class="gl" x="215.2" y="298.0" text-anchor="middle">Right after the lesson</text><rect class="b robin" x="387.8" y="88.7" width="78" height="157.3" rx="10"><title>A week later, Robin: 69%</title></rect><text class="v" x="426.8" y="78.7" text-anchor="middle">69%</text><text class="n" x="426.8" y="268.0" text-anchor="middle">Robin</text><rect class="b deniz" x="479.8" y="88.7" width="78" height="157.3" rx="10"><title>A week later, Deniz: 69%</title></rect><text class="v" x="518.8" y="78.7" text-anchor="middle">69%</text><text class="n" x="518.8" y="268.0" text-anchor="middle">Deniz</text><text class="gl" x="472.8" y="298.0" text-anchor="middle">A week later</text><line class="ax" x1="64" x2="624" y1="246" y2="246"/></svg></div>
-      <p class="rat-gmsg" id="rat-gmsg"></p>
+      <p class="rat-gmsg"></p>
     </div>
     <div class="rat-after">
       <div class="rat-verdict no"><b>✗</b>Not supported. The opposite happened.</div>
       <div class="rat-find"><span>Finding 1</span>Children learned more Dutch words from the Dutch-only robot than from the robot that added Turkish translations.</div>
-      <p>Children learned new words from both robots: on every test they picked the right picture well above chance. On average, they answered 66% of Robin's words and 62% of Deniz's words correctly right after the lesson, and 69% of both a week later. Accounting for how many times each child heard each word, a mixed-effects model found higher scores for Robin's words across both tests (odds ratio 2.11).</p>
+      <p>Children learned new words from both robots: on every test they picked the right picture well above chance. Right after the lesson, they got 66% of Robin's words right and 62% of Deniz's. A week later, both were at 69%. Once the analysis took into account how many times each child heard each word, children did better on Robin's words on both tests.</p>
     </div>
   </div>
 </div>
-<div class="rat-ch f2" id="rat-ch2">
+<div class="rat-ch f2" id="rat-ch2" data-guess>
   <div class="rat-chn">2</div>
   <div class="rat-chb">
     <div class="rat-chk">Prediction 2</div>
     <h3 class="rat-cht">Children will prefer the bilingual robot.</h3>
-    <p>After both lessons, each child was asked: “Which robot do you want to play with again?”</p>
-    <div class="rat-pref" data-anim>
-      <div class="rat-dots" role="img" aria-label="48 of 67 children chose Deniz, 19 chose Robin"><i class="d" style="--i:0"></i><i class="d" style="--i:1"></i><i class="d" style="--i:2"></i><i class="d" style="--i:3"></i><i class="d" style="--i:4"></i><i class="d" style="--i:5"></i><i class="d" style="--i:6"></i><i class="d" style="--i:7"></i><i class="d" style="--i:8"></i><i class="d" style="--i:9"></i><i class="d" style="--i:10"></i><i class="d" style="--i:11"></i><i class="d" style="--i:12"></i><i class="d" style="--i:13"></i><i class="d" style="--i:14"></i><i class="d" style="--i:15"></i><i class="d" style="--i:16"></i><i class="d" style="--i:17"></i><i class="d" style="--i:18"></i><i class="d" style="--i:19"></i><i class="d" style="--i:20"></i><i class="d" style="--i:21"></i><i class="d" style="--i:22"></i><i class="d" style="--i:23"></i><i class="d" style="--i:24"></i><i class="d" style="--i:25"></i><i class="d" style="--i:26"></i><i class="d" style="--i:27"></i><i class="d" style="--i:28"></i><i class="d" style="--i:29"></i><i class="d" style="--i:30"></i><i class="d" style="--i:31"></i><i class="d" style="--i:32"></i><i class="d" style="--i:33"></i><i class="d" style="--i:34"></i><i class="d" style="--i:35"></i><i class="d" style="--i:36"></i><i class="d" style="--i:37"></i><i class="d" style="--i:38"></i><i class="d" style="--i:39"></i><i class="d" style="--i:40"></i><i class="d" style="--i:41"></i><i class="d" style="--i:42"></i><i class="d" style="--i:43"></i><i class="d" style="--i:44"></i><i class="d" style="--i:45"></i><i class="d" style="--i:46"></i><i class="d" style="--i:47"></i><i class="r" style="--i:48"></i><i class="r" style="--i:49"></i><i class="r" style="--i:50"></i><i class="r" style="--i:51"></i><i class="r" style="--i:52"></i><i class="r" style="--i:53"></i><i class="r" style="--i:54"></i><i class="r" style="--i:55"></i><i class="r" style="--i:56"></i><i class="r" style="--i:57"></i><i class="r" style="--i:58"></i><i class="r" style="--i:59"></i><i class="r" style="--i:60"></i><i class="r" style="--i:61"></i><i class="r" style="--i:62"></i><i class="r" style="--i:63"></i><i class="r" style="--i:64"></i><i class="r" style="--i:65"></i><i class="r" style="--i:66"></i></div>
-      <div class="rat-prefkey"><div class="d"><b>48</b> chose Deniz</div><div class="r"><b>19</b> chose Robin</div></div>
+    <div class="rat-guess">
+      <p class="rat-gq">After both lessons, each child was asked: “Which robot do you want to play with again?” What would you pick?</p>
+      <div class="rat-gb"><button type="button" data-g="robin" data-msg="You picked like 19 of the 67 children. Most chose Deniz."><i></i>Robin</button><button type="button" data-g="deniz" data-msg="You picked like most children: 48 of 67 chose Deniz."><i></i>Deniz</button></div>
+      <div class="rat-pref">
+        <div class="rat-dots" role="img" aria-label="48 of 67 children chose Deniz, 19 chose Robin"><i class="d" style="--i:0"></i><i class="d" style="--i:1"></i><i class="d" style="--i:2"></i><i class="d" style="--i:3"></i><i class="d" style="--i:4"></i><i class="d" style="--i:5"></i><i class="d" style="--i:6"></i><i class="d" style="--i:7"></i><i class="d" style="--i:8"></i><i class="d" style="--i:9"></i><i class="d" style="--i:10"></i><i class="d" style="--i:11"></i><i class="d" style="--i:12"></i><i class="d" style="--i:13"></i><i class="d" style="--i:14"></i><i class="d" style="--i:15"></i><i class="d" style="--i:16"></i><i class="d" style="--i:17"></i><i class="d" style="--i:18"></i><i class="d" style="--i:19"></i><i class="d" style="--i:20"></i><i class="d" style="--i:21"></i><i class="d" style="--i:22"></i><i class="d" style="--i:23"></i><i class="d" style="--i:24"></i><i class="d" style="--i:25"></i><i class="d" style="--i:26"></i><i class="d" style="--i:27"></i><i class="d" style="--i:28"></i><i class="d" style="--i:29"></i><i class="d" style="--i:30"></i><i class="d" style="--i:31"></i><i class="d" style="--i:32"></i><i class="d" style="--i:33"></i><i class="d" style="--i:34"></i><i class="d" style="--i:35"></i><i class="d" style="--i:36"></i><i class="d" style="--i:37"></i><i class="d" style="--i:38"></i><i class="d" style="--i:39"></i><i class="d" style="--i:40"></i><i class="d" style="--i:41"></i><i class="d" style="--i:42"></i><i class="d" style="--i:43"></i><i class="d" style="--i:44"></i><i class="d" style="--i:45"></i><i class="d" style="--i:46"></i><i class="d" style="--i:47"></i><i class="r" style="--i:48"></i><i class="r" style="--i:49"></i><i class="r" style="--i:50"></i><i class="r" style="--i:51"></i><i class="r" style="--i:52"></i><i class="r" style="--i:53"></i><i class="r" style="--i:54"></i><i class="r" style="--i:55"></i><i class="r" style="--i:56"></i><i class="r" style="--i:57"></i><i class="r" style="--i:58"></i><i class="r" style="--i:59"></i><i class="r" style="--i:60"></i><i class="r" style="--i:61"></i><i class="r" style="--i:62"></i><i class="r" style="--i:63"></i><i class="r" style="--i:64"></i><i class="r" style="--i:65"></i><i class="r" style="--i:66"></i></div>
+        <div class="rat-prefkey"><div class="d"><b>48</b> chose Deniz</div><div class="r"><b>19</b> chose Robin</div></div>
+      </div>
+      <p class="rat-gmsg"></p>
     </div>
-    <div class="rat-verdict yes"><b>✓</b>Supported. 72% chose Deniz.</div>
-    <div class="rat-find"><span>Finding 2</span>Most children preferred the bilingual robot, but their preference did not change how much they learned.</div>
-    <div class="rat-gap">
-      <div class="d"><span>Liked more</span><b>Deniz</b></div>
-      <div class="r"><span>Learned more from</span><b>Robin</b></div>
+    <div class="rat-after">
+      <div class="rat-verdict yes"><b>✓</b>Supported. 72% chose Deniz.</div>
+      <div class="rat-find"><span>Finding 2</span>Most children preferred the bilingual robot, but their preference did not change how much they learned.</div>
+      <div class="rat-gap">
+        <div class="d"><span>Liked more</span><b>Deniz</b></div>
+        <div class="r"><span>Learned more from</span><b>Robin</b></div>
+      </div>
     </div>
   </div>
 </div>
@@ -430,13 +466,14 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
     <p>The study found no sign that translations helped children with smaller vocabularies more.</p>
   </div>
 </div>
-<div class="rat-why">
-  <div class="rat-k">So why might translations not help?</div>
-  <ul>
-    <li>Turkish is rarely heard in Dutch classrooms, and children were often surprised by it.</li>
-    <li>Switching between two languages may have added extra mental effort.</li>
-    <li>Excitement about the bilingual robot may have distracted children from learning.</li>
-  </ul>
+<div class="rat-whyx">
+  <h3 class="rat-whyh">So why might translations not help?</h3>
+  <div class="rat-reasons">
+    <div><b>1</b><strong>Surprise</strong><p>Turkish is rarely heard in Dutch classrooms, and children were often surprised by it.</p></div>
+    <div><b>2</b><strong>Extra effort</strong><p>Switching between two languages may have added extra mental effort.</p></div>
+    <div><b>3</b><strong>Distraction</strong><p>Excitement about the bilingual robot may have distracted children from learning.</p></div>
+  </div>
+  <p class="rat-whynote">These are possible explanations, not tested results.</p>
 </div>
 <div class="rat-part"><span>Part three</span>What it means for products</div>
 <div class="rat-biz">
@@ -470,16 +507,34 @@ body[data-theme="dark"] .rat{--bg:#151b2e;--ink:#f4efe4;--muted:#a8b0c7;--card:#
     anims.forEach(function (a) { a.classList.add("rat-in"); });
   }
 
-  var ch1 = document.getElementById("rat-ch1");
-  var gmsg = document.getElementById("rat-gmsg");
-  if (ch1) {
-    [].forEach.call(ch1.querySelectorAll(".rat-gb button"), function (b) {
+  [].forEach.call(root.querySelectorAll(".rat-ch[data-guess]"), function (ch) {
+    var msg = ch.querySelector(".rat-gmsg");
+    [].forEach.call(ch.querySelectorAll(".rat-gb button"), function (b) {
       b.addEventListener("click", function () {
-        if (ch1.hasAttribute("data-g")) { return; }
-        var g = b.getAttribute("data-g");
-        ch1.setAttribute("data-g", g);
-        gmsg.textContent = g === "deniz" ? "That was the team's prediction too." : "Good call. The team expected the opposite.";
-        setTimeout(function () { ch1.querySelector(".rat-plot").classList.add("rat-in"); }, 250);
+        if (ch.hasAttribute("data-g")) { return; }
+        ch.setAttribute("data-g", b.getAttribute("data-g"));
+        msg.textContent = b.getAttribute("data-msg");
+        setTimeout(function () {
+          [].forEach.call(ch.querySelectorAll(".rat-plot, .rat-pref"), function (x) { x.classList.add("rat-in"); });
+        }, 250);
+      });
+    });
+  });
+
+  var test = document.getElementById("rat-test");
+  if (test) {
+    var tmsg = document.getElementById("rat-tmsg");
+    [].forEach.call(test.querySelectorAll(".rat-tcards button"), function (b) {
+      b.addEventListener("click", function () {
+        [].forEach.call(test.querySelectorAll(".rat-tcards button"), function (x) { x.classList.remove("ok", "no"); });
+        void b.offsetWidth;
+        if (b.getAttribute("data-ok") === "1") {
+          b.classList.add("ok");
+          tmsg.textContent = "Correct! Klappen means clapping.";
+        } else {
+          b.classList.add("no");
+          tmsg.textContent = "Not this one. Try again.";
+        }
       });
     });
   }
