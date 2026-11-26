@@ -7,213 +7,184 @@ comments: false
 ---
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-/* About page, laid out as an academic research poster. Every rule is scoped to .abt and every class is prefixed abt-, so nothing here touches the rest of the site. One font family (Archivo), deep green and coral. */
+/* About page as a cross-stitch sampler. Every rule is scoped to .abt and every class is prefixed abt-. One font (Quicksand). The stitched motifs are drawn by the script at the bottom. */
 .header:has(+ .page-content .abt){display:none}
-.abt{--wall:#e9e6df;--sheet:#fffdf8;--ink:#1c2321;--muted:#5f6763;--line:rgba(28,35,33,.14);--grn:#0f5b4f;--on-grn:#f6f1e4;--acc:#ff7a59;--acc-soft:rgba(255,122,89,.22);--dim:rgba(28,35,33,.28);--fig:#eef3ef;
-  font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-stretch:100%;color:var(--ink);font-size:16.5px;line-height:1.58;text-align:left;
-  max-width:1000px;margin:0 auto;padding:26px;background:var(--wall);border-radius:16px}
-body[data-theme="dark"] .abt{--dim:rgba(236,235,229,.26);--wall:#0e1110;--sheet:#171c1a;--ink:#ecebe5;--muted:#a0a8a3;--line:rgba(236,235,229,.14);--grn:#1d7a6a;--fig:#202825}
+.abt{--wall:#f7f1e6;--ink:#3a3330;--muted:#7b716a;--linen:#f1e7d3;--grid:rgba(122,90,58,.09);--red:#c8463d;--grn:#4f7a4a;--blu:#3c6aa8;--mus:#d9a441;--wood:#c9935c;--wood2:#a8733f;
+  background:var(--wall);color:var(--ink);font-family:"Quicksand",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-weight:500;font-size:18px;line-height:1.6;text-align:left;max-width:900px;margin:0 auto;padding:24px 30px 56px;border-radius:18px}
+body[data-theme="dark"] .abt{--wall:#1e1a17;--ink:#efe6d8;--muted:#b3a698}
 .abt *,.abt *::before,.abt *::after{box-sizing:border-box}
-.abt p{margin:0 0 12px;padding:0;color:inherit;opacity:1}
-.abt h1,.abt h2,.abt h3{font-family:inherit;color:inherit;margin:0;padding:0;border:0;text-transform:none;letter-spacing:normal}
-.abt h2::before,.abt h2::after,.abt h3::before,.abt h3::after{content:none}
+.abt p{margin:0;padding:0;color:inherit;opacity:1}
+.abt h1,.abt h2{font-family:inherit;color:inherit;margin:0;padding:0;border:0;letter-spacing:normal;text-transform:none}
+.abt h2::before,.abt h2::after{content:none}
 .abt a{color:inherit}
 .abt a::after{content:none!important}
 .abt b,.abt strong{color:inherit!important}
-.abt em,.abt i{font-style:normal}
-.abt ol,.abt ul{list-style:none!important;margin:0;padding:0}
-.abt li{list-style:none!important}
-.abt li::before{content:none}
-.abt table{border-collapse:collapse;width:100%;margin:0;border:0;display:table}
-.abt tr,.abt th,.abt td{border:0!important;padding:0;background:none!important;text-align:left}
-.abt .abt-bg tr:not(:last-child) td{border-bottom:1px solid var(--line)!important}
-.abt .abt-refs a,.abt a.abt-more,.abt .abt-bg a{color:inherit!important}
+.abt-cloth{background-color:var(--linen);background-image:repeating-linear-gradient(0deg,var(--grid) 0 1px,transparent 1px 9px),repeating-linear-gradient(90deg,var(--grid) 0 1px,transparent 1px 9px)}
 
-.abt-sheet{position:relative;background:var(--sheet);border-radius:6px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 18px 40px -18px rgba(0,0,0,.35);overflow:hidden}
-.abt-sheet::before,.abt-sheet::after{content:"";position:absolute;top:10px;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ff9e85,var(--acc) 60%,#c8452a);box-shadow:0 3px 4px rgba(0,0,0,.3);z-index:3}
-.abt-sheet::before{left:12px}.abt-sheet::after{right:12px}
+.abt-top{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;padding:30px 0 10px}
+.abt-hoop{position:relative;width:330px;height:330px;border-radius:50%;padding:14px;background:linear-gradient(145deg,var(--wood),var(--wood2));box-shadow:0 14px 30px -14px rgba(60,35,10,.5),inset 0 0 0 3px rgba(255,255,255,.18)}
+.abt-hoop::before{content:"";position:absolute;left:50%;top:-16px;width:26px;height:26px;margin-left:-13px;border-radius:6px;background:linear-gradient(#b8bcc4,#7d828c);box-shadow:0 2px 3px rgba(0,0,0,.3)}
+.abt-hoopin{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;overflow:hidden;box-shadow:inset 0 0 0 5px var(--wood2),inset 0 6px 14px rgba(60,35,10,.25)}
+.abt-hoopin svg{width:82%;height:auto;display:block}
+.abt h1.abt-h1{font-weight:700;font-size:clamp(38px,6vw,58px);line-height:1.05;letter-spacing:-.02em;margin-bottom:16px}
+.abt-h1 span{color:var(--red)}
+body[data-theme="dark"] .abt-h1 span{color:#ef7a6f}
+.abt p.abt-intro{font-size:20px;line-height:1.55;max-width:34ch;margin-bottom:12px}
+.abt p.abt-note{font-size:16px;color:var(--muted);max-width:36ch}
 
-.abt-banner{background:var(--grn);color:var(--on-grn);padding:40px 44px 30px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
-.abt h1.abt-title{font-weight:800;font-stretch:112%;font-size:clamp(30px,4.6vw,50px);line-height:1.04;letter-spacing:-.02em;color:var(--on-grn);max-width:20ch}
-.abt-title mark{background:none;color:var(--acc);padding:0}
-.abt p.abt-authors{margin:16px 0 0;font-size:16px;font-weight:500;color:var(--on-grn);opacity:.9}
-.abt-authors sup{font-size:.7em;color:var(--acc);font-weight:700}
-.abt-ribbon{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
-.abt-ribbon span{white-space:nowrap;font-weight:700;font-size:13.5px;border-radius:999px;padding:6px 13px;background:rgba(255,255,255,.12);color:var(--on-grn)}
-.abt-ribbon span.hot{background:var(--acc);color:#1c2321}
-.abt-ribbon span.open::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#9ff0b9;margin-right:8px;animation:abt-pulse 2s infinite}
-@keyframes abt-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.abt-sampler{position:relative;margin:56px 0 0;border-radius:6px;padding:34px 30px 30px;box-shadow:0 18px 34px -20px rgba(60,35,10,.45)}
+.abt-sampler::before{content:"";position:absolute;inset:12px;border:2.5px dashed var(--red);border-radius:4px;pointer-events:none;opacity:.75}
+.abt h2.abt-h2{position:relative;text-align:center;font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:#7a5a3a;margin-bottom:24px}
+.abt-motifs{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.abt-m{position:relative;z-index:1;text-align:center;color:#3a3330}
+.abt-m svg{display:block;height:118px;width:auto;max-width:100%;margin:0 auto 14px;overflow:visible}
+.abt-m b{display:block;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#7a5a3a;margin-bottom:4px}
+.abt-m p{font-size:15.5px;line-height:1.45;color:#3a3330}
+.abt-m.next p{color:#7a5a3a}
+.abt-needle{transform-origin:20% 80%;animation:abt-bob 2.4s ease-in-out infinite}
+@keyframes abt-bob{0%,100%{transform:rotate(0)}50%{transform:rotate(-6deg) translateY(-2px)}}
 
-.abt-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 44px;border-bottom:1.5px solid var(--line);font-size:14px;color:var(--muted);font-weight:600}
-.abt-skim{font-family:inherit;font-weight:700;font-size:14px;border:1.5px solid var(--ink);background:none;color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer;transition:background .2s,color .2s}
-.abt-skim[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#1c2321}
+.abt-patches{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:40px}
+.abt a.abt-patch{position:relative;display:inline-block;text-decoration:none;font-weight:700;font-size:17px;color:#3a3330!important;padding:12px 22px;border-radius:12px;transform:rotate(var(--r,0deg));transition:transform .25s cubic-bezier(.34,1.56,.64,1);box-shadow:0 6px 12px -8px rgba(60,35,10,.5)}
+.abt a.abt-patch::before{content:"";position:absolute;inset:5px;border:2px dashed var(--c,var(--red));border-radius:8px}
+.abt a.abt-patch:hover{transform:rotate(0) translateY(-3px)}
+.abt a.abt-patch:nth-child(1){--r:-2deg;--c:var(--red)}
+.abt a.abt-patch:nth-child(2){--r:1.5deg;--c:var(--blu)}
+.abt a.abt-patch:nth-child(3){--r:-1deg;--c:var(--grn)}
 
-.abt-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
-.abt-col{padding:26px 26px 30px;border-right:1.5px solid var(--line)}
-.abt-col:last-child{border-right:0}
-.abt-sec{margin-bottom:26px}
-.abt-sec:last-child{margin-bottom:0}
-.abt h2.abt-h{display:flex;align-items:center;gap:10px;font-weight:800;font-stretch:108%;font-size:17px;letter-spacing:.01em;text-transform:uppercase;color:var(--on-grn);background:var(--grn);border-radius:4px;padding:6px 12px;margin-bottom:14px}
-.abt-h span{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--on-grn);color:var(--grn);font-size:12.5px}
-
-.abt-bg td{padding:9px 0;vertical-align:top}
-.abt-bg td:first-child{width:76px;font-size:13px;font-weight:700;color:var(--muted);padding-top:11px}
-.abt-bg b{display:block;font-weight:700;font-size:15.5px;line-height:1.3}
-.abt-bg span{display:block;font-size:14px;line-height:1.45;color:var(--muted)}
-.abt-bg tr.hl b{color:var(--grn)!important}
-body[data-theme="dark"] .abt-bg tr.hl b{color:#7fd8c5!important}
-.abt-bg em{display:inline-block;margin-top:5px;font-size:12.5px;font-weight:700;background:var(--acc-soft);border-radius:5px;padding:1px 7px}
-.abt .abt-bg a{text-decoration:underline;text-underline-offset:2px}
-
-.abt-m{padding:10px 0 12px;border-bottom:1px solid var(--line)}
-.abt-m:last-child{border-bottom:0}
-.abt-m h3{display:flex;align-items:center;gap:8px;font-weight:800;font-size:16.5px;margin-bottom:4px}
-.abt-m h3::before{content:"";width:9px;height:9px;border-radius:2px;background:var(--acc);display:inline-block}
-.abt-m p{font-size:14.5px;line-height:1.5;margin:0;color:var(--muted)}
-
-.abt-res{margin-bottom:18px}
-.abt-res p{font-size:15px}
-.abt-fig{background:var(--fig);border-radius:6px;padding:12px 14px 10px;margin:4px 0 8px}
-.abt-fig .row{display:grid;grid-template-columns:76px 1fr 38px;align-items:center;gap:8px;margin:5px 0;font-size:13px;font-weight:700}
-.abt-fig .track{height:14px;background:rgba(0,0,0,.06);border-radius:3px;overflow:hidden}
-body[data-theme="dark"] .abt-fig .track{background:rgba(255,255,255,.07)}
-.abt-fig .track i{display:block;height:100%;width:0;background:var(--grn);border-radius:3px;transition:width 1s cubic-bezier(.2,.8,.2,1)}
-.abt-fig .track i.a{background:var(--acc)}
-.abt-fig.on .track i{width:var(--w)}
-.abt-fig .row span:last-child{text-align:right;font-variant-numeric:tabular-nums}
-.abt p.abt-cap{font-size:12.5px;line-height:1.4;color:var(--muted);margin:6px 0 0}
-.abt-cap b{font-weight:800}
-.abt a.abt-more{display:inline-block;font-weight:700;font-size:14px;text-decoration:none;border-bottom:2px solid var(--acc)}
-.abt a.abt-more:hover{color:var(--acc)}
-
-.abt-disc p{font-size:15.5px}
-.abt-tools{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
-.abt-tools span{font-size:13.5px;font-weight:700;border:1.5px solid var(--line);border-radius:6px;padding:3px 9px}
-.abt p.abt-lang{font-size:14.5px;color:var(--muted);margin:0}
-.abt-refs li{font-size:14px;line-height:1.45;padding-left:28px!important;text-indent:-28px;margin:0 0 9px!important}
-.abt-refs li b{font-weight:700}
-.abt .abt-refs a{text-decoration:none;border-bottom:1.5px solid var(--acc)}
-.abt .abt-refs a:hover{color:var(--acc)}
-.abt-refs .n{display:inline-block;width:28px;text-indent:0;color:var(--muted);font-weight:700}
-
-.abt mark.k{background:none;color:inherit;padding:0;transition:background .25s}
-.abt-sheet.skim .abt-cols *{color:var(--dim)!important;transition:color .25s}
-.abt-sheet.skim .abt-cols mark.k{color:var(--ink)!important;background:var(--acc-soft);box-shadow:0 0 0 2px var(--acc-soft);border-radius:2px}
-.abt-sheet.skim .abt-cols .abt-h,.abt-sheet.skim .abt-cols .abt-h *{color:var(--on-grn)!important}
-.abt-sheet.skim .abt-cols .abt-h span{color:var(--grn)!important}
-.abt-sheet.skim .abt-cols .abt-fig *{color:var(--ink)!important}
-
-@media(max-width:860px){.abt-cols{grid-template-columns:1fr 1fr}.abt-col:nth-child(2){border-right:0}.abt-col:nth-child(3){grid-column:span 2;border-top:1.5px solid var(--line)}}
-@media(max-width:600px){.abt{padding:10px;font-size:16px}.abt-banner{grid-template-columns:1fr;padding:34px 22px 22px}.abt-ribbon{align-items:flex-start;flex-direction:row;flex-wrap:wrap}.abt-bar{padding:10px 22px}.abt-cols{grid-template-columns:1fr}.abt-col{border-right:0;border-top:1.5px solid var(--line);padding:22px}.abt-col:first-child{border-top:0}.abt-col:nth-child(3){grid-column:auto}}
-@media(prefers-reduced-motion:reduce){.abt *{animation:none!important;transition:none!important}}
+@media(max-width:760px){.abt-top{grid-template-columns:1fr;gap:28px;justify-items:center;text-align:center}.abt p.abt-intro,.abt p.abt-note{margin-left:auto;margin-right:auto}.abt-motifs{grid-template-columns:repeat(2,1fr);gap:26px 18px}.abt-m.next{grid-column:span 2}}
+@media(max-width:420px){.abt{padding:14px 14px 40px}.abt-hoop{width:270px;height:270px}.abt-sampler{padding:30px 18px 24px}}
+@media(prefers-reduced-motion:reduce){.abt-needle{animation:none}}
 </style>
 <div class="abt">
-<div class="abt-sheet" id="abt-sheet">
-  <div class="abt-banner">
-    <div>
-      <h1 class="abt-title">How much do people explain when they <mark>talk to a machine?</mark></h1>
-      <p class="abt-authors">Hande Sodacı, PhD<sup>1</sup> · User experience &amp; behavioral researcher · Istanbul<br><sup>1</sup>Department of Psychology, Koç University</p>
-    </div>
-    <div class="abt-ribbon">
-      <span class="open">Open to UX and behavioral research roles</span>
-      <span class="hot">★ HRI '26 · Honorable Mention</span>
-    </div>
+<div class="abt-top">
+  <div class="abt-hoop" aria-hidden="true"><div class="abt-hoopin abt-cloth" id="abt-name"></div></div>
+  <div>
+    <h1 class="abt-h1">Hi, I'm <span>Hande.</span></h1>
+    <p class="abt-intro">I'm a UX and behavioral researcher in Istanbul. My PhD asked how much people explain when they talk to a machine.</p>
+    <p class="abt-note">This site is my little home on the web. I set it up myself, one stitch at a time.</p>
   </div>
-  <div class="abt-bar"><span>An about page, laid out as a research poster.</span><button type="button" class="abt-skim" id="abt-skim" aria-pressed="false">Skim it in 30 seconds</button></div>
-  <div class="abt-cols">
-    <div class="abt-col">
-      <div class="abt-sec">
-        <h2 class="abt-h"><span>1</span>Introduction</h2>
-        <p>That is the question my PhD asked. I am a behavioral scientist with <mark class="k">a PhD in cognitive psychology from Koç University</mark> and <mark class="k">6+ years of experience investigating how people respond to and interact with technology</mark>, including social robots and tablet-based systems.</p>
-        <p>I combine qualitative and quantitative methods across the full research cycle, from study design and data collection to reporting.</p>
-      </div>
-      <div class="abt-sec">
-        <h2 class="abt-h"><span>2</span>Background</h2>
-        <table class="abt-bg">
-          <tr><td>2011–16</td><td><b>Boğaziçi University</b><span>BA in Psychology, with a certificate in Linguistics</span></td></tr>
-          <tr><td>2016–18</td><td><b>Radboud University</b><span>Research Master in Language and Communication, Nijmegen</span></td></tr>
-          <tr class="hl"><td>2017–18</td><td><b>Tilburg University</b><span>Research assistant on the EU Horizon 2020 <a href="/projects/robots-as-tutors/">L2TOR</a> project: a NAO robot teaching Dutch words to Turkish–Dutch children</span><em>Where my interest in human–robot interaction started</em></td></tr>
-          <tr><td>2020–22</td><td><b>MEF University</b><span>Project coordinator for a TÜBİTAK-funded longitudinal study</span></td></tr>
-          <tr><td>2020–26</td><td><b>Koç University</b><span>PhD in Psychology (Cognitive Track): in-lab studies of how people talk to human and robot listeners</span></td></tr>
-          <tr><td>2023–25</td><td><b>European Open Science</b><span>Editorial assistant for 15 academic journals (remote)</span></td></tr>
-        </table>
-      </div>
-    </div>
-    <div class="abt-col">
-      <div class="abt-sec">
-        <h2 class="abt-h"><span>3</span>Methods</h2>
-        <div class="abt-m"><h3>Testing</h3><p>I design and run <mark class="k">controlled in-lab user studies</mark>, from protocol design to data collection. My dissertation studies involved <mark class="k">200+ participants and 6,000+ responses</mark>.</p></div>
-        <div class="abt-m"><h3>Analyzing</h3><p>I model user behavior trial by trial with <mark class="k">mixed-effects and ordinal models in R</mark>, using reproducible workflows, and I report what the data show even when it is not what I expected.</p></div>
-        <div class="abt-m"><h3>Building</h3><p>I <mark class="k">program the robot interactions</mark> for my studies and pilot each task over several rounds until it feels natural to users. When existing measures could not capture what I was looking for, I <mark class="k">developed a new one</mark>. I also hold an Associate Degree in Web Design and Coding and set up this site myself.</p></div>
-        <div class="abt-m"><h3>Communicating</h3><p>I prepare visually structured reports, presentations, and posters <mark class="k">for technical and non-technical audiences</mark>, including my ACM/IEEE HRI 2026 poster, which received an Honorable Mention.</p></div>
-      </div>
-      <div class="abt-sec">
-        <h2 class="abt-h"><span>4</span>Materials</h2>
-        <div class="abt-tools"><span>R</span><span>SPSS</span><span>JASP</span><span>Qualtrics</span><span>OpenSesame</span><span>ELAN</span><span>Choregraphe (NAO)</span><span>HTML/CSS</span><span>Microsoft Office</span></div>
-        <p class="abt-lang"><b>Languages:</b> Turkish (native), English (fluent)</p>
-      </div>
-    </div>
-    <div class="abt-col">
-      <div class="abt-sec">
-        <h2 class="abt-h"><span>5</span>Results</h2>
-        <div class="abt-res">
-          <p>People gave a robot more detail than a human listener who behaved the same way (Fig. 1). They did not say less once the robot began guessing correctly, and <mark class="k">gave more detail only when it explicitly failed to understand them</mark>.</p>
-          <div class="abt-fig" data-fig>
-            <div class="row"><span>Human</span><span class="track"><i style="--w:66%"></i></span><span>1.98</span></div>
-            <div class="row"><span>Robot</span><span class="track"><i class="a" style="--w:74.3%"></i></span><span>2.23</span></div>
-            <p class="abt-cap"><b>Fig. 1.</b> Average detail per description, by listener.</p>
-          </div>
-          <a class="abt-more" href="/projects/talking-to-robots/">Talking to Robots →</a>
-        </div>
-        <div class="abt-res">
-          <p>Most children preferred the robot that also spoke Turkish (Fig. 2), yet they learned more from the one that spoke only Dutch. That taught me to <mark class="k">separate what users like from what works for them</mark>.</p>
-          <div class="abt-fig" data-fig>
-            <div class="row"><span>Bilingual</span><span class="track"><i class="a" style="--w:72%"></i></span><span>72%</span></div>
-            <div class="row"><span>Dutch-only</span><span class="track"><i style="--w:28%"></i></span><span>28%</span></div>
-            <p class="abt-cap"><b>Fig. 2.</b> Which robot children wanted to play with again.</p>
-          </div>
-          <a class="abt-more" href="/projects/robots-as-tutors/">Robots as Tutors →</a>
-        </div>
-      </div>
-      <div class="abt-sec abt-disc">
-        <h2 class="abt-h"><span>6</span>Discussion</h2>
-        <p>I want to bring my research experience to <mark class="k">usability testing and other user studies of interactive products</mark>, turning evidence from real users into actionable insights for engineers and designers.</p>
-      </div>
-      <div class="abt-sec">
-        <h2 class="abt-h"><span>7</span>References</h2>
-        <ol class="abt-refs">
-          <li><span class="n">[1]</span>Sodacı, H. <a href="/projects/talking-to-robots/"><b>Talking to Robots</b></a>. Project page.</li>
-          <li><span class="n">[2]</span>Sodacı, H. <a href="/projects/robots-as-tutors/"><b>Robots as Tutors</b></a>. Project page.</li>
-          <li><span class="n">[3]</span>Sodacı, H. (2026). <a href="/assets/HS_resume_202611.pdf"><b>Resume</b></a> [PDF].</li>
-          <li><span class="n">[4]</span>Sodacı, H. <a href="/contact/"><b>Get in touch</b></a>. Contact form.</li>
-        </ol>
-      </div>
-    </div>
+</div>
+<div class="abt-sampler abt-cloth">
+  <h2 class="abt-h2">My path so far</h2>
+  <div class="abt-motifs">
+    <div class="abt-m" data-motif="tulip"><b>Istanbul</b><p>Psychology at Boğaziçi, with a certificate in linguistics.</p></div>
+    <div class="abt-m" data-motif="mill"><b>The Netherlands</b><p>A research master's in language at Radboud.</p></div>
+    <div class="abt-m" data-motif="robot"><b>Tilburg</b><p>My first robot, teaching Dutch words to Turkish–Dutch children.</p></div>
+    <div class="abt-m" data-motif="talk"><b>Koç University</b><p>A PhD on how people talk to robots.</p></div>
+    <div class="abt-m next" data-motif="heart"><b>Next</b><p>UX research. Still stitching.</p></div>
   </div>
+</div>
+<div class="abt-patches">
+  <a class="abt-patch abt-cloth" href="/projects/talking-to-robots/">See my projects</a>
+  <a class="abt-patch abt-cloth" href="/assets/HS_resume_202611.pdf">Resume</a>
+  <a class="abt-patch abt-cloth" href="/contact/">Say hello</a>
 </div>
 </div>
 <script>
 (function () {
   var root = document.querySelector(".abt");
   if (!root) { return; }
-  var sheet = document.getElementById("abt-sheet");
-  var skim = document.getElementById("abt-skim");
-  skim.addEventListener("click", function () {
-    var on = !sheet.classList.contains("skim");
-    sheet.classList.toggle("skim", on);
-    skim.setAttribute("aria-pressed", on ? "true" : "false");
-    skim.textContent = on ? "Show everything" : "Skim it in 30 seconds";
+  var NS = "http://www.w3.org/2000/svg";
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var C = { R: "#c8463d", G: "#4f7a4a", L: "#7aa36b", B: "#3c6aa8", Y: "#d9a441", D: "#3a3330", N: "#8a6240", W: "#fbf6ec" };
+
+  var FONT = {
+    H: ["X...X", "X...X", "X...X", "XXXXX", "X...X", "X...X", "X...X"],
+    A: [".XXX.", "X...X", "X...X", "XXXXX", "X...X", "X...X", "X...X"],
+    N: ["X...X", "XX..X", "XX..X", "X.X.X", "X..XX", "X..XX", "X...X"],
+    D: ["XXXX.", "X...X", "X...X", "X...X", "X...X", "X...X", "XXXX."],
+    E: ["XXXXX", "X....", "X....", "XXXX.", "X....", "X....", "XXXXX"]
+  };
+  var MOTIFS = {
+    tulip: ["...R.R.R...", "..RRRRRRR..", "..RRRRRRR..", "..RRRRRRR..", "...RRRRR...", "....RRR....", ".....G.....", ".LL..G..LL.", "..LL.G.LL..", "...LLGLL...", ".....G.....", ".....G....."],
+    mill: ["B.........B", ".B.......B.", "..B.....B..", "...B...B...", "....BYB....", "....NNN....", "...BNNNB...", "..B.NNN.B..", ".B.NNNNN.B.", "...NNNNN...", "..NNNNNNN..", "..NNN.NNN..", "GGGGGGGGGGG"],
+    robot: [".....R.....", ".....D.....", "..DDDDDDD..", "..D.....D..", "..D.B.B.D..", "..D.....D..", "..D.RRR.D..", "..DDDDDDD..", "....D.D....", ".BBBBBBBBB.", ".BB.BBB.BB.", ".BBBBBBBBB."],
+    talk: [".YYYYYYYY...", "YYYYYYYYYY..", "YYDYYDYYDY..", "YYYYYYYYYY..", ".YYYYYYYY...", "..YY........", ".YY.........", "......BBBBBB", ".....BBBBBBB", ".....BBWBWBB", ".....BBBBBBB", "......BBBBB.", "..........BB"],
+    heart: [".RR...RR.", "RRRR.RRRR", "RRRRRRRRR", "RRRRRRRRR", ".RRRRRRR.", "..RRRRR..", "...RRR...", "....R...."]
+  };
+
+  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) { e.setAttribute(k, a[k]); } return e; }
+  function cross(g, x, y, s, col) {
+    var p = s * 0.17, w = s * 0.27;
+    var st = el("g", { "class": "st" });
+    st.appendChild(el("path", { d: "M" + (x + p) + " " + (y + p) + "L" + (x + s - p) + " " + (y + s - p), stroke: col, "stroke-width": w, "stroke-linecap": "round", opacity: ".85" }));
+    st.appendChild(el("path", { d: "M" + (x + s - p) + " " + (y + p) + "L" + (x + p) + " " + (y + s - p), stroke: col, "stroke-width": w, "stroke-linecap": "round" }));
+    g.appendChild(st);
+    return st;
+  }
+  function draw(rows, s, pad, done) {
+    var w = rows[0].length, h = rows.length;
+    var svg = el("svg", { viewBox: (-pad) + " " + (-pad) + " " + (w * s + pad * 2) + " " + (h * s + pad * 2), "aria-hidden": "true" });
+    var g = el("g", {}); svg.appendChild(g);
+    var list = [];
+    rows.forEach(function (r, y) {
+      for (var x = 0; x < r.length; x++) {
+        var ch = r.charAt(x);
+        if (ch === "." || !C[ch]) { continue; }
+        var stitched = !done || done(x, y, list.length);
+        if (stitched) { list.push(cross(g, x * s, y * s, s, C[ch])); }
+        else { g.appendChild(el("rect", { x: x * s + s * 0.3, y: y * s + s * 0.3, width: s * 0.4, height: s * 0.4, fill: "none", stroke: C[ch], "stroke-width": s * 0.08, opacity: ".45" })); }
+      }
+    });
+    list.forEach(function (st) { st.style.opacity = reduce ? 1 : 0; });
+    svg._st = list;
+    return svg;
+  }
+  function stitchIn(svg, speed) {
+    if (reduce) { return; }
+    svg._st.forEach(function (st, i) {
+      setTimeout(function () { st.style.transition = "opacity .2s"; st.style.opacity = 1; }, i * speed);
+    });
+  }
+
+  var word = ["H", "A", "N", "D", "E"];
+  var rows = [];
+  for (var r = 0; r < 7; r++) {
+    rows.push(word.map(function (L) { return FONT[L][r].replace(/X/g, "R"); }).join("."));
+  }
+  rows.push(Array(30).join("."));
+  var hrt = [".YY.YY.", "YYYYYYY", ".YYYYY.", "..YYY..", "...Y..."];
+  hrt.forEach(function (line) {
+    var padL = Math.floor((29 - line.length) / 2);
+    rows.push(Array(padL + 1).join(".") + line + Array(29 - padL - line.length + 1).join("."));
   });
-  var figs = [].slice.call(root.querySelectorAll("[data-fig]"));
-  if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  var nameSvg = draw(rows, 9, 4);
+  document.getElementById("abt-name").appendChild(nameSvg);
+
+  var motifs = [].slice.call(root.querySelectorAll("[data-motif]"));
+  motifs.forEach(function (m) {
+    var key = m.getAttribute("data-motif");
+    var svg;
+    if (key === "heart") {
+      svg = draw(MOTIFS.heart, 10, 14, function (x, y) { return y >= 4; });
+      var g = el("g", { "class": "abt-needle" });
+      g.appendChild(el("path", { d: "M44 46 Q 70 30 78 6", fill: "none", stroke: "#c8463d", "stroke-width": "1.6", "stroke-linecap": "round" }));
+      g.appendChild(el("line", { x1: "70", y1: "-2", x2: "96", y2: "-28", stroke: "#9aa0a8", "stroke-width": "3", "stroke-linecap": "round" }));
+      g.appendChild(el("ellipse", { cx: "92", cy: "-24", rx: "1.6", ry: "3", transform: "rotate(45 92 -24)", fill: "#f1e7d3" }));
+      svg.appendChild(g);
+    } else {
+      svg = draw(MOTIFS[key], 10, 4);
+    }
+    m.insertBefore(svg, m.firstChild);
+  });
+
+  if ("IntersectionObserver" in window && !reduce) {
     var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); } });
-    }, { threshold: 0.4 });
-    figs.forEach(function (f) { io.observe(f); });
+      es.forEach(function (e) {
+        if (!e.isIntersecting) { return; }
+        var t = e.target;
+        io.unobserve(t);
+        if (t.id === "abt-name") { stitchIn(nameSvg, 14); }
+        else { setTimeout(function () { stitchIn(t.querySelector("svg"), 22); }, motifs.indexOf(t) * 350); }
+      });
+    }, { threshold: 0.35 });
+    io.observe(document.getElementById("abt-name"));
+    motifs.forEach(function (m) { io.observe(m); });
   } else {
-    figs.forEach(function (f) { f.classList.add("on"); });
+    [nameSvg].concat(motifs.map(function (m) { return m.querySelector("svg"); })).forEach(function (s) { s._st.forEach(function (st) { st.style.opacity = 1; }); });
   }
 })();
 </script>
