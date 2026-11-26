@@ -127,7 +127,7 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
 .ttr-caption{font-family:var(--f-m);font-size:12px;line-height:1.5;color:var(--muted);margin-top:8px}
 .ttr-ex{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0 18px}
 .ttr-excard{background:var(--paper);border:2px solid var(--ink);border-radius:8px;padding:14px 16px}
-.ttr-exk{font-weight:700;color:var(--pop);margin-bottom:10px}
+.ttr-exk{font-family:var(--f-d);font-weight:800;font-size:17px;line-height:1.25;background:var(--ink);color:var(--paper);margin:-14px -16px 10px;padding:11px 16px;border-radius:5px 5px 0 0}
 .ttr-exrow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:8px 0;border-top:1px dashed var(--line)}
 .ttr-exrow:first-of-type{border-top:0}
 .ttr-exrow span{flex:0 0 72px;font-size:11px;font-weight:700;color:var(--muted)}
@@ -137,7 +137,7 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
 @media(max-width:700px){.ttr-ex{grid-template-columns:1fr}}
 .ttr-sub{display:inline-block;font-weight:700;background:var(--ink);color:var(--paper);padding:3px 10px;margin:28px 0 10px}
 
-.ttr-story{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:8px;align-items:stretch;margin:16px 0 6px}
+.ttr-story{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:8px;align-items:stretch;margin:16px 0 22px}
 .ttr-frame{background:var(--paper);border:2px solid var(--ink);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:8px}
 .ttr-frame.hot{background:var(--sun);color:var(--on-sun);box-shadow:5px 5px 0 var(--pop);transform:rotate(-1deg)}
 .ttr-fk{font-family:var(--f-m);font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
@@ -312,12 +312,12 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
     <p>The robot gave two kinds of verbal cue. Half the speakers heard each version.</p>
     <div class="ttr-ex">
       <div class="ttr-excard">
-        <div class="ttr-mono ttr-exk">1 · Before the game: a competence claim</div>
+        <div class="ttr-exk">1. Before the game: Competence claim</div>
         <div class="ttr-exrow on"><span class="ttr-mono">Claim</span><q>I have been trained on millions of words, so I can usually grasp what is said to me easily.</q></div>
         <div class="ttr-exrow"><span class="ttr-mono">No claim</span><q>It will be a nice game.</q></div>
       </div>
       <div class="ttr-excard">
-        <div class="ttr-mono ttr-exk">2 · After a correct description: feedback</div>
+        <div class="ttr-exk">2. During the game: Feedback after correct descriptions</div>
         <div class="ttr-exrow on"><span class="ttr-mono">Explicit</span><q>Very clear!</q> <i>then guesses right</i></div>
         <div class="ttr-exrow"><span class="ttr-mono">Minimal</span><q>Okay.</q> <i>then guesses right</i></div>
       </div>
@@ -336,30 +336,30 @@ body[data-theme="dark"] .ttr-block strong{color:var(--ink);background:linear-gra
     </div>
     <div class="ttr-caption">None of the four combinations moved the metric.</div>
     <div class="ttr-mono ttr-sub">Test B · The robot fails</div>
-    <p>This was not a manipulation. On a few scripted rounds, the same for everyone, the robot guessed wrong, said it couldn't find the word, and asked the speaker to describe it again. This is where behavior moved.</p>
+    <p>In some rounds, the robot said it couldn't find the word and asked the speaker to describe it again. Speakers responded right away: they added detail in their second attempt.</p>
     <div class="ttr-story">
       <div class="ttr-frame">
-        <div class="ttr-fk">Trial 4 · the robot errs</div>
-        <div class="ttr-fsay">You describe the word.</div>
+        <div class="ttr-fk">Trial 4</div>
+        <div class="ttr-fsay">First attempt</div>
         <div class="ttr-fbub">“Hmm, I couldn't find it. Could you describe it again?”</div>
         <div class="ttr-fbar"><i style="width:81.7%"></i></div><div class="ttr-fnum">2.45</div>
       </div>
       <div class="ttr-farrow" aria-hidden="true">→</div>
       <div class="ttr-frame hot">
-        <div class="ttr-fk">The retry</div>
-        <div class="ttr-fsay">You add detail.</div>
+        <div class="ttr-fk">Trial 4, retry</div>
+        <div class="ttr-fsay">Second attempt</div>
         <div class="ttr-fbub up">+0.20 more detail</div>
         <div class="ttr-fbar"><i style="width:88.3%"></i></div><div class="ttr-fnum">2.65</div>
       </div>
       <div class="ttr-farrow" aria-hidden="true">→</div>
       <div class="ttr-frame">
-        <div class="ttr-fk">Trial 5 · robot is right</div>
-        <div class="ttr-fsay">You relax back.</div>
+        <div class="ttr-fk">Trial 5</div>
+        <div class="ttr-fsay">Next round</div>
         <div class="ttr-fbub">“Truck!”</div>
         <div class="ttr-fbar"><i style="width:77%"></i></div><div class="ttr-fnum">2.31</div>
       </div>
     </div>
-    <div class="ttr-fine">Mean semantic detail density across speakers, trial 4 shown. The same rise happened at trials 9, 11 and 15. The full picture is below.</div>
+    <p>This increase was limited to the second attempt. When the next round started, speakers returned to their baseline level of detail.</p>
     <div class="ttr-plot">
       <svg class="ttr-plotsvg" viewBox="0 0 880 420" role="img" aria-label="Mean semantic detail density by trial. On the four trials where the robot erred (4, 9, 11 and 15), the repair attempt is higher than the incorrect trial it followed, while correct trials stay flat around 2.3 to 2.5."><rect class="pl-panel" x="74" y="64" width="790" height="294"/><rect class="pl-band" x="229.5" y="64" width="34.6" height="294"/><rect class="pl-band" x="476.4" y="64" width="34.6" height="294"/><rect class="pl-band" x="575.2" y="64" width="34.6" height="294"/><rect class="pl-band" x="772.7" y="64" width="34.6" height="294"/><line class="pl-grid" x1="74" x2="864" y1="333.5" y2="333.5"/><line class="pl-tick" x1="68" x2="74" y1="333.5" y2="333.5"/><text class="pl-txt" x="64" y="338.5" text-anchor="end">2.00</text><line class="pl-grid" x1="74" x2="864" y1="272.2" y2="272.2"/><line class="pl-tick" x1="68" x2="74" y1="272.2" y2="272.2"/><text class="pl-txt" x="64" y="277.2" text-anchor="end">2.25</text><line class="pl-grid" x1="74" x2="864" y1="211.0" y2="211.0"/><line class="pl-tick" x1="68" x2="74" y1="211.0" y2="211.0"/><text class="pl-txt" x="64" y="216.0" text-anchor="end">2.50</text><line class="pl-grid" x1="74" x2="864" y1="149.8" y2="149.8"/><line class="pl-tick" x1="68" x2="74" y1="149.8" y2="149.8"/><text class="pl-txt" x="64" y="154.8" text-anchor="end">2.75</text><line class="pl-grid" x1="74" x2="864" y1="88.5" y2="88.5"/><line class="pl-tick" x1="68" x2="74" y1="88.5" y2="88.5"/><text class="pl-txt" x="64" y="93.5" text-anchor="end">3.00</text><line class="pl-tick" x1="98.7" x2="98.7" y1="358" y2="364"/><text class="pl-txt" x="98.7" y="382" text-anchor="middle">1</text><line class="pl-tick" x1="148.1" x2="148.1" y1="358" y2="364"/><text class="pl-txt" x="148.1" y="382" text-anchor="middle">2</text><line class="pl-tick" x1="197.4" x2="197.4" y1="358" y2="364"/><text class="pl-txt" x="197.4" y="382" text-anchor="middle">3</text><line class="pl-tick" x1="246.8" x2="246.8" y1="358" y2="364"/><text class="pl-txt" x="246.8" y="382" text-anchor="middle">4</text><line class="pl-tick" x1="296.2" x2="296.2" y1="358" y2="364"/><text class="pl-txt" x="296.2" y="382" text-anchor="middle">5</text><line class="pl-tick" x1="345.6" x2="345.6" y1="358" y2="364"/><text class="pl-txt" x="345.6" y="382" text-anchor="middle">6</text><line class="pl-tick" x1="394.9" x2="394.9" y1="358" y2="364"/><text class="pl-txt" x="394.9" y="382" text-anchor="middle">7</text><line class="pl-tick" x1="444.3" x2="444.3" y1="358" y2="364"/><text class="pl-txt" x="444.3" y="382" text-anchor="middle">8</text><line class="pl-tick" x1="493.7" x2="493.7" y1="358" y2="364"/><text class="pl-txt" x="493.7" y="382" text-anchor="middle">9</text><line class="pl-tick" x1="543.1" x2="543.1" y1="358" y2="364"/><text class="pl-txt" x="543.1" y="382" text-anchor="middle">10</text><line class="pl-tick" x1="592.4" x2="592.4" y1="358" y2="364"/><text class="pl-txt" x="592.4" y="382" text-anchor="middle">11</text><line class="pl-tick" x1="641.8" x2="641.8" y1="358" y2="364"/><text class="pl-txt" x="641.8" y="382" text-anchor="middle">12</text><line class="pl-tick" x1="691.2" x2="691.2" y1="358" y2="364"/><text class="pl-txt" x="691.2" y="382" text-anchor="middle">13</text><line class="pl-tick" x1="740.6" x2="740.6" y1="358" y2="364"/><text class="pl-txt" x="740.6" y="382" text-anchor="middle">14</text><line class="pl-tick" x1="789.9" x2="789.9" y1="358" y2="364"/><text class="pl-txt" x="789.9" y="382" text-anchor="middle">15</text><line class="pl-tick" x1="839.3" x2="839.3" y1="358" y2="364"/><text class="pl-txt" x="839.3" y="382" text-anchor="middle">16</text><path class="pl-line" d="M148.1 240.4L197.4 220.8M197.4 220.8L246.8 223.2M246.8 174.3L296.2 257.5M296.2 257.5L345.6 198.8M345.6 198.8L394.9 211.0M394.9 211.0L444.3 237.9M444.3 237.9L493.7 225.7M493.7 157.1L543.1 240.4M543.1 240.4L592.4 211.0M592.4 149.8L641.8 282.1M641.8 282.1L691.2 237.9M691.2 237.9L740.6 220.8M740.6 220.8L789.9 250.2M789.9 162.0L839.3 240.4M98.7 223.2L148.1 240.4"/><line class="pl-err" x1="98.7" x2="98.7" y1="251.2" y2="195.3"/><line class="pl-err" x1="148.1" x2="148.1" y1="269.8" y2="211.0"/><line class="pl-err" x1="197.4" x2="197.4" y1="249.7" y2="191.9"/><line class="pl-err" x1="246.8" x2="246.8" y1="252.9" y2="193.6"/><line class="pl-err" x1="246.8" x2="246.8" y1="206.8" y2="141.7"/><line class="pl-err" x1="296.2" x2="296.2" y1="282.1" y2="233.0"/><line class="pl-err" x1="345.6" x2="345.6" y1="230.4" y2="167.1"/><line class="pl-err" x1="394.9" x2="394.9" y1="241.1" y2="180.9"/><line class="pl-err" x1="444.3" x2="444.3" y1="266.1" y2="209.8"/><line class="pl-err" x1="493.7" x2="493.7" y1="256.8" y2="194.6"/><line class="pl-err" x1="493.7" x2="493.7" y1="189.7" y2="124.5"/><line class="pl-err" x1="543.1" x2="543.1" y1="269.6" y2="211.2"/><line class="pl-err" x1="592.4" x2="592.4" y1="241.6" y2="180.4"/><line class="pl-err" x1="592.4" x2="592.4" y1="181.4" y2="118.1"/><line class="pl-err" x1="641.8" x2="641.8" y1="310.5" y2="253.6"/><line class="pl-err" x1="691.2" x2="691.2" y1="268.3" y2="207.6"/><line class="pl-err" x1="740.6" x2="740.6" y1="247.0" y2="194.6"/><line class="pl-err" x1="789.9" x2="789.9" y1="278.4" y2="222.0"/><line class="pl-err" x1="789.9" x2="789.9" y1="197.3" y2="126.7"/><line class="pl-err" x1="839.3" x2="839.3" y1="271.3" y2="209.5"/><circle class="pl-dot ok" cx="98.7" cy="223.2" r="7.5"><title>Trial 1 · Correct: 2.45 (SE 0.114)</title></circle><circle class="pl-dot ok" cx="148.1" cy="240.4" r="7.5"><title>Trial 2 · Correct: 2.38 (SE 0.120)</title></circle><circle class="pl-dot ok" cx="197.4" cy="220.8" r="7.5"><title>Trial 3 · Correct: 2.46 (SE 0.118)</title></circle><circle class="pl-dot bad" cx="246.8" cy="223.2" r="7.5"><title>Trial 4 · Incorrect: 2.45 (SE 0.121)</title></circle><circle class="pl-dot rep" cx="246.8" cy="174.3" r="7.5"><title>Trial 4 · Repair: 2.65 (SE 0.133)</title></circle><circle class="pl-dot ok" cx="296.2" cy="257.5" r="7.5"><title>Trial 5 · Correct: 2.31 (SE 0.100)</title></circle><circle class="pl-dot ok" cx="345.6" cy="198.8" r="7.5"><title>Trial 6 · Correct: 2.55 (SE 0.129)</title></circle><circle class="pl-dot ok" cx="394.9" cy="211.0" r="7.5"><title>Trial 7 · Correct: 2.50 (SE 0.123)</title></circle><circle class="pl-dot ok" cx="444.3" cy="237.9" r="7.5"><title>Trial 8 · Correct: 2.39 (SE 0.115)</title></circle><circle class="pl-dot bad" cx="493.7" cy="225.7" r="7.5"><title>Trial 9 · Incorrect: 2.44 (SE 0.127)</title></circle><circle class="pl-dot rep" cx="493.7" cy="157.1" r="7.5"><title>Trial 9 · Repair: 2.72 (SE 0.133)</title></circle><circle class="pl-dot ok" cx="543.1" cy="240.4" r="7.5"><title>Trial 10 · Correct: 2.38 (SE 0.119)</title></circle><circle class="pl-dot bad" cx="592.4" cy="211.0" r="7.5"><title>Trial 11 · Incorrect: 2.50 (SE 0.125)</title></circle><circle class="pl-dot rep" cx="592.4" cy="149.8" r="7.5"><title>Trial 11 · Repair: 2.75 (SE 0.129)</title></circle><circle class="pl-dot ok" cx="641.8" cy="282.1" r="7.5"><title>Trial 12 · Correct: 2.21 (SE 0.116)</title></circle><circle class="pl-dot ok" cx="691.2" cy="237.9" r="7.5"><title>Trial 13 · Correct: 2.39 (SE 0.124)</title></circle><circle class="pl-dot ok" cx="740.6" cy="220.8" r="7.5"><title>Trial 14 · Correct: 2.46 (SE 0.107)</title></circle><circle class="pl-dot bad" cx="789.9" cy="250.2" r="7.5"><title>Trial 15 · Incorrect: 2.34 (SE 0.115)</title></circle><circle class="pl-dot rep" cx="789.9" cy="162.0" r="7.5"><title>Trial 15 · Repair: 2.70 (SE 0.144)</title></circle><circle class="pl-dot ok" cx="839.3" cy="240.4" r="7.5"><title>Trial 16 · Correct: 2.38 (SE 0.126)</title></circle><text class="pl-axis" x="469" y="408" text-anchor="middle">Trial (within-block order)</text><text class="pl-axis" transform="translate(18 211) rotate(-90)" text-anchor="middle">Mean semantic detail density</text><circle class="pl-dot ok" cx="270" cy="28" r="7.5"/><text class="pl-leg" x="284" y="34">Correct</text><circle class="pl-dot bad" cx="390" cy="28" r="7.5"/><text class="pl-leg" x="404" y="34">Incorrect</text><circle class="pl-dot rep" cx="510" cy="28" r="7.5"/><text class="pl-leg" x="524" y="34">Repair</text><text class="pl-delta" x="246.8" y="132.7" text-anchor="middle">+0.20</text><text class="pl-delta" x="493.7" y="115.5" text-anchor="middle">+0.28</text><text class="pl-delta" x="592.4" y="109.1" text-anchor="middle">+0.25</text><text class="pl-delta" x="789.9" y="117.7" text-anchor="middle">+0.36</text></svg>
       <div class="ttr-fine" style="margin-bottom:0">Shaded columns mark trials where the robot erred. Labels show the rise on the retry.</div>
