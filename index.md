@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 ---
 <style>
 .adt{--rec:#3b6fe0;--rec-s:#dce6fb;--fr:#e8603f;--fr-s:#fbe0d8;--kid:#e8a514;--kid-s:#fbedc8;--bot:#13a184;--bot-s:#d3f0e8;--bg:#f5f2ec;--ink:#1d1b26;--mut:#5f5d6b;display:flex;flex-direction:column;align-items:center;gap:12px;max-width:430px;margin:-3.5rem auto 3rem;padding:20px 22px 18px;border-radius:20px;background:var(--bg);color:var(--ink)!important;text-decoration:none!important;text-align:center;transition:transform .25s,box-shadow .25s}
